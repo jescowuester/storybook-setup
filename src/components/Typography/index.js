@@ -67,7 +67,7 @@ const H6 = styled.h6`
 
 const P = styled.p`
   text-align: ${getTextAlign};
-  font-size: ${getFontSize('h200')};
+  font-size: ${getFontSize('h400')};
   margin: 0;
   line-height: ${({ lineHeight }) => lineHeight || '100%'};
   font-weight: ${({

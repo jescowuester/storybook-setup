@@ -6,9 +6,11 @@ import { Button } from '../..';
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
-  .add('primary', () => <Button primary>Book a call</Button>)
-  .add('secondary', () => <Button secondary>Find opportunities here</Button>)
-  .add('with dynamic button text', () => {
+  .add('primary', () => {
+    const btnText = text('Button Text', 'Book a call');
+    return <Button primary>{btnText}</Button>;
+  })
+  .add('secondary', () => {
     const btnText = text('Button Text', 'Find opportunities here');
     return <Button secondary>{btnText}</Button>;
   });
