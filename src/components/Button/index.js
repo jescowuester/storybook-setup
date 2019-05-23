@@ -18,6 +18,11 @@ const Button = styled.button`
   padding: 22px 24px;
   border-radius: ${({ theme: { borderRadius } }) => borderRadius.small};
   box-shadow: ${({ theme: { shadows } }) => shadows.z1};
+
+  :hover {
+    background: ${({ primary, secondary, theme: { colors } }) =>
+      primary ? colors.blue : secondary ? colors.red : colors.greyLight};
+  }
 `;
 
 export default Button;
