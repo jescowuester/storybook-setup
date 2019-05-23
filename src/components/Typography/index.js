@@ -5,51 +5,76 @@ const getFontSize = initial => ({ theme, fontSize }) =>
 
 const getTextAlign = ({ textAlign }) => textAlign || 'left';
 
-const getFontWeight = initial => ({ theme, fontWeight }) =>
-  theme.font.weights[fontWeight || initial];
-
 const H1 = styled.h1`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h900')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const H2 = styled.h2`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h800')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const H3 = styled.h3`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h700')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const H4 = styled.h4`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h600')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const H5 = styled.h5`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h500')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const H6 = styled.h6`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h400')};
-  font-weight: ${getFontWeight('bold')};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.bold};
 `;
 
 const P = styled.p`
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h200')};
-  font-weight: ${getFontWeight('regular')};
-  line-height: ${({ lineHeight }) => lineHeight || '100%'};
   margin: 0;
+  line-height: ${({ lineHeight }) => lineHeight || '100%'};
+  font-weight: ${({
+    theme: {
+      font: { weights }
+    }
+  }) => weights.regular};
 `;
 
 const Span = styled.span`

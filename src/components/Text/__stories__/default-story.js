@@ -4,11 +4,11 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { Text } from '../..';
 
-storiesOf('Button', module)
+storiesOf('Text', module)
   .addDecorator(withKnobs)
-  .add('primary', () => <Text>Book a call</Text>)
-  .add('secondary', () => <Text>Find opportunities here</Text>)
+  .add('default', () => <Text>Normal text</Text>)
+  .add('H1', () => <Text type="h1">This is a heading text</Text>)
   .add('with dynamic button text', () => {
-    const btnText = text('Button Text', 'Find opportunities here');
-    return <Text secondary>{btnText}</Text>;
+    const dynamicText = text('Text', 'Find opportunities here');
+    return <Text secondary>{dynamicText}</Text>;
   });

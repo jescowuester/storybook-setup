@@ -16,9 +16,9 @@ const Button = styled.button`
   }) => sizes.h400};
   font-weight: ${({
     theme: {
-      font: { weigths }
+      font: { weights }
     }
-  }) => weigths.medium};
+  }) => weights.medium};
   line-height: ${({
     theme: {
       font: { heights }
