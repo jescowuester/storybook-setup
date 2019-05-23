@@ -14,6 +14,16 @@ const Button = styled.button`
       font: { sizes }
     }
   }) => sizes.h400};
+  font-weight: ${({
+    theme: {
+      font: { weigths }
+    }
+  }) => weigths.medium};
+  line-height: ${({
+    theme: {
+      font: { heights }
+    }
+  }) => heights.h600};
   min-width: 172px;
   padding: 22px 24px;
   border-radius: ${({ theme: { borderRadius } }) => borderRadius.small};

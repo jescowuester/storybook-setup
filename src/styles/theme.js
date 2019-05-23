@@ -40,7 +40,8 @@ const theme = {
         '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'
     },
     weigths: {
-      bold: 400,
+      bold: 600,
+      medium: 500,
       regular: 600
     },
     heights: {

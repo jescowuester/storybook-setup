@@ -8,6 +8,14 @@
 
 @font-face {
     font-family: 'Roboto';
+    font-style: medium;
+    font-weight: 500;
+    src: url("roboto-medium.woff2") format("woff2"),
+        url("roboto-medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Roboto';
     font-style: bold;
     font-weight: 600;
     src: url("roboto-bold.woff2") format("woff2"),
