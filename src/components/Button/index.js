@@ -24,10 +24,11 @@ const Button = styled.button`
       font: { heights }
     }
   }) => heights.h600};
-  min-width: 172px;
-  padding: 22px 24px;
+  padding: 0 24px;
+  height: 60px;
   border-radius: ${({ theme: { borderRadius } }) => borderRadius.small};
   box-shadow: ${({ theme: { shadows } }) => shadows.z1};
+  cursor: pointer;
 
   :hover {
     background: ${({ primary, secondary, theme: { colors } }) =>

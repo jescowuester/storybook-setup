@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   a, a:focus, a:active,
   button, button:focus, button:active,
   input, input:focus, input:active {
-    font-family: 'Roboto, sans-serif';
+    font-family: 'Roboto';
     outline: none;
   }
 `;
