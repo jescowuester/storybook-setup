@@ -8,9 +8,6 @@ import GlobalStyle from './globalStyle';
 import '../src/assets/fonts/roboto.css';
 
 const themes = [theme, altTheme];
-
-console.log(theme);
-
 const req = require.context('../src/components', true, /\-story.js$/);
 
 addDecorator(withThemesProvider(themes));
