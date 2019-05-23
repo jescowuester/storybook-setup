@@ -1,53 +1,26 @@
 /* eslint-disable no-nested-ternary */
+import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { StyledButton } from './style';
 
 const propTypes = {
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool
+  children: PropTypes.node
 };
 
 const defaultProps = {
-  primary: false,
-  secondary: false
+  children: <></>
 };
 
-const Button = styled.button`
-  background: ${({ primary, secondary, theme: { colors } }) =>
-    primary
-      ? colors.blueDark
-      : secondary
-      ? colors.redLight
-      : colors.greyLighter};
-  color: #fff;
-  font-size: ${({
-    theme: {
-      font: { sizes }
-    }
-  }) => sizes.h400};
-  font-weight: ${({
-    theme: {
-      font: { weights }
-    }
-  }) => weights.medium};
-  line-height: ${({
-    theme: {
-      font: { heights }
-    }
-  }) => heights.h600};
-  padding: 0 24px;
-  height: 60px;
-  border-radius: ${({ theme: { borderRadius } }) => borderRadius.small};
-  box-shadow: ${({ theme: { shadows } }) => shadows.z1};
-  cursor: pointer;
+const PrimaryButton = props => (
+  <StyledButton color="blueDark" hoverColor="blue" {...props} />
+);
+const SecondaryButton = props => (
+  <StyledButton color="redLight" hoverColor="red" {...props} />
+);
 
-  :hover {
-    background: ${({ primary, secondary, theme: { colors } }) =>
-      primary ? colors.blue : secondary ? colors.red : colors.greyLight};
-  }
-`;
+PrimaryButton.propTypes = propTypes;
+PrimaryButton.defaultProps = defaultProps;
+SecondaryButton.propTypes = propTypes;
+SecondaryButton.defaultProps = defaultProps;
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
-
-export default Button;
+export { PrimaryButton, SecondaryButton };
