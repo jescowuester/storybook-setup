@@ -7,14 +7,16 @@ import { ToastContainer } from 'react-toastify';
 import styled, { ThemeProvider } from 'styled-components';
 
 import config from '../config';
-import { Navigation } from './containers';
 import GlobalStyle from '../styles/globalStyle';
 import theme from '../styles/theme';
+
+import 'assets/fonts/roboto.css';
 
 const AppWrapper = styled.div`
   height: 100%;
   position: relative;
   background-color: ${props => props.theme.colors.white};
+  overflow: hidden;
 `;
 
 const scrollToTop = () => {
@@ -30,8 +32,6 @@ const App = ({ route }) => (
       <Helmet {...config.app} />
 
       <Route path="/" component={scrollToTop} />
-
-      <Navigation />
 
       {renderRoutes(route.routes)}
 

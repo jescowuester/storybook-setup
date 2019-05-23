@@ -1,4 +1,4 @@
-import { NotFound, Home } from './app/pages';
+import { NotFound, Home } from './pages';
 import App from './app';
 // import withTracker from './utils/withTracker';
 

@@ -2,25 +2,25 @@ import breakpoints from './media';
 
 const theme = {
   colors: {
-    'black-darker': '#283039',
-    'black-dark': '#323F4B',
+    blackDarker: '#283039',
+    blackDark: '#323F4B',
     black: '#3E4C59',
-    'black-light': '#52606D',
-    'black-lighter': '#616E7C',
-    'grey-darker': '#7B8794',
-    'grey-dark': '#9AA5B1',
+    blackLight: '#52606D',
+    blackLighter: '#616E7C',
+    greyDarker: '#7B8794',
+    greyDark: '#9AA5B1',
     grey: '#CBD2D9',
-    'grey-light': '#E4E7EB',
-    'grey-lighter': '#F5F7FA',
-    'red-dark': '#E41408',
+    greyLight: '#E4E7EB',
+    greyLighter: '#F5F7FA',
+    redDark: '#E41408',
     red: '#F5352A',
-    'red-light': '#F65C53',
-    'orange-dark': '#FC9900',
+    redLight: '#F65C53',
+    orangeDark: '#FC9900',
     orange: '#ED9918',
-    'orange-light': '#D99E43',
-    'blue-dark': '#067AED',
+    orangeLight: '#D99E43',
+    blueDark: '#067AED',
     blue: '#3A8CDD',
-    'blue-light': '#94BDF0'
+    blueLight: '#94BDF0'
   },
   font: {
     sizes: {
@@ -55,17 +55,13 @@ const theme = {
       h900: '67px'
     }
   },
+  borderRadius: {
+    small: '4px',
+    medium: '8px',
+    large: '50%'
+  },
   shadows: {
-    z1:
-      'px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 1px 1px 0px rgba(10, 22, 70, 0.1)',
-    z2:
-      '0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 3px 3px -1px rgba(10, 22, 70, 0.1)',
-    z3:
-      '0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 6px 6px -1px rgba(10, 22, 70, 0.1)',
-    z4:
-      '0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 16px 16px -1px rgba(10, 22, 70, 0.1)',
-    z5:
-      '0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 32px 40px -2px rgba(10, 22, 70, 0.12)'
+    z1: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.15)'
   },
   breakpoints: {
     // use like  ${({theme})=>theme.breakpoints.max-xs}{...}

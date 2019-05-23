@@ -17,19 +17,14 @@ import './styles/beforeJs.css';
 import configureStore from './utils/configureStore';
 import routes from './routes';
 
-const interRegularObserver = new FontFaceObserver('Inter', { weight: 400 });
-const interMediumObserver = new FontFaceObserver('Inter', { weight: 500 });
-const interSemiboldObserver = new FontFaceObserver('Inter', { weight: 600 });
-const interBoldObserver = new FontFaceObserver('Inter', { weight: 700 });
+const robotoRegularObserver = new FontFaceObserver('Roboto', { weight: 400 });
+const robotoBoldObserver = new FontFaceObserver('Roboto', { weight: 600 });
 
-Promise.all([
-  interRegularObserver.load(),
-  interMediumObserver.load(),
-  interSemiboldObserver.load(),
-  interBoldObserver.load()
-]).then(() => {
-  document.body.classList.add('font-loaded');
-});
+Promise.all([robotoRegularObserver.load(), robotoBoldObserver.load()]).then(
+  () => {
+    document.body.classList.add('font-loaded');
+  }
+);
 
 const history = createBrowserHistory();
 const initialState = {};

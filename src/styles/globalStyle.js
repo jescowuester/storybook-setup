@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${p => p.theme.colors.blackFake};
+    color: ${p => p.theme.colors.black};
   }
 
   html {
@@ -22,11 +22,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body.font-loaded {
-    font-family: ${p => p.theme.fonts.primary};
+    font-family: ${p => p.theme.font.family.primary};
   }
 
   #react-root {
     height: 100%;
+  }
+
+  a, a:focus, a:active,
+  button, button:focus, button:active,
+  input, input:focus, input:active {
+    outline: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
       div {
         font-weight: 500;
         letter-spacing: 0.3px;
-        font-family: ${p => p.theme.fonts.primary};
+        font-family: ${p => p.theme.font.family.primary};
       }
     }
   }
