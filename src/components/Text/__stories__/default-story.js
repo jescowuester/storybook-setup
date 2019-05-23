@@ -2,13 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Button } from '../..';
+import { Text } from '../..';
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
-  .add('primary', () => <Button primary>Book a call</Button>)
-  .add('secondary', () => <Button secondary>Find opportunities here</Button>)
+  .add('primary', () => <Text>Book a call</Text>)
+  .add('secondary', () => <Text>Find opportunities here</Text>)
   .add('with dynamic button text', () => {
     const btnText = text('Button Text', 'Find opportunities here');
-    return <Button secondary>{btnText}</Button>;
+    return <Text secondary>{btnText}</Text>;
   });
