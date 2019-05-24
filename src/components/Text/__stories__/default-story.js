@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import { Text, SecondaryText, Header } from '../..';
 
@@ -18,7 +18,17 @@ storiesOf('Typography', module)
       </SecondaryText>
     );
   })
-  .add('H1', () => {
+  .add('Header', () => {
     const dynamicText = text('Text', 'Heading (H1)');
-    return <Header color={text('colorProp', 'redDark')}>{dynamicText}</Header>;
+    return (
+      <Header
+        color={text('colorProp', 'redDark')}
+        xl={boolean('size-xl', false)}
+        lg={boolean('size-lg', false)}
+        md={boolean('size-md', false)}
+        sm={boolean('size-sm', false)}
+        xs={boolean('size-xs', false)}>
+          {dynamicText}
+      </Header>
+    );
   });
