@@ -8,13 +8,17 @@ storiesOf('Typography', module)
   .addDecorator(withKnobs)
   .add('regular text', () => {
     const dynamicText = text('Text', 'Regular text');
-    return <Text>{dynamicText}</Text>;
+    return <Text fontSize={text('fontSize', 'h500')}>{dynamicText}</Text>;
   })
   .add('secondary text', () => {
     const dynamicText = text('Text', 'Secondary text');
-    return <SecondaryText>{dynamicText}</SecondaryText>;
+    return (
+      <SecondaryText fontSize={text('fontSize', 'h300')}>
+        {dynamicText}
+      </SecondaryText>
+    );
   })
   .add('H1', () => {
     const dynamicText = text('Text', 'Heading (H1)');
-    return <Header color={text('ColorProp', 'redDark')}>{dynamicText}</Header>;
+    return <Header color={text('colorProp', 'redDark')}>{dynamicText}</Header>;
   });

@@ -4,11 +4,13 @@ import { StyledText, H1Text } from './style';
 
 const propTypes = {
   color: PropTypes.string,
+  fontSize: PropTypes.string,
   children: PropTypes.node
 };
 
 const defaultProps = {
   color: '',
+  fontSize: '',
   children: <></>
 };
 

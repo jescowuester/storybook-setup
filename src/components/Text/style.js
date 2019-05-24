@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import { P, H1, H2, H3, H4, H5, H6 } from '../Typography';
 
 const StyledText = styled(P)`
+  font-size: ${({
+    fontSize,
+    theme: {
+      font: { sizes }
+    }
+  }) => sizes[fontSize]};
   color: ${({ color, theme: { colors } }) => colors[color]};
 `;
 
