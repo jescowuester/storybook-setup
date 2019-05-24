@@ -13,6 +13,7 @@ const H1 = styled.h1`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const H2 = styled.h2`
@@ -23,6 +24,7 @@ const H2 = styled.h2`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const H3 = styled.h3`
@@ -33,6 +35,7 @@ const H3 = styled.h3`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const H4 = styled.h4`
@@ -43,6 +46,7 @@ const H4 = styled.h4`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const H5 = styled.h5`
@@ -53,6 +57,7 @@ const H5 = styled.h5`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const H6 = styled.h6`
@@ -63,6 +68,7 @@ const H6 = styled.h6`
       font: { weights }
     }
   }) => weights.bold};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const P = styled.p`
@@ -75,16 +81,19 @@ const P = styled.p`
       font: { weights }
     }
   }) => weights.regular};
+  color: ${({ theme: { colors } }) => colors.blackLight};
 `;
 
 const Span = styled.span`
   line-height: ${p => (p.lineHeight ? p.lineHeight : '1em')};
   text-align: ${getTextAlign};
   font-size: ${getFontSize('h200')};
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 const A = styled.a`
   text-decoration: none;
+  color: ${({ theme: { colors } }) => colors.blackDarker};
 `;
 
 export { H1, H2, H3, H4, H5, H6, P, Span, A };

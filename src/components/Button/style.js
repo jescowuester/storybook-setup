@@ -1,10 +1,9 @@
 /* eslint-disable no-eval */
-/* eslint-disable no-nested-ternary */
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
   background: ${({ color, theme: { colors } }) =>
-    color ? eval(`colors.${color}`) : colors.greyLighter};
+    colors[color] || colors.greyLighter};
   color: #fff;
   font-size: ${({
     theme: {
