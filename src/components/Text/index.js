@@ -22,16 +22,6 @@ const defaultProps = {
   children: <></>
 };
 
-const secondaryTextProps = {
-  fontSize: PropTypes.string,
-  children: PropTypes.node
-};
-
-const secondaryTextDefaultProps = {
-  fontSize: '',
-  children: <></>
-};
-
 const headerProps = {
   xl: PropTypes.bool,
   lg: PropTypes.bool,
@@ -49,7 +39,7 @@ const defaultHeaderProps = {
 };
 
 const Text = props => <StyledText {...props} />;
-const SecondaryText = props => <StyledText color="blackDark" {...props} />;
+const SecondaryText = props => <StyledText {...props} />;
 
 const Header = props => {
   const { xl, lg, md, sm, xs } = props;
@@ -79,8 +69,8 @@ const Header = props => {
 
 Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
-SecondaryText.propTypes = secondaryTextProps;
-SecondaryText.defaultProps = secondaryTextDefaultProps;
+SecondaryText.propTypes = propTypes;
+SecondaryText.defaultProps = { ...defaultProps, color: 'blackDark' };
 Header.propTypes = { ...propTypes, ...headerProps };
 Header.defaulProps = { ...defaultProps, ...defaultHeaderProps };
 
