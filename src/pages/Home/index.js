@@ -9,17 +9,19 @@ import {
   Header
 } from '../../components';
 
+import { View } from './style';
+
 export default class Home extends PureComponent {
   render() {
     return (
-      <div>
+      <View>
         <Helmet title="Home" />
         <Header> This is a title </Header>
         <SecondaryText> Sub heading Text </SecondaryText>
         <Text> This is just the plain main Text </Text>
         <PrimaryButton> Book a call </PrimaryButton>
         <SecondaryButton> Make an appointment </SecondaryButton>
-      </div>
+      </View>
     );
   }
 }
