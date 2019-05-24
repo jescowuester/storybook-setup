@@ -27,8 +27,9 @@ storiesOf('Typography', module)
         lg={boolean('size-lg', false)}
         md={boolean('size-md', false)}
         sm={boolean('size-sm', false)}
-        xs={boolean('size-xs', false)}>
-          {dynamicText}
+        xs={boolean('size-xs', false)}
+      >
+        {dynamicText}
       </Header>
     );
   });
