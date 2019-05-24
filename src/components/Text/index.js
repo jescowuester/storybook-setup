@@ -22,6 +22,16 @@ const defaultProps = {
   children: <></>
 };
 
+const secondaryTextProps = {
+  fontSize: PropTypes.string,
+  children: PropTypes.node
+};
+
+const secondaryTextDefaultProps = {
+  fontSize: '',
+  children: <></>
+};
+
 const headerProps = {
   xl: PropTypes.bool,
   lg: PropTypes.bool,
@@ -69,8 +79,8 @@ const Header = props => {
 
 Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
-SecondaryText.propTypes = propTypes;
-SecondaryText.defaultProps = defaultProps;
+SecondaryText.propTypes = secondaryTextProps;
+SecondaryText.defaultProps = secondaryTextDefaultProps;
 Header.propTypes = { ...propTypes, ...headerProps };
 Header.defaulProps = { ...defaultProps, ...defaultHeaderProps };
 
