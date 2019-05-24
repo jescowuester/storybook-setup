@@ -7,10 +7,10 @@ import { PrimaryButton, SecondaryButton } from '../..';
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('primary', () => {
-    const btnText = text('Button Text', 'Book a call');
+    const btnText = text('text', 'Book a call');
     return <PrimaryButton>{btnText}</PrimaryButton>;
   })
   .add('secondary', () => {
-    const btnText = text('Button Text', 'Find opportunities here');
+    const btnText = text('text', 'Find opportunities here');
     return <SecondaryButton>{btnText}</SecondaryButton>;
   });

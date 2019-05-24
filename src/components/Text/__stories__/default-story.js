@@ -7,11 +7,15 @@ import { Text, SecondaryText, Header } from '../..';
 storiesOf('Typography', module)
   .addDecorator(withKnobs)
   .add('regular text', () => {
-    const dynamicText = text('Text', 'Regular text');
-    return <Text fontSize={text('fontSize', 'h500')}>{dynamicText}</Text>;
+    const dynamicText = text('text', 'Regular text');
+    return (
+      <Text color={text('color', '')} fontSize={text('fontSize', 'h500')}>
+        {dynamicText}
+      </Text>
+    );
   })
   .add('secondary text', () => {
-    const dynamicText = text('Text', 'Secondary text');
+    const dynamicText = text('text', 'Secondary text');
     return (
       <SecondaryText fontSize={text('fontSize', 'h300')}>
         {dynamicText}
@@ -19,10 +23,10 @@ storiesOf('Typography', module)
     );
   })
   .add('Header', () => {
-    const dynamicText = text('Text', 'Heading (H1)');
+    const dynamicText = text('text', 'Heading (H1)');
     return (
       <Header
-        color={text('colorProp', 'redDark')}
+        color={text('color', '')}
         xl={boolean('size-xl', false)}
         lg={boolean('size-lg', false)}
         md={boolean('size-md', false)}
