@@ -4,29 +4,19 @@ import { space } from "styled-system";
 
 const A = styled.a`
 ${space}
-  color: ${p => p.theme.colors.blueDark};
+  color: ${({ secondary, theme: { colors } }) =>
+    secondary ? colors.redLight : colors.blueDark};
   font-size: 20px;
   position: relative;
+  white-space: nowrap;
+  transition: color 0.2s;
   svg {
     transition: transform 0.2s;
   }
-  /* &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    height: 2px;
-    background: ${p => p.theme.colors.blueDark};
-    width: 0px;
-    transition: width 0.2s;
-  } */
   &:hover {
-    color: ${p => p.theme.colors.blue};
+    color: ${({ secondary, theme: { colors } }) =>
+      secondary ? colors.red : colors.blue};
     opacity: 1;
-    /* &:after {
-    background: ${p => p.theme.colors.blue};
-    width: 100%;
-  } */
     svg {
       transform: translate3d(5px, 0, 0);
     }

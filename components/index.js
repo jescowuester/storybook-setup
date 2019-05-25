@@ -6,5 +6,6 @@ import Icon from "./Icon";
 import Text from "./Text";
 import Section from "./Section";
 import Redirect from "./Redirect";
+import Card from "./Card";
 
-export { Button, Flex, Text, Layout, Box, Section, Icon, Redirect };
+export { Button, Flex, Text, Layout, Box, Section, Icon, Redirect, Card };

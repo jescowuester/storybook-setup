@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 var Box = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div({
   boxSizing: "border-box",
   minWidth: 0
-}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"]);
+}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexBasis"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifySelf"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignSelf"], styled_system__WEBPACK_IMPORTED_MODULE_1__["order"]);
 /* harmony default export */ __webpack_exports__["default"] = (Box);
 
 /***/ }),
@@ -173,6 +173,115 @@ Button.defaultProps = {
 
 /***/ }),
 
+/***/ "./components/Card.js":
+/*!****************************!*\
+  !*** ./components/Card.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components */ "./components/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/components/Card.js";
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 100%;\n  height: 0;\n  padding-top: 56%;\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div(_templateObject(), function (p) {
+  return p.img;
+});
+
+var Card = function Card(_ref) {
+  var img = _ref.img,
+      title = _ref.title,
+      text = _ref.text,
+      redirect = _ref.redirect,
+      secondary = _ref.secondary;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    mb: "160px",
+    mx: "30px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    bg: secondary ? "white" : "greyLighter",
+    p: "50px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+    mb: "30px",
+    as: "h4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+    mb: "40px",
+    fontSize: "18px",
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
+    secondary: secondary,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, redirect)));
+};
+
+Card.defaultProps = {
+  redirect: "Learn more",
+  secondary: false
+};
+Card.propTypes = {
+  src: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  redirect: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  secondary: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
 /***/ "./components/Flex.js":
 /*!****************************!*\
   !*** ./components/Flex.js ***!
@@ -190,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Flex = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div({
   display: "flex"
-}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"]);
+}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignContent"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"]);
 Flex.displayName = "Flex";
 /* harmony default export */ __webpack_exports__["default"] = (Flex); // Flex.propTypes = {
 //   ...flexWrap.propTypes,
@@ -328,7 +437,7 @@ var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/components/Red
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n", "\n  color: ", ";\n  font-size: 20px;\n  position: relative;\n  svg {\n    transition: transform 0.2s;\n  }\n  /* &:after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    bottom: -6px;\n    height: 2px;\n    background: ", ";\n    width: 0px;\n    transition: width 0.2s;\n  } */\n  &:hover {\n    color: ", ";\n    opacity: 1;\n    /* &:after {\n    background: ", ";\n    width: 100%;\n  } */\n    svg {\n      transform: translate3d(5px, 0, 0);\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n", "\n  color: ", ";\n  font-size: 20px;\n  position: relative;\n  white-space: nowrap;\n  transition: color 0.2s;\n  svg {\n    transition: transform 0.2s;\n  }\n  &:hover {\n    color: ", ";\n    opacity: 1;\n    svg {\n      transform: translate3d(5px, 0, 0);\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -340,24 +449,24 @@ function _templateObject() {
 
 
 
-var A = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.a(_templateObject(), styled_system__WEBPACK_IMPORTED_MODULE_6__["space"], function (p) {
-  return p.theme.colors.blueDark;
-}, function (p) {
-  return p.theme.colors.blueDark;
-}, function (p) {
-  return p.theme.colors.blue;
-}, function (p) {
-  return p.theme.colors.blue;
+var A = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.a(_templateObject(), styled_system__WEBPACK_IMPORTED_MODULE_6__["space"], function (_ref) {
+  var secondary = _ref.secondary,
+      colors = _ref.theme.colors;
+  return secondary ? colors.redLight : colors.blueDark;
+}, function (_ref2) {
+  var secondary = _ref2.secondary,
+      colors = _ref2.theme.colors;
+  return secondary ? colors.red : colors.blue;
 });
 
-var Redirect = function Redirect(_ref) {
-  var children = _ref.children,
-      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children"]);
+var Redirect = function Redirect(_ref3) {
+  var children = _ref3.children,
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, ["children"]);
 
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(A, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 27
     },
     __self: this
   }), children, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
@@ -365,7 +474,7 @@ var Redirect = function Redirect(_ref) {
     icon: ["far", "long-arrow-right"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 29
     },
     __self: this
   }), " ");
@@ -435,7 +544,7 @@ Text.defaultProps = {
 /*!*****************************!*\
   !*** ./components/index.js ***!
   \*****************************/
-/*! exports provided: Button, Flex, Text, Layout, Box, Section, Icon, Redirect */
+/*! exports provided: Button, Flex, Text, Layout, Box, Section, Icon, Redirect, Card */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -463,6 +572,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _Redirect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Redirect */ "./components/Redirect.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return _Redirect__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return _Card__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
 
 
 
@@ -2083,7 +2196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700|Roboto:400,500,700&display=swap');\n\n/* defaults */\n\nhtml, body{\n  font-family: 'Roboto', sans-serif;\n  font-weight: 500px;\n}\np {\n  font-size: 20px;\n  line-height: 31px;\n}\nh1{\n  font-family: 'IBM Plex Sans', sans-serif;\n  font-size: 56px;\n  font-weight: bold;\n  line-height: 73px;\n}\nh2 {\n  font-size: 14px;\n  text-transform: uppercase;\n  letter-spacing: 0.2em;\n}\nh3 {\n  font-size: 46px;\n}\nh4 {\n  font-size: 36px;\n}\n\nhr {\n  border: none;\n  border-bottom: 2px solid #5a525e;\n}\n\n /* reset */\nhtml {\n  box-sizing: border-box;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\nbody {\n  overflow-x: hidden;\n  position: relative;\n}\n\nbutton {\n  border: none;\n  margin: 0;\n  padding: 0;\n  width: auto;\n  overflow: visible;\n\n  background: transparent;\n  color: inherit;\n  font: inherit;\n  line-height: normal;\n  -webkit-font-smoothing: inherit;\n  -moz-osx-font-smoothing: inherit;\n  -webkit-appearance: none;\n  cursor: pointer;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  &:hover{\n    opacity: 0.7;\n  }\n  transition: opacity 0.1s;\n}\n\nul,\nol {\n  list-style: none;\n}\n\nimg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n\npre,\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700|Roboto:400,500,700&display=swap');\n\n/* defaults */\n\nhtml, body{\n  font-family: 'Roboto', sans-serif;\n  font-weight: 500px;\n}\n\np {\n  font-size: ", ";\n  line-height: 31px;\n}\n\nh1 {\n  font-family: 'IBM Plex Sans', sans-serif;\n  font-size: ", ";\n  font-weight: bold;\n  line-height: 73px;\n}\n\nh2 {\n  font-size: ", ";\n  text-transform: uppercase;\n  ", "\n}\n\nh3 {\n  font-size: ", ";\n}\n\nh4 {\n  font-size: ", ";\n}\n\nhr {\n  border: none;\n  border-bottom: 2px solid #5a525e;\n}\n\n /* reset */\nhtml {\n  box-sizing: border-box;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\nbody {\n  overflow-x: hidden;\n  position: relative;\n}\n\nbutton {\n  border: none;\n  margin: 0;\n  padding: 0;\n  width: auto;\n  overflow: visible;\n\n  background: transparent;\n  color: inherit;\n  font: inherit;\n  line-height: normal;\n  -webkit-font-smoothing: inherit;\n  -moz-osx-font-smoothing: inherit;\n  -webkit-appearance: none;\n  cursor: pointer;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  &:hover{\n    opacity: 0.7;\n  }\n  transition: opacity 0.1s;\n}\n\nul,\nol {\n  list-style: none;\n}\n\nimg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n\npre,\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2093,7 +2206,19 @@ function _templateObject() {
 }
 
 
-var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), function (p) {
+  return p.theme.font.sizes.p;
+}, function (p) {
+  return p.theme.font.sizes.h1;
+}, function (p) {
+  return p.theme.font.sizes.h2;
+}, ""
+/* letter-spacing: 0.2em; */
+, function (p) {
+  return p.theme.font.sizes.h3;
+}, function (p) {
+  return p.theme.font.sizes.h4;
+});
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyle);
 
 /***/ }),
@@ -2134,15 +2259,11 @@ var theme = {
   },
   font: {
     sizes: {
-      h100: "14px",
-      h200: "16px",
-      h300: "18px",
-      h400: "20px",
-      h500: "22px",
-      h600: "24px",
-      h700: "36px",
-      h800: "42px",
-      h900: "56px"
+      h1: "73px",
+      h2: "14px",
+      h3: "46px",
+      h4: "36px",
+      p: "20px"
     },
     family: {
       primary: "Roboto, sans-serif",

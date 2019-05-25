@@ -9,26 +9,31 @@ html, body{
   font-family: 'Roboto', sans-serif;
   font-weight: 500px;
 }
+
 p {
-  font-size: 20px;
+  font-size: ${p => p.theme.font.sizes.p};
   line-height: 31px;
 }
-h1{
+
+h1 {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 56px;
+  font-size: ${p => p.theme.font.sizes.h1};
   font-weight: bold;
   line-height: 73px;
 }
+
 h2 {
-  font-size: 14px;
+  font-size: ${p => p.theme.font.sizes.h2};
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  ${"" /* letter-spacing: 0.2em; */}
 }
+
 h3 {
-  font-size: 46px;
+  font-size: ${p => p.theme.font.sizes.h3};
 }
+
 h4 {
-  font-size: 36px;
+  font-size: ${p => p.theme.font.sizes.h4};
 }
 
 hr {

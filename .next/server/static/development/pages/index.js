@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 var Box = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div({
   boxSizing: "border-box",
   minWidth: 0
-}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"]);
+}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexBasis"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flex"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifySelf"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignSelf"], styled_system__WEBPACK_IMPORTED_MODULE_1__["order"]);
 /* harmony default export */ __webpack_exports__["default"] = (Box);
 
 /***/ }),
@@ -173,6 +173,115 @@ Button.defaultProps = {
 
 /***/ }),
 
+/***/ "./components/Card.js":
+/*!****************************!*\
+  !*** ./components/Card.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components */ "./components/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/components/Card.js";
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 100%;\n  height: 0;\n  padding-top: 56%;\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div(_templateObject(), function (p) {
+  return p.img;
+});
+
+var Card = function Card(_ref) {
+  var img = _ref.img,
+      title = _ref.title,
+      text = _ref.text,
+      redirect = _ref.redirect,
+      secondary = _ref.secondary;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    mb: "160px",
+    mx: "30px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Box"], {
+    bg: secondary ? "white" : "greyLighter",
+    p: "50px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+    mb: "30px",
+    as: "h4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Text"], {
+    mb: "40px",
+    fontSize: "18px",
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
+    secondary: secondary,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, redirect)));
+};
+
+Card.defaultProps = {
+  redirect: "Learn more",
+  secondary: false
+};
+Card.propTypes = {
+  src: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  redirect: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  secondary: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
 /***/ "./components/Flex.js":
 /*!****************************!*\
   !*** ./components/Flex.js ***!
@@ -190,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Flex = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div({
   display: "flex"
-}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"]);
+}, styled_system__WEBPACK_IMPORTED_MODULE_1__["space"], styled_system__WEBPACK_IMPORTED_MODULE_1__["color"], styled_system__WEBPACK_IMPORTED_MODULE_1__["width"], styled_system__WEBPACK_IMPORTED_MODULE_1__["fontSize"], styled_system__WEBPACK_IMPORTED_MODULE_1__["position"], styled_system__WEBPACK_IMPORTED_MODULE_1__["height"], styled_system__WEBPACK_IMPORTED_MODULE_1__["minWidth"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexWrap"], styled_system__WEBPACK_IMPORTED_MODULE_1__["flexDirection"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignItems"], styled_system__WEBPACK_IMPORTED_MODULE_1__["alignContent"], styled_system__WEBPACK_IMPORTED_MODULE_1__["justifyContent"]);
 Flex.displayName = "Flex";
 /* harmony default export */ __webpack_exports__["default"] = (Flex); // Flex.propTypes = {
 //   ...flexWrap.propTypes,
@@ -296,7 +405,7 @@ var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/components/Red
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n", "\n  color: ", ";\n  font-size: 20px;\n  position: relative;\n  svg {\n    transition: transform 0.2s;\n  }\n  /* &:after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    bottom: -6px;\n    height: 2px;\n    background: ", ";\n    width: 0px;\n    transition: width 0.2s;\n  } */\n  &:hover {\n    color: ", ";\n    opacity: 1;\n    /* &:after {\n    background: ", ";\n    width: 100%;\n  } */\n    svg {\n      transform: translate3d(5px, 0, 0);\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n", "\n  color: ", ";\n  font-size: 20px;\n  position: relative;\n  white-space: nowrap;\n  transition: color 0.2s;\n  svg {\n    transition: transform 0.2s;\n  }\n  &:hover {\n    color: ", ";\n    opacity: 1;\n    svg {\n      transform: translate3d(5px, 0, 0);\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -308,24 +417,24 @@ function _templateObject() {
 
 
 
-var A = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.a(_templateObject(), styled_system__WEBPACK_IMPORTED_MODULE_6__["space"], function (p) {
-  return p.theme.colors.blueDark;
-}, function (p) {
-  return p.theme.colors.blueDark;
-}, function (p) {
-  return p.theme.colors.blue;
-}, function (p) {
-  return p.theme.colors.blue;
+var A = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.a(_templateObject(), styled_system__WEBPACK_IMPORTED_MODULE_6__["space"], function (_ref) {
+  var secondary = _ref.secondary,
+      colors = _ref.theme.colors;
+  return secondary ? colors.redLight : colors.blueDark;
+}, function (_ref2) {
+  var secondary = _ref2.secondary,
+      colors = _ref2.theme.colors;
+  return secondary ? colors.red : colors.blue;
 });
 
-var Redirect = function Redirect(_ref) {
-  var children = _ref.children,
-      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children"]);
+var Redirect = function Redirect(_ref3) {
+  var children = _ref3.children,
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, ["children"]);
 
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(A, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 27
     },
     __self: this
   }), children, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
@@ -333,7 +442,7 @@ var Redirect = function Redirect(_ref) {
     icon: ["far", "long-arrow-right"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 29
     },
     __self: this
   }), " ");
@@ -403,7 +512,7 @@ Text.defaultProps = {
 /*!*****************************!*\
   !*** ./components/index.js ***!
   \*****************************/
-/*! exports provided: Button, Flex, Text, Layout, Box, Section, Icon, Redirect */
+/*! exports provided: Button, Flex, Text, Layout, Box, Section, Icon, Redirect, Card */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -431,6 +540,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _Redirect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Redirect */ "./components/Redirect.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return _Redirect__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return _Card__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
 
 
 
@@ -675,20 +788,27 @@ function _templateObject() {
 
 
 var Img = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject(), function (p) {
-  return p.src;
+  return p.img;
 });
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(components__WEBPACK_IMPORTED_MODULE_2__["Flex"])(_templateObject2(), function (p) {
   return p.theme.colors.blackLight;
 });
 
-var ClientCases = function ClientCases() {
+var ClientCases = function ClientCases(_ref) {
+  var _ref$content = _ref.content,
+      title = _ref$content.title,
+      card1 = _ref$content.card1,
+      card2 = _ref$content.card2,
+      card3 = _ref$content.card3,
+      card4 = _ref$content.card4,
+      button = _ref$content.button;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Section"], {
     textAlign: "center",
     p: "160px",
     bg: "greyLighter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -696,7 +816,7 @@ var ClientCases = function ClientCases() {
     as: "h3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, "Client Cases."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, {
@@ -704,139 +824,218 @@ var ClientCases = function ClientCases() {
     width: "100%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
     width: "48%",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
-    src: "/static/placeholder.jpg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    as: "h4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }, "Impraise"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    as: "p",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: card1.img,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
-    },
-    __self: this
-  }, "Kudos from Impraise!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
-    width: "48%",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
-    src: "/static/placeholder.jpg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     as: "h4",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, card1.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, card1.text)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
+    width: "48%",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 41
     },
     __self: this
-  }, "Impraise"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    as: "p",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: card2.img,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
-  }, "Kudos from Impraise!"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    as: "h4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, card2.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, card2.text))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, {
     justifyContent: "space-between",
     width: "100%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
     width: "48%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
-    src: "/static/placeholder.jpg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    as: "h4",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 48
     },
     __self: this
-  }, "Impraise"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    as: "p",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: card3.img,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: this
-  }, "Kudos from Impraise!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
-    width: "48%",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    as: "h4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, card3.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    as: "p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
-    src: "/static/placeholder.jpg",
+  }, card3.text)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
+    width: "48%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    img: card4.img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     as: "h4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
-  }, "Impraise"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, card4.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     as: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
-  }, "Kudos from Impraise!"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }, card4.text))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
-  }, "Read more"));
+  }, button));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ClientCases);
+
+/***/ }),
+
+/***/ "./containers/FixRecruitmentGame/index.js":
+/*!************************************************!*\
+  !*** ./containers/FixRecruitmentGame/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! components */ "./components/index.js");
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/FixRecruitmentGame/index.js";
+
+
+
+var FixRecruitmentGame = function FixRecruitmentGame() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    p: "160px 255px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+    mb: "40px",
+    as: "h3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "Fixing the recruitment game."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Flex"], {
+    justifyContent: "space-between",
+    alignItems: "center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Box"], {
+    flexBasis: "50%",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "We have the recruitment knowledge, man power, experience, tools and the network to place the perfect candidates in the right roles and support you on your additional a needs along the way. We\u2019re on a mission.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Box"], {
+    flexBasis: "40%",
+    alignItems: "center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+    lineHeight: "46px",
+    fontSize: "36px",
+    color: "blue",
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "We\u2019re on a mission. As One. Are you in?"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FixRecruitmentGame);
 
 /***/ }),
 
@@ -860,7 +1059,7 @@ var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/Hir
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  min-width: 45%;\n  height: 680px;\n  background: url(/static/placeholder.jpg) no-repeat center;\n  background-size: cover;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  min-width: 45%;\n  height: 680px;\n  background: url(", ") no-repeat center;\n  background-size: cover;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -871,9 +1070,16 @@ function _templateObject() {
 
 
 
-var Img = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject());
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject(), function (p) {
+  return p.src;
+});
 
-var HiringEasy = function HiringEasy() {
+var HiringEasy = function HiringEasy(_ref) {
+  var _ref$content = _ref.content,
+      img = _ref$content.img,
+      title = _ref$content.title,
+      text = _ref$content.text,
+      button = _ref$content.button;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Section"], {
     bg: "greyLighter",
     __source: {
@@ -902,7 +1108,7 @@ var HiringEasy = function HiringEasy() {
       lineNumber: 16
     },
     __self: this
-  }, "Want to make hiring easy?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "50px",
     as: "p",
     __source: {
@@ -910,23 +1116,24 @@ var HiringEasy = function HiringEasy() {
       lineNumber: 19
     },
     __self: this
-  }, "We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, button), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+    ml: "30px",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, "Book a call"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-    ml: "30px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
   }, "Download our pitch")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
+    src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   })));
@@ -969,7 +1176,10 @@ function _templateObject() {
 
 var Outer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section(_templateObject());
 
-var Home = function Home() {
+var Home = function Home(_ref) {
+  var _ref$content = _ref.content,
+      leftCol = _ref$content.leftCol,
+      rightCol = _ref$content.rightCol;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Outer, {
     __source: {
       fileName: _jsxFileName,
@@ -994,7 +1204,7 @@ var Home = function Home() {
       lineNumber: 13
     },
     __self: this
-  }, "You are a"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, leftCol.tagLine), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "20px",
     as: "h1",
     __source: {
@@ -1002,7 +1212,7 @@ var Home = function Home() {
       lineNumber: 16
     },
     __self: this
-  }, "Candidate"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, leftCol.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "50px",
     as: "p",
     __source: {
@@ -1010,14 +1220,14 @@ var Home = function Home() {
       lineNumber: 19
     },
     __self: this
-  }, "Don\u2019t check for job opportunities yourself. We do that work for you, matching you with the best scale-ups worldwide. Are you ready?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }, leftCol.text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     secondary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
-  }, "Find opportunities here")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
+  }, leftCol.button)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
     height: "100%",
     width: "50%",
     bg: "blackDark",
@@ -1025,7 +1235,7 @@ var Home = function Home() {
     p: "180px 160px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -1033,42 +1243,155 @@ var Home = function Home() {
     as: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
-  }, "You are a"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, rightCol.tagLine), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "20px",
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
-  }, "Scale-up"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, rightCol.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "50px",
     as: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
-  }, "We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }, rightCol.text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 40
     },
     __self: this
-  }, "Find me the one.")));
+  }, rightCol.button)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ "./containers/WhatWeDo/index.js":
-/*!**************************************!*\
-  !*** ./containers/WhatWeDo/index.js ***!
-  \**************************************/
+/***/ "./containers/InGreatCompany/index.js":
+/*!********************************************!*\
+  !*** ./containers/InGreatCompany/index.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components */ "./components/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/InGreatCompany/index.js";
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  flex-basis: 33%;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 130px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var LogoContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject());
+
+var InGreatCompany = function InGreatCompany(_ref) {
+  var _ref$content = _ref.content,
+      title = _ref$content.title,
+      text = _ref$content.text,
+      companies = _ref$content.companies;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Section"], {
+    p: "130px 160px 30px",
+    textAlign: "center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    mb: "30px",
+    as: "h3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    mx: "20%",
+    mb: "120px",
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
+    flexWrap: "wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, companies.map(function (_ref2) {
+    var name = _ref2.name,
+        href = _ref2.href,
+        img = _ref2.img;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoContainer, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      href: href,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      target: "blank",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: img,
+      alt: name,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }))));
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (InGreatCompany);
+
+/***/ }),
+
+/***/ "./containers/WantToKnowMore/index.js":
+/*!********************************************!*\
+  !*** ./containers/WantToKnowMore/index.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1081,11 +1404,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/WhatWeDo/index.js";
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/WantToKnowMore/index.js";
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 100%;\n  height: 0;\n  padding-top: 56%;\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1096,69 +1419,169 @@ function _templateObject() {
 
 
 
-var Img = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject(), function (p) {
+var SectionWithBackground = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(components__WEBPACK_IMPORTED_MODULE_2__["Section"])(_templateObject(), function (p) {
   return p.src;
 });
 
-var Card = function Card(_ref) {
-  var src = _ref.src,
-      title = _ref.title,
-      text = _ref.text;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
-    mb: "160px",
-    mx: "30px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Img, {
-    src: src,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Box"], {
+var WantToKnowMore = function WantToKnowMore(_ref) {
+  var _ref$content = _ref.content,
+      title = _ref$content.title,
+      text = _ref$content.text,
+      button = _ref$content.button,
+      img = _ref$content.img;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SectionWithBackground, {
+    src: img,
+    textAlign: "center",
+    p: "160px",
     bg: "greyLighter",
-    p: "50px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "30px",
-    as: "h4",
+    as: "h3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     mb: "40px",
-    fontSize: "18px",
     as: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
-  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
-  }, "Learn more")));
+  }, button));
 };
 
-var index = function index() {
+/* harmony default export */ __webpack_exports__["default"] = (WantToKnowMore);
+
+/***/ }),
+
+/***/ "./containers/WeAreSpecialists/index.js":
+/*!**********************************************!*\
+  !*** ./containers/WeAreSpecialists/index.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components */ "./components/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/WeAreSpecialists/index.js";
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+var SectionWithBackground = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(components__WEBPACK_IMPORTED_MODULE_2__["Section"])(_templateObject(), function (p) {
+  return p.src;
+});
+
+var WeAreSpecialists = function WeAreSpecialists(_ref) {
+  var _ref$content = _ref.content,
+      img = _ref$content.img,
+      title = _ref$content.title,
+      text = _ref$content.text,
+      button = _ref$content.button;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SectionWithBackground, {
+    src: img,
+    textAlign: "left",
+    p: "160px",
+    bg: "greyLighter",
+    pr: "45%",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    mb: "30px",
+    as: "h3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    mb: "40px",
+    as: "p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, text), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, " ", button, " "));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WeAreSpecialists);
+
+/***/ }),
+
+/***/ "./containers/WhatWeDo/index.js":
+/*!**************************************!*\
+  !*** ./containers/WhatWeDo/index.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components */ "./components/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+
+var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/containers/WhatWeDo/index.js";
+
+
+
+
+var index = function index(_ref) {
+  var _ref$content = _ref.content,
+      title = _ref$content.title,
+      card1 = _ref$content.card1,
+      card2 = _ref$content.card2,
+      card3 = _ref$content.card3,
+      card4 = _ref$content.card4;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Section"], {
     p: "160px 130px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -1166,13 +1589,13 @@ var index = function index() {
     as: "h3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 7
     },
     __self: this
-  }, "What we do."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -1180,55 +1603,43 @@ var index = function index() {
     flexDirection: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 11
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Card, {
-    src: "/static/placeholder.jpg",
-    title: "Recruitment",
-    text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these \u2018had to find\u2019 people. We\u2019ve done it over a thousand times.",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Card"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, card1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 12
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Card, {
-    src: "/static/placeholder.jpg",
-    title: "Recruitment",
-    text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these \u2018had to find\u2019 people. We\u2019ve done it over a thousand times.",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Card"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, card2, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 13
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
     pt: "150px",
     flexDirection: "column",
     width: "50%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 15
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Card, {
-    src: "/static/placeholder.jpg",
-    title: "Recruitment",
-    text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these \u2018had to find\u2019 people. We\u2019ve done it over a thousand times.",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Card"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, card3, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 16
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Card, {
-    src: "/static/placeholder.jpg",
-    title: "Recruitment",
-    text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these \u2018had to find\u2019 people. We\u2019ve done it over a thousand times.",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components__WEBPACK_IMPORTED_MODULE_2__["Card"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, card4, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 17
     },
     __self: this
-  }))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
@@ -1239,7 +1650,7 @@ var index = function index() {
 /*!*****************************!*\
   !*** ./containers/index.js ***!
   \*****************************/
-/*! exports provided: Home, HiringEasy, WhatWeDo, ClientCases */
+/*! exports provided: Home, HiringEasy, WhatWeDo, ClientCases, WantToKnowMore, InGreatCompany, WeAreSpecialists, FixRecruitmentGame */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1255,6 +1666,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _ClientCases__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ClientCases */ "./containers/ClientCases/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ClientCases", function() { return _ClientCases__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _WantToKnowMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WantToKnowMore */ "./containers/WantToKnowMore/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WantToKnowMore", function() { return _WantToKnowMore__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+/* harmony import */ var _InGreatCompany__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InGreatCompany */ "./containers/InGreatCompany/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InGreatCompany", function() { return _InGreatCompany__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var _WeAreSpecialists__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./WeAreSpecialists */ "./containers/WeAreSpecialists/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WeAreSpecialists", function() { return _WeAreSpecialists__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _FixRecruitmentGame__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FixRecruitmentGame */ "./containers/FixRecruitmentGame/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FixRecruitmentGame", function() { return _FixRecruitmentGame__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+
+
+
 
 
 
@@ -2018,30 +2445,171 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/home/jesco/code/storyofams/oneworks-frontend/pages/index.js";
 
 
+var content = {
+  home: {
+    leftCol: {
+      tagLine: "You are a",
+      title: "Candidate",
+      text: "Don’t check for job opportunities yourself. We do that work for you, matching you with the best scale-ups worldwide. Are you ready?",
+      button: "Find opportunities here"
+    },
+    rightCol: {
+      tagLine: "You are a",
+      title: "Scale-up",
+      text: "We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.",
+      button: "Find opportunities here"
+    }
+  },
+  hiringEasy: {
+    img: "/static/placeholder.jpg",
+    title: "Want to make hiring easy?",
+    text: "We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.",
+    button: "Book a call"
+  },
+  whatWeDo: {
+    title: "What we do.",
+    card1: {
+      img: "/static/placeholder.jpg",
+      title: "Recruitment",
+      text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these ‘had to find’ people. We’ve done it over a thousand times."
+    },
+    card2: {
+      img: "/static/placeholder.jpg",
+      title: "Recruitment",
+      text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these ‘had to find’ people. We’ve done it over a thousand times."
+    },
+    card3: {
+      img: "/static/placeholder.jpg",
+      title: "Recruitment",
+      text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these ‘had to find’ people. We’ve done it over a thousand times."
+    },
+    card4: {
+      img: "/static/placeholder.jpg",
+      title: "Recruitment",
+      text: "From a single key hire to multiple key hires. At One we can help you to allocate and attract these ‘had to find’ people. We’ve done it over a thousand times."
+    }
+  },
+  clientCases: {
+    title: "Client Cases.",
+    card1: {
+      img: "/static/placeholder.jpg",
+      title: "Impraise",
+      text: "Kudos from Impraise!"
+    },
+    card2: {
+      img: "/static/placeholder.jpg",
+      title: "Impraise",
+      text: "Kudos from Impraise!"
+    },
+    card3: {
+      img: "/static/placeholder.jpg",
+      title: "Impraise",
+      text: "Kudos from Impraise!"
+    },
+    card4: {
+      img: "/static/placeholder.jpg",
+      title: "Impraise",
+      text: "Kudos from Impraise!"
+    },
+    button: "Read more"
+  },
+  inGreatCompany: {
+    title: " You're in great company",
+    text: "We know it takes time, money and resource to find the right talent. While you focus on growing your business, we can take care of finding you your dream team.",
+    companies: [{
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }, {
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }, {
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }, {
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }, {
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }, {
+      name: "vanmoof",
+      href: "https://www.vanmoof.com/en_nl/",
+      img: "/static/placeholder-logo.png"
+    }]
+  },
+  wantToKnowMore: {
+    img: "/static/placeholder-background.jpg",
+    title: "Want to know more?",
+    text: "Download our Scale-up pitch.",
+    button: "Download"
+  },
+  weAreSpecialists: {
+    img: "/static/placeholder-background-2.png",
+    title: "We are your remote recruitment specialist",
+    text: "We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries. Crazy about recruitment, even more about people.",
+    button: "Download our pitch"
+  }
+};
 
 function Index() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["Home"], {
+    content: content.home,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 142
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["HiringEasy"], {
+    content: content.hiringEasy,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 143
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["WhatWeDo"], {
+    content: content.whatWeDo,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 144
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["ClientCases"], {
+    content: content.clientCases,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 145
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["InGreatCompany"], {
+    content: content.inGreatCompany,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["WantToKnowMore"], {
+    content: content.wantToKnowMore,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 147
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["WeAreSpecialists"], {
+    content: content.weAreSpecialists,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(containers__WEBPACK_IMPORTED_MODULE_1__["FixRecruitmentGame"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149
     },
     __self: this
   }));

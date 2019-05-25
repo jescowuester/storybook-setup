@@ -4,26 +4,25 @@ import styled from "styled-components";
 const Img = styled.div`
   min-width: 45%;
   height: 680px;
-  background: url(/static/placeholder.jpg) no-repeat center;
+  background: url(${p => p.src}) no-repeat center;
   background-size: cover;
 `;
 
-const HiringEasy = () => {
+const HiringEasy = ({ content: { img, title, text, button } }) => {
   return (
     <Section bg="greyLighter">
       <Flex>
         <Box p="100px 160px 100px 190px">
           <Text mb="30px" as="h1">
-            Want to make hiring easy?
+            {title}
           </Text>
           <Text mb="50px" as="p">
-            We have an extremely large network. Built up from more than 20 years
-            of experience. Let us find your next best new talents today.
+            {text}
           </Text>
-          <Button>Book a call</Button>
+          <Button>{button}</Button>
           <Redirect ml="30px">Download our pitch</Redirect>
         </Box>
-        <Img />
+        <Img src={img} />
       </Flex>
     </Section>
   );

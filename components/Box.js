@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import {
   space,
   color,
@@ -6,8 +6,14 @@ import {
   fontSize,
   position,
   height,
-  minWidth
-} from "styled-system"
+  minWidth,
+  flexBasis,
+  flexDirection,
+  flex,
+  justifySelf,
+  alignSelf,
+  order
+} from "styled-system";
 
 const Box = styled.div(
   {
@@ -20,7 +26,13 @@ const Box = styled.div(
   fontSize,
   position,
   height,
-  minWidth
-)
+  minWidth,
+  flexBasis,
+  flexDirection,
+  flex,
+  justifySelf,
+  alignSelf,
+  order
+);
 
-export default Box
+export default Box;

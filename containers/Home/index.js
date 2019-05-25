@@ -6,21 +6,20 @@ const Outer = styled.section`
   display: flex;
 `;
 
-const Home = () => {
+const Home = ({ content: { leftCol, rightCol } }) => {
   return (
     <Outer>
       <Box height="100%" width="50%" bg="greyLighter" p="180px 160px">
         <Text mb="10px" as="h2">
-          You are a
+          {leftCol.tagLine}
         </Text>
         <Text mb="20px" as="h1">
-          Candidate
+          {leftCol.title}
         </Text>
         <Text mb="50px" as="p">
-          Don’t check for job opportunities yourself. We do that work for you,
-          matching you with the best scale-ups worldwide. Are you ready?
+          {leftCol.text}
         </Text>
-        <Button secondary>Find opportunities here</Button>
+        <Button secondary>{leftCol.button}</Button>
       </Box>
       <Box
         height="100%"
@@ -30,16 +29,15 @@ const Home = () => {
         p="180px 160px"
       >
         <Text mb="10px" as="h2">
-          You are a
+          {rightCol.tagLine}
         </Text>
         <Text mb="20px" as="h1">
-          Scale-up
+          {rightCol.title}
         </Text>
         <Text mb="50px" as="p">
-          We have an extremely large network. Built up from more than 20 years
-          of experience. Let us find your next best new talents today.
+          {rightCol.text}
         </Text>
-        <Button>Find me the one.</Button>
+        <Button>{rightCol.button}</Button>
       </Box>
     </Outer>
   );

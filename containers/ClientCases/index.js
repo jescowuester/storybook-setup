@@ -5,7 +5,7 @@ const Img = styled.div`
   width: 100%;
   height: 0;
   padding-top: 60%;
-  background-image: url(${p => p.src});
+  background-image: url(${p => p.img});
   background-size: cover;
   background-position: center;
   border-radius: 5px;
@@ -24,7 +24,9 @@ const Container = styled(Flex)`
   }
 `;
 
-const ClientCases = () => {
+const ClientCases = ({
+  content: { title, card1, card2, card3, card4, button }
+}) => {
   return (
     <Section textAlign="center" p="160px" bg="greyLighter">
       <Text mb="80px" as="h3">
@@ -32,29 +34,29 @@ const ClientCases = () => {
       </Text>
       <Container justifyContent="space-between" width="100%">
         <Box width="48%">
-          <Img src="/static/placeholder.jpg" />
-          <Text as="h4">Impraise</Text>
-          <Text as="p">Kudos from Impraise!</Text>
+          <Img img={card1.img} />
+          <Text as="h4">{card1.title}</Text>
+          <Text as="p">{card1.text}</Text>
         </Box>
         <Box width="48%">
-          <Img src="/static/placeholder.jpg" />
-          <Text as="h4">Impraise</Text>
-          <Text as="p">Kudos from Impraise!</Text>
+          <Img img={card2.img} />
+          <Text as="h4">{card2.title}</Text>
+          <Text as="p">{card2.text}</Text>
         </Box>
       </Container>
       <Container justifyContent="space-between" width="100%">
         <Box width="48%">
-          <Img src="/static/placeholder.jpg" />
-          <Text as="h4">Impraise</Text>
-          <Text as="p">Kudos from Impraise!</Text>
+          <Img img={card3.img} />
+          <Text as="h4">{card3.title}</Text>
+          <Text as="p">{card3.text}</Text>
         </Box>
         <Box width="48%">
-          <Img src="/static/placeholder.jpg" />
-          <Text as="h4">Impraise</Text>
-          <Text as="p">Kudos from Impraise!</Text>
+          <Img img={card4.img} />
+          <Text as="h4">{card4.title}</Text>
+          <Text as="p">{card4.text}</Text>
         </Box>
       </Container>
-      <Button>Read more</Button>
+      <Button>{button}</Button>
     </Section>
   );
 };

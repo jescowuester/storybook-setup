@@ -2,15 +2,16 @@ import styled from "styled-components";
 import {
   flexWrap,
   flexDirection,
-  alignItems,
-  justifyContent,
   space,
   color,
   width,
   fontSize,
   position,
   height,
-  minWidth
+  minWidth,
+  alignItems,
+  alignContent,
+  justifyContent
 } from "styled-system";
 
 const Flex = styled.div(
@@ -27,6 +28,7 @@ const Flex = styled.div(
   flexWrap,
   flexDirection,
   alignItems,
+  alignContent,
   justifyContent
 );
 

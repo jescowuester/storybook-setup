@@ -26,15 +26,11 @@ const theme = {
   },
   font: {
     sizes: {
-      h100: "14px",
-      h200: "16px",
-      h300: "18px",
-      h400: "20px",
-      h500: "22px",
-      h600: "24px",
-      h700: "36px",
-      h800: "42px",
-      h900: "56px"
+      h1: "73px",
+      h2: "14px",
+      h3: "46px",
+      h4: "36px",
+      p: "20px"
     },
     family: {
       primary: "Roboto, sans-serif",
