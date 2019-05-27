@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Text, Button, Flex, Box, Section } from "components";
+import { Text, Button, Flex, Box, Section } from 'components';
 
 const Img = styled.div`
   width: 100%;
@@ -25,9 +26,7 @@ const Container = styled(Flex)`
   }
 `;
 
-const ClientCases = ({
-  content: { title, card1, card2, card3, card4, button }
-}) => (
+const ClientCases = ({ content: { card1, card2, card3, card4, button } }) => (
   <Section textAlign="center" p="160px" bg="greyLighter">
     <Text mb="80px" as="h3">
       Client Cases.

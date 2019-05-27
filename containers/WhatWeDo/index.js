@@ -1,4 +1,6 @@
-import { Section, Text, Flex, Card } from "components";
+import React from 'react';
+
+import { Section, Text, Flex, Card } from 'components';
 
 const index = ({ content: { title, card1, card2, card3, card4 } }) => (
   <Section p="160px 130px 0">

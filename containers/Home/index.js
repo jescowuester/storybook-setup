@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Box, Text, Button } from "components";
+import { Box, Text, Button } from 'components';
 
 const Outer = styled.section`
   height: calc(100vh - 100px);
@@ -21,13 +22,7 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       </Text>
       <Button secondary>{leftCol.button}</Button>
     </Box>
-    <Box
-      height="100%"
-      width="50%"
-      bg="blackDark"
-      color="white"
-      p="180px 160px"
-    >
+    <Box height="100%" width="50%" bg="blackDark" color="white" p="180px 160px">
       <Text mb="10px" as="h2">
         {rightCol.tagLine}
       </Text>

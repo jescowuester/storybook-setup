@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import Link from "next/link";
+import React from 'react';
+import styled from 'styled-components';
+import Link from 'next/link';
 
-import { Text, Flex, Section } from "components";
+import { Text, Flex, Section } from 'components';
 
 const LogoContainer = styled.div`
   flex-basis: 33%;

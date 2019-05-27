@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Text, Button, Section } from "components";
+import { Text, Button, Section } from 'components';
 
 const SectionWithBackground = styled(Section)`
   background-image: url(${p => p.src});

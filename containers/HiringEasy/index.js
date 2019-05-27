@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Section, Box, Text, Flex, Button, TextButton } from "components";
+import { Section, Box, Text, Flex, Button, TextButton } from 'components';
 
 const Img = styled.div`
   min-width: 45%;

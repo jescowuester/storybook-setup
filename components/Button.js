@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { space, color, width, fontSize } from "styled-system";
+import React from 'react';
+import styled from 'styled-components';
+import { space, color, width, fontSize } from 'styled-system';
 
 const Button = styled.button`
   box-shadow: ${p => p.theme.shadows.z2};
@@ -30,9 +31,9 @@ const Button = styled.button`
 `;
 
 Button.defaultProps = {
-  py: "15px",
-  px: "26px",
-  fontSize: "20px"
+  py: '15px',
+  px: '26px',
+  fontSize: '20px'
 };
 
 export default Button;

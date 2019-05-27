@@ -20,15 +20,15 @@ import {
 } from "@fortawesome/pro-light-svg-icons"
 
 library.add(
-  //light
+  // light
   faTimes,
   faCalendarPlus,
   faBalanceScale,
   faArchive,
   faCheck,
-  //regular
+  // regular
   faLongArrowRight,
-  //brands
+  // brands
   faTwitter,
   faFacebookF,
   faInstagram,

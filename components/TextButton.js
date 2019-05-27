@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import { space } from "styled-system";
+import React from 'react';
+import styled from 'styled-components';
+import { space } from 'styled-system';
 
-import { Icon } from "components";
+import { Icon } from 'components';
 
 const A = styled.a`
   ${space}
@@ -30,7 +31,7 @@ const A = styled.a`
 const TextButton = ({ children, ...props }) => (
   <A {...props}>
     {children}
-    <Icon ml="10px" icon={["far", "long-arrow-right"]} />{" "}
+    <Icon ml="10px" icon={['far', 'long-arrow-right']} />{' '}
   </A>
 );
 

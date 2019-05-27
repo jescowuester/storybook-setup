@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { Box, Text, TextButton } from "components";
+import { Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
   width: 50%;
@@ -15,7 +16,7 @@ const Img = styled.div`
 const Card = ({ src, title, text, redirect, secondary }) => (
   <Flex mb="160px" mx="30px">
     <Img src={src} />
-    <Box bg={secondary ? "white" : "greyLighter"} p="50px">
+    <Box bg={secondary ? 'white' : 'greyLighter'} p="50px">
       <Text mb="30px" as="h4">
         {title}
       </Text>
@@ -28,7 +29,7 @@ const Card = ({ src, title, text, redirect, secondary }) => (
 );
 
 Card.defaultProps = {
-  redirect: "Learn more",
+  redirect: 'Learn more',
   secondary: false
 };
 
