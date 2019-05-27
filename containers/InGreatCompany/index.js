@@ -19,8 +19,8 @@ const InGreatCompany = ({ content: { title, text, companies } }) => {
         {text}
       </Text>
       <Flex flexWrap="wrap">
-        {companies.map(({ name, href, img }) => (
-          <LogoContainer>
+        {companies.map(({ name, href, img }, key) => (
+          <LogoContainer key={key}>
             <Link href={href}>
               <a target="blank">
                 <img src={img} alt={name} />

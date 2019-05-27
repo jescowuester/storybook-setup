@@ -1,7 +1,7 @@
 import { Text, Section, Flex, Box } from "components";
 
-const formatNewLine = text => text.split('\n').map((item) => {
-  return <Text lineHeight="40px" color="blackLight" as='p'>{item}</Text>;
+const formatNewLine = text => text.split('\n').map((item, key) => {
+  return <Text lineHeight="40px" color="blackLight" as='p' key={key}>{item}</Text>;
 });
 
 const TextSection = ({ content: { col1, col2, title, tagline } }) => {
