@@ -1,5 +1,5 @@
 import PT from "prop-types";
-import { Box, Text, Redirect } from "components";
+import { Box, Text, TextButton } from "components";
 import styled from "styled-components";
 
 const Img = styled.div`
@@ -21,7 +21,7 @@ const Card = ({ img, title, text, redirect, secondary }) => (
       <Text mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <Redirect secondary={secondary}>{redirect}</Redirect>
+      <TextButton secondary={secondary}>{redirect}</TextButton>
     </Box>
   </Box>
 );

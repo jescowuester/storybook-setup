@@ -1,4 +1,4 @@
-import { Section, Box, Text, Flex, Button, Redirect } from "components";
+import { Section, Box, Text, Flex, Button, TextButton } from "components";
 import styled from "styled-components";
 
 const Img = styled.div`
@@ -20,7 +20,7 @@ const HiringEasy = ({ content: { img, title, text, button } }) => {
             {text}
           </Text>
           <Button>{button}</Button>
-          <Redirect ml="30px">Download our pitch</Redirect>
+          <TextButton ml="30px">Download our pitch</TextButton>
         </Box>
         <Img src={img} />
       </Flex>

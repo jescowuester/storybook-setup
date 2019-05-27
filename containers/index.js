@@ -5,7 +5,7 @@ import ClientCases from "./ClientCases";
 import WantToKnowMore from "./WantToKnowMore";
 import InGreatCompany from "./InGreatCompany";
 import WeAreSpecialists from "./WeAreSpecialists";
-import FixRecruitmentGame from "./FixRecruitmentGame";
+import TextSection from "./TextSection";
 
 export {
   Home,
@@ -15,5 +15,5 @@ export {
   WantToKnowMore,
   InGreatCompany,
   WeAreSpecialists,
-  FixRecruitmentGame
+  TextSection
 };

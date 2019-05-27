@@ -6,7 +6,7 @@ import {
   InGreatCompany,
   WantToKnowMore,
   WeAreSpecialists,
-  FixRecruitmentGame
+  TextSection
 } from "containers";
 
 const content = {
@@ -133,6 +133,19 @@ const content = {
     text:
       "We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries. Crazy about recruitment, even more about people.",
     button: "Download our pitch"
+  },
+  fixRecruitmentGame: {
+    title: "Fixing the recruitment game.",
+    col1:
+      "We have the recruitment knowledge, man power, experience, tools and the network to place the perfect candidates in the right roles and support you on your additional a needs along the way. We’re on a mission.",
+    tagline: "We’re on a mission. As One. Are you in?"
+  },
+  makingHiringEasy: {
+    title: "Making hiring easy.",
+    col1:
+      "This is our goal. To help businesses get the talent they need to succeed. And to help people find a job they love. \n Everyone is incredibly frustrated by how hard it is to find amazing talent. We share that frustration. Recruiting is a fragmented, opaque process undermined by outdated technology that turns off candidates and hiring managers.",
+    col2: "Now, imagine a world where it’s easy to find great candidates, it’s easy for people to show interest in jobs, it’s easy for hiring teams to collaborate, and your recruiting vendors are just a click away.",
+    tagline: "We imagined it. And then we delivered it."
   }
 };
 
@@ -146,7 +159,8 @@ function Index() {
       <InGreatCompany content={content.inGreatCompany} />
       <WantToKnowMore content={content.wantToKnowMore} />
       <WeAreSpecialists content={content.weAreSpecialists} />
-      <FixRecruitmentGame />
+      <TextSection content={content.fixRecruitmentGame} />
+      <TextSection content={content.makingHiringEasy} />
     </>
   );
 }
