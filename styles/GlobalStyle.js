@@ -67,7 +67,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -102,13 +102,11 @@ img {
   vertical-align: top;
 }
 
-
 pre,
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 
 `;
 
