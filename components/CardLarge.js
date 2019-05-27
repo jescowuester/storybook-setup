@@ -1,11 +1,12 @@
-import PT from "prop-types";
-import { Box, Text, TextButton } from "components";
+import PropTypes from "prop-types";
 import styled from "styled-components";
+
+import { Box, Text, TextButton } from "components";
 
 const Img = styled.div`
   width: 50%;
   height: 100%;
-  /* padding-left: 100%; */
+
   background-image: url(${p => p.src});
   background-size: cover;
   background-position: center;
@@ -32,11 +33,11 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  src: PT.string.isRequired,
-  title: PT.string.isRequired,
-  text: PT.string.isRequired,
-  redirect: PT.string,
-  secondary: PT.bool
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  redirect: PropTypes.string,
+  secondary: PropTypes.bool
 };
 
 export default Card;

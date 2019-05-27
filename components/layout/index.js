@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Main, Footer, NavLink } from "./styles";
+import { Nav, Main, Footer } from "./styles";
 import { Flex, Text } from "components";
 import Link from "next/link";
 
