@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { space } from 'styled-system';
+import { space, alignSelf } from 'styled-system';
 
 import { Icon } from 'components';
 
 const A = styled.a`
   ${space}
+  ${alignSelf}
   color: ${({ secondary, theme: { colors } }) =>
     secondary ? colors.redLight : colors.blueDark};
   font-size: 20px;

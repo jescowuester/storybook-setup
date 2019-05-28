@@ -1,6 +1,7 @@
 import Article from './Article';
 import ClientCases from './ClientCases';
 import Contact from './Contact';
+import Footer from './Footer';
 import HiringEasy from './HiringEasy';
 import Home from './Home';
 import InGreatCompany from './InGreatCompany';
@@ -17,6 +18,7 @@ export {
   Article,
   ClientCases,
   Contact,
+  Footer,
   HiringEasy,
   Home,
   InGreatCompany,
