@@ -1,3 +1,4 @@
+import Article from './Article';
 import ClientCases from './ClientCases';
 import Contact from './Contact';
 import HiringEasy from './HiringEasy';
@@ -11,6 +12,7 @@ import WeAreSpecialists from './WeAreSpecialists';
 import WhatWeDo from './WhatWeDo';
 
 export {
+  Article,
   ClientCases,
   Contact,
   HiringEasy,

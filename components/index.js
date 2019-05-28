@@ -7,6 +7,7 @@ import Icon from './Icon';
 import Input from './Input';
 import Layout from './layout';
 import Section from './Section';
+import ShareButton from './ShareButton';
 import Text from './Text';
 import TextButton from './TextButton';
 
@@ -20,6 +21,7 @@ export {
   Input,
   Layout,
   Section,
+  ShareButton,
   Text,
   TextButton
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Section, Flex, Box } from 'components';
+import PropTypes from 'prop-types';
 
 const formatNewLine = text =>
   text.split('\n').map((item, key) => (
@@ -8,8 +9,16 @@ const formatNewLine = text =>
     </Text>
   ));
 
-const TextSection = ({ content: { col1, col2, title, tagline } }) => (
-  <Section p={['40px', '100 150px', '160px 255px']}>
+// todo reformat to use setinnerhtml
+
+const TextSection = ({
+  secondary,
+  content: { col1, col2, title, tagline }
+}) => (
+  <Section
+    bg={secondary ? 'greyLighter' : 'white'}
+    p={['40px', '100 150px', '160px 255px']}
+  >
     <Text mb="40px" as="h3">
       {title}
     </Text>
@@ -29,7 +38,7 @@ const TextSection = ({ content: { col1, col2, title, tagline } }) => (
           mt={['20px', '20px', '0']}
           lineHeight="46px"
           fontSize="36px"
-          color="blue"
+          color={secondary ? 'redLight' : 'blue'}
           as="p"
         >
           {tagline}
@@ -38,5 +47,19 @@ const TextSection = ({ content: { col1, col2, title, tagline } }) => (
     </Flex>
   </Section>
 );
+
+TextSection.defaultProps = {
+  secondary: false
+};
+
+TextSection.proptTypes = {
+  secondary: PropTypes.bool,
+  content: PropTypes.objectOf({
+    col1: PropTypes.string,
+    col2: PropTypes.string,
+    title: PropTypes.string,
+    tagline: PropTypes.string
+  }).isRequired
+};
 
 export default TextSection;
