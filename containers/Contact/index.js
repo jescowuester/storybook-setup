@@ -6,29 +6,20 @@ import _ from 'lodash';
 import { Box, Button, Text, Flex, Input, Section } from 'components';
 import { Maps } from 'containers';
 
-const ContactContainer = styled(Flex)`
-  justify-content: space-between;
-`;
+const ContactContainer = styled(Flex)``;
 
 const AddressContainer = styled(Flex)``;
-const LocationContainer = styled(Flex)`
-  max-width: 360px;
-  margin-right: 124px;
-  flex-direction: column;
-`;
-const HoursContainer = styled(Flex)`
-  max-width: 360px;
-  flex-direction: column;
-`;
+const LocationContainer = styled(Flex)``;
+const HoursContainer = styled(Flex)``;
 
 const MapsContainer = styled(Flex)`
-  width: 635px;
-  min-height: 862px;
+  width: 100%;
 `;
 
 const Form = styled(Flex)`
   flex-direction: column;
   width: 455px;
+  max-width: 90%;
 `;
 
 const StyledLink = styled(Link)`
@@ -42,9 +33,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const disclaimerTemplate = _.template(disclaimer.txt);
 
   const DisclaimerLink = (to, link) => (
-    <Link href={to}>
+    <StyledLink href={to}>
       <a> {link} </a>
-    </Link>
+    </StyledLink>
   );
 
   const disclaimerCompiledText = disclaimerTemplate({
@@ -64,8 +55,11 @@ const Contact = ({ content: { location, text, form, address } }) => {
 
   return (
     <Section>
-      <ContactContainer>
-        <Box px={['86px 160px']} py={['100px']}>
+      <ContactContainer
+        justifyContent={['center', 'space-between']}
+        flexDirection={['column', 'row']}
+      >
+        <Box p={['40px', '100px 86px 160px 100px']}>
           <Text mb="30px" as="h1">
             {title}
           </Text>
@@ -85,14 +79,23 @@ const Contact = ({ content: { location, text, form, address } }) => {
         </Box>
         <>
           <Maps location={location} />
-          <MapsContainer id="map" />
+          <MapsContainer
+            id="map"
+            maxWidth={['100%', '635px']}
+            height={['431px', '862px']}
+            alignSelf="center;"
+          />
         </>
       </ContactContainer>
       <AddressContainer>
-        <Box p="100px 86px 100px 160px">
+        <Box p={['40px', '100px 86px 160px 100px']}>
           <Text as="h1">{addressTitle}</Text>
-          <Flex mt="40px">
-            <LocationContainer mr="20px">
+          <Flex mt="40px" flexWrap={['wrap', 'nowrap']}>
+            <LocationContainer
+              flexDirection="column"
+              mr="20px"
+              maxWidth={['100%', '360px']}
+            >
               <Text as="h3" fontSize="24px" mb="20px">
                 {addressLocation.title}
               </Text>
@@ -103,7 +106,11 @@ const Contact = ({ content: { location, text, form, address } }) => {
                 {`${addressLocation.zipcode} ${addressLocation.city}`}
               </Text>
             </LocationContainer>
-            <HoursContainer>
+            <HoursContainer
+              flexDirection="column"
+              mt={[0, '20px']}
+              maxWidth={['100%', '360px']}
+            >
               <Text as="h3" fontSize="24px" mb="20px">
                 {hours.title}
               </Text>
