@@ -17,9 +17,9 @@ const Img = styled.div`
 const SwiperImg = styled.img`
   width: 100% !important;
   min-width: 100% !important;
-  height: 680px !important;
+  /* height: 680px !important; */
   background: url(${p => p.src}) no-repeat center;
-  background-size: cover;
+  background-size: auto;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     display: none;
   }
@@ -33,12 +33,7 @@ const swiperProps = {
     el: '.swiper-pagination',
     clickable: true
   },
-  themeColor: '#fff',
-  color: '#fff',
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
+  themeColor: '#fff'
 };
 
 const HiringEasy = ({
@@ -48,7 +43,9 @@ const HiringEasy = ({
   return (
     <Section bg="greyLighter">
       <Flex>
-        <Box p={['60px 40px', '60px 40px', '100px 160px 100px 190px']}>
+        <Box
+          p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 190px']}
+        >
           <Text mb="30px" as="h1">
             {title}
           </Text>
@@ -63,7 +60,7 @@ const HiringEasy = ({
           </TextButton>
         </Box>
         {images.length ? (
-          <Box position="relative" height="680px" width="45%" minWidth="45%">
+          <Box position="relative" minHeight="100%" width="45%" minWidth="45%">
             <Swiper {...swiperProps}>
               {images.map(image => (
                 <SwiperImg src={image.img} key={image._id} />
