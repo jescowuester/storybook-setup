@@ -116,21 +116,33 @@ const renderNav = nav => {
 };
 
 const Footer = () => (
-  <StyledFooter p={['45px 0', '45px 110px', '90px 220px']}>
-    <Content justifyContent="space-between" mb="70px">
-      <Col flexDirection="column" alignItems="flex-start">
-        <img
-          css="cursor: pointer"
-          src="/static/logo-small.svg"
-          alt="logo-small"
-        />
-        <Text fontSize="16px" mt="30px">
-          Keizersgracht 555
-        </Text>
-        <Text fontSize="16px" mb="30px">
-          1017 DR Amsterdam
-        </Text>
-        <TextButton mb="80px" color="#94BDF0">
+  <StyledFooter p={['45px 34px', '45px 110px', '90px 220px']}>
+    <Content
+      justifyContent="space-between"
+      flexWrap={['wrap', 'no-wrap']}
+      mb="70px"
+    >
+      <Col flexDirection={['row', 'column', 'column']} alignItems="flex-start">
+        <Col flexDirection="column" alignItems="flex-start">
+          <img
+            css="cursor: pointer"
+            src="/static/logo-small.svg"
+            alt="logo-small"
+          />
+          <Col flexDirection="column">
+            <Text fontSize="16px" mt="30px">
+              Keizersgracht 555
+            </Text>
+            <Text fontSize="16px" mb="30px">
+              1017 DR Amsterdam
+            </Text>
+          </Col>
+        </Col>
+        <TextButton
+          mb={['20px', '80px']}
+          color="#94BDF0"
+          alignSelf={['flex-end', 'center']}
+        >
           Get in touch
         </TextButton>
         <img
