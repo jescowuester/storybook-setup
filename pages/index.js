@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Article,
   Home,
   HiringEasy,
   WhatWeDo,
@@ -168,21 +169,27 @@ const content = {
       title: 'We do recruitment',
       text:
         '<p>From a single to multiple key hires, from your next international hire to filling in one of your leadership roles… Done it, been there. Building entire teams?</p>  <p>Yep, done that too. Nearly 20 years of recruitment experience,</p> <p>combined with a large network and all the gear needed, we are here to help you.</p> '
-    },
-  ]
+    }
+  ],
+  article: {
+    text:
+      '<p> Al 6 jaar verbindt Ageras klanten met accountants en boekhouders in Denemarken, Zweden, Noorwegen, Nederland, Duitsland en het Verenigd Koninkrijk. </p> <p> Het succesverhaal begon in Kopenhagen, maar nu is het tijd voor een spannend nieuw hoofdstuk: de opening van een kantoor in Amsterdam! Ageras en One. zitten op dezelfde verdieping en een partnership was dan ook snel gesloten. Voor het opzetten van het eerste buitenlandse team helpt One. met o.a. employer branding en het vinden van de juiste mensen om van Ageras Nederland een groot succes te maken. Het Nederlandse team onder leiding van Nick bestaat nu uit Customer Success Managers Romy en Hans, en als Account Manager Sophie. Ageras is een slim platform dat boekhouders en accountants aan klanten koppelt. In het team zorgen de accountmanagers er voor dat er nieuwe accountants </p> <img src="/static/placeholder.jpg" /> <p> aan het platform worden aangesloten, en de customer success managers zijn verantwoordelijk voor de B2C zijde van de ‘marktplaats’. </p> ',
+    shareText: 'Share this story'
+  }
 };
 
 function Index() {
   return (
     <>
       <Home content={content.home} />
+      <Article content={content.article} />
       <HiringEasy content={content.hiringEasy} />
       <WhatWeDo content={content.whatWeDo} />
       <ClientCases content={content.clientCases} />
       <InGreatCompany content={content.inGreatCompany} />
       <WantToKnowMore content={content.wantToKnowMore} />
       <WeAreSpecialists content={content.weAreSpecialists} />
-      <TextSection content={content.fixRecruitmentGame} />
+      <TextSection secondary content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />
       <LargeCards content={content.largeCards} />
     </>

@@ -1,3 +1,4 @@
+import Article from './Article';
 import Home from './Home';
 import HiringEasy from './HiringEasy';
 import WhatWeDo from './WhatWeDo';
@@ -9,6 +10,7 @@ import TextSection from './TextSection';
 import LargeCards from './LargeCards';
 
 export {
+  Article,
   Home,
   HiringEasy,
   WhatWeDo,

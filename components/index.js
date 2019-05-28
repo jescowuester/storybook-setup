@@ -8,6 +8,7 @@ import Section from './Section';
 import TextButton from './TextButton';
 import Card from './Card';
 import CardLarge from './CardLarge';
+import ShareButton from './ShareButton';
 
 export {
   Button,
@@ -19,5 +20,6 @@ export {
   Icon,
   TextButton,
   Card,
-  CardLarge
+  CardLarge,
+  ShareButton
 };
