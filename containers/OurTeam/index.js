@@ -28,7 +28,7 @@ const TeamMember = ({ img, name, text, buttonText }) => (
 const OurTeam = ({ content: { title, text, teamMembers } }) => {
   return (
     <Section p={['40px 60px', '40px 60px', '160px 10%']}>
-      <Box mb="80px" width="55%">
+      <Box mb="80px" width={['100%', '100%', '55%']}>
         <Text mb="40px" as="h3">
           {title}
         </Text>
