@@ -1,9 +1,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import {} from '@fortawesome/pro-solid-svg-icons';
+import {
+  faHeart,
+  faMapMarkerAlt,
+  faUsers
+} from '@fortawesome/pro-solid-svg-icons';
 
 import {
   faLongArrowRight,
+  faHeart as faHeartRegular,
   faLongArrowLeft
 } from '@fortawesome/pro-regular-svg-icons';
 
@@ -32,6 +37,12 @@ library.add(
 
   // regular
   faLongArrowRight,
+  faHeartRegular,
+
+  //solid
+  faHeart,
+  faMapMarkerAlt,
+  faUsers,
   faLongArrowLeft,
 
   // brands

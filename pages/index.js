@@ -10,7 +10,8 @@ import {
   TextSection,
   WantToKnowMore,
   WeAreSpecialists,
-  WhatWeDo
+  WhatWeDo,
+  Jobs
 } from 'containers';
 
 const content = {
@@ -226,6 +227,36 @@ const content = {
     shareText: 'Share this story',
     title: 'Setting up a team from scratch in The Netherlands',
     backButton: 'Back to blog overview'
+  },
+  jobs: {
+    title: 'Jobs at One.',
+    buttonText: 'View all vacancies',
+    jobs: [
+      {
+        _id: 1,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: true
+      },
+      {
+        _id: 2,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      },
+      {
+        _id: 3,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      }
+    ]
   }
 };
 
@@ -233,6 +264,7 @@ function Index() {
   return (
     <>
       <Home content={content.home} />
+      <Jobs content={content.jobs} />
       <Article content={content.article} />
       <HiringEasy content={content.hiringEasy} />
       <WhatWeDo content={content.whatWeDo} />
