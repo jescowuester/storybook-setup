@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
+import Link from 'next/link';
 
 import { Text, Flex, TextButton } from 'components';
 import { StyledFooter } from 'components/layout/styles';
@@ -65,6 +66,7 @@ const TradeMarkContainer = styled(Flex)``;
 const Content = styled(Flex)``;
 const Col = styled(Flex)``;
 const RatingContainer = styled(Flex)``;
+const NavItemContainer = styled(Flex)``;
 
 const rating = [1, 1, 1, 1, 1, 1, 1, 1, 0.5];
 
@@ -80,6 +82,38 @@ const renderRating = () =>
       />
     )
   );
+
+const renderNav = nav => {
+  const navTitle = nav.title;
+  const navItems = _.map(nav.links, item =>
+    item.isExternal ? (
+      <Text
+        as="a"
+        mb="10"
+        href={item.to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {item.name}
+      </Text>
+    ) : (
+      <Link to={item.to} mb="10">
+        <Text as="a">{item.name}</Text>
+      </Link>
+    )
+  );
+
+  return (
+    <>
+      <Text as="h2" mb="16px" color="#FFFFFF" fontSize="14px" fontWeight="bold">
+        {navTitle}
+      </Text>
+      <NavItemContainer mb="40px" flexDirection="column">
+        {navItems}
+      </NavItemContainer>
+    </>
+  );
+};
 
 const Footer = () => (
   <StyledFooter>
@@ -106,13 +140,13 @@ const Footer = () => (
         />
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        <Text> col </Text>
+        {_.map(leftNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        <Text> col </Text>
+        {_.map(centerNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        <Text> col </Text>
+        {_.map(rightNav, nav => renderNav(nav))}
         <Text mt="40px"> 8.6 / 10 </Text>
         <RatingContainer mb="30px">{renderRating()}</RatingContainer>
         <img
