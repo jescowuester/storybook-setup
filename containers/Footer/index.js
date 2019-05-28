@@ -145,7 +145,7 @@ const Footer = () => (
         </Col>
         <Col mx={['30px', 0]} alignSelf={['flex-end', 'flex-start']}>
           <TextButton
-            mb={['20px', '80px']}
+            mb={['40px', '80px']}
             color="#94BDF0"
             alignSelf={['flex-end', 'flex-start']}
           >
