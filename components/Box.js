@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   space,
   color,
@@ -13,11 +13,11 @@ import {
   justifySelf,
   alignSelf,
   order
-} from "styled-system";
+} from 'styled-system';
 
 const Box = styled.div(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     minWidth: 0
   },
   space,

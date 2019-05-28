@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import Link from "next/link";
+import styled from 'styled-components';
+import Link from 'next/link';
+import { space } from 'styled-system';
 
 const Nav = styled.nav`
   z-index: 2000;
@@ -11,11 +12,16 @@ const Nav = styled.nav`
   background: ${p => p.theme.colors.white};
   display: flex;
   align-items: center;
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    padding: 0 20px;
+  }
 `;
 
 const Main = styled.main`
-  padding-top: 100px;
-  min-height: 100vh;
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 `;
 
 const NavLink = styled(Link)`
@@ -23,11 +29,30 @@ const NavLink = styled(Link)`
   margin: 0 20px;
 `;
 
-const Footer = styled.footer`
+const StyledFooter = styled.footer`
   background: ${p => p.theme.colors.blackDarker};
-  height: 524px;
   color: ${p => p.theme.colors.white};
-  padding: 90px 220px;
+  ${space}
 `;
 
-export { Main, Footer, Nav, NavLink };
+const NavSwitcher = styled.div`
+  margin-left: auto;
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    .text {
+      display: none;
+    }
+    .bars {
+      display: block;
+    }
+  }
+  @media (min-width: ${p => p.theme.breakpoints[1]}) {
+    .text {
+      display: flex;
+    }
+    .bars {
+      display: none;
+    }
+  }
+`;
+
+export { Main, StyledFooter, Nav, NavLink, NavSwitcher };

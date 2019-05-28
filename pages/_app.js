@@ -1,10 +1,10 @@
-import React from "react";
-import App, { Container } from "next/app";
-import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
-import GlobalStyle from "../styles/GlobalStyle";
-import { Layout } from "components";
-import "components/Icon/library";
+import React from 'react';
+import App, { Container } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import theme from '../styles/theme';
+import GlobalStyle from '../styles/GlobalStyle';
+import { Layout } from 'components';
+import 'components/Icon/library';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,6 +23,10 @@ class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+          />
           <GlobalStyle />
           <Container>
             <Component {...pageProps} />

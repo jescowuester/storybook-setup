@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   flexWrap,
   flexDirection,
+  alignSelf,
   space,
   color,
   width,
@@ -9,14 +10,16 @@ import {
   position,
   height,
   minWidth,
+  maxWidth,
   alignItems,
   alignContent,
-  justifyContent
-} from "styled-system";
+  justifyContent,
+  textAlign
+} from 'styled-system';
 
 const Flex = styled.div(
   {
-    display: "flex"
+    display: 'flex'
   },
   space,
   color,
@@ -25,14 +28,17 @@ const Flex = styled.div(
   position,
   height,
   minWidth,
+  maxWidth,
   flexWrap,
+  alignSelf,
   flexDirection,
   alignItems,
   alignContent,
-  justifyContent
+  justifyContent,
+  textAlign
 );
 
-Flex.displayName = "Flex";
+Flex.displayName = 'Flex';
 
 export default Flex;
 
