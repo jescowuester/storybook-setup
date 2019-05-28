@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
 html, body{
   font-family: 'Roboto', sans-serif;
-  font-weight: 500px;
+  font-weight: 400;
 
   box-sizing: border-box;
   font-style: normal;
@@ -24,34 +24,57 @@ html, body{
 }
 
 p {
-  font-size: ${p => p.theme.font.sizes.p};
+  font-size: ${p => p.theme.font.sizes.large.p};
   line-height: 31px;
 }
 
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: ${p => p.theme.font.sizes.h1};
+  font-size: ${p => p.theme.font.sizes.large.h1};
   font-weight: bold;
   line-height: 73px;
 }
 
 h2 {
-  font-size: ${p => p.theme.font.sizes.h2};
+  font-size: ${p => p.theme.font.sizes.large.h2};
   text-transform: uppercase;
   ${'' /* letter-spacing: 0.2em; */}
 }
 
 h3 {
-  font-size: ${p => p.theme.font.sizes.h3};
+  font-size: ${p => p.theme.font.sizes.large.h3};
 }
 
 h4 {
-  font-size: ${p => p.theme.font.sizes.h4};
+  font-size: ${p => p.theme.font.sizes.large.h4};
 }
 
 hr {
   border: none;
   border-bottom: 2px solid #5a525e;
+}
+
+@media (max-width: ${p => p.theme.breakpoints[1]}){
+  p {
+  font-size: ${p => p.theme.font.sizes.small.p};
+}
+
+h1 {
+  font-size: ${p => p.theme.font.sizes.small.h1};
+}
+
+h2 {
+  font-size: ${p => p.theme.font.sizes.small.h2};
+}
+
+h3 {
+  font-size: ${p => p.theme.font.sizes.small.h3};
+}
+
+h4 {
+  font-size: ${p => p.theme.font.sizes.small.h4};
+}rder-bottom: 2px solid #5a525e;
+}
 }
 
 button {

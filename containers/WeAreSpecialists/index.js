@@ -12,10 +12,10 @@ const SectionWithBackground = styled(Section)`
 const WeAreSpecialists = ({ content: { img, title, text, button } }) => (
   <SectionWithBackground
     src={img}
-    textAlign="left"
-    p="160px"
+    textAlign={['left', 'center', 'left']}
+    p={['40px 20px', '40px', '160px']}
     bg="greyLighter"
-    pr="45%"
+    pr={['20px', '40px', '45%']}
   >
     <Text mb="30px" as="h3">
       {title}
