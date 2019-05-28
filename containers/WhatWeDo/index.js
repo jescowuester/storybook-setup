@@ -5,7 +5,7 @@ import { Section, Text, Flex, Card } from 'components';
 const colWidth = ['100%', '100%', '50%'];
 
 const index = ({ content: { title, card1, card2, card3, card4 } }) => (
-  <Section p={['60px 40px', '60px 40px', '160px 130px 0']}>
+  <Section p={['60px 20px', '60px 40px', '160px 130px 0']}>
     <Text mb="80px" as="h3">
       {title}
     </Text>
