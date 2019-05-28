@@ -2,7 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 import { Flex, Text } from 'components';
-import { Nav, Main, Footer } from './styles';
+import { Footer } from 'containers';
+
+import { Nav, Main } from './styles';
 
 const navItems = [
   {
@@ -50,8 +52,10 @@ const Layout = ({ children }) => {
           ))}
         </Flex>
       </Nav>
-      <Main>{children}</Main>
-      <Footer>footi</Footer>
+      <Main>
+        {children}
+        <Footer />
+      </Main>
     </>
   );
 };
