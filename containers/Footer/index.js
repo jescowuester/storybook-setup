@@ -116,7 +116,7 @@ const renderNav = nav => {
 };
 
 const Footer = () => (
-  <StyledFooter>
+  <StyledFooter p={['45px 0', '45px 110px', '90px 220px']}>
     <Content justifyContent="space-between" mb="70px">
       <Col flexDirection="column" alignItems="flex-start">
         <img

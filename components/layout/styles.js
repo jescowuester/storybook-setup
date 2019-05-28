@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { space } from 'styled-system';
 
 const Nav = styled.nav`
   z-index: 2000;
@@ -28,7 +29,7 @@ const NavLink = styled(Link)`
 const StyledFooter = styled.footer`
   background: ${p => p.theme.colors.blackDarker};
   color: ${p => p.theme.colors.white};
-  padding: 90px 220px;
+  ${space}
 `;
 
 export { Main, StyledFooter, Nav, NavLink };
