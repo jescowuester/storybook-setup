@@ -8,7 +8,8 @@ import {
 
 import {
   faLongArrowRight,
-  faHeart as faHeartRegular
+  faHeart as faHeartRegular,
+  faLongArrowLeft
 } from '@fortawesome/pro-regular-svg-icons';
 
 import {
@@ -42,6 +43,7 @@ library.add(
   faHeart,
   faMapMarkerAlt,
   faUsers,
+  faLongArrowLeft,
 
   // brands
   faTwitter,

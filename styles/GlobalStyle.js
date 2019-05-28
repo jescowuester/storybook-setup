@@ -62,6 +62,7 @@ hr {
 
 h1 {
   font-size: ${p => p.theme.font.sizes.small.h1};
+  line-height: 63px;
 }
 
 h2 {
