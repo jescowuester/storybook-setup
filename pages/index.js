@@ -169,9 +169,24 @@ const content = {
       }
     },
     form: {
-      name: { name: 'name', type: 'text', placeholder: 'Your name' },
-      email: { name: 'email', type: 'email', placeholder: 'Your email' },
-      phone: { name: 'tel', type: 'tel', placeholder: 'Your phone number' }
+      name: {
+        name: 'name',
+        type: 'text',
+        placeholder: 'Your name',
+        id: 'eb4a5b0f-b3b2-4782-8a90-2c896a4bbc2c'
+      },
+      email: {
+        name: 'email',
+        type: 'email',
+        placeholder: 'Your email',
+        id: 'dd754897-da20-4cb9-8bed-0ebbedd1e497'
+      },
+      phone: {
+        name: 'tel',
+        type: 'tel',
+        placeholder: 'Your phone number',
+        id: '49b90960-e3c1-402b-9803-0a34a61ea1d5'
+      }
     },
     address: {
       title: 'Our Office',
