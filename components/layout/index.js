@@ -1,32 +1,33 @@
-import React from "react";
-import { Nav, Main, Footer } from "./styles";
-import { Flex, Text } from "components";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+
+import { Flex, Text } from 'components';
+import { Nav, Main, Footer } from './styles';
 
 const navItems = [
   {
-    text: "About",
-    href: "about",
+    text: 'About',
+    href: 'about',
     key: 1
   },
   {
-    text: "Cases",
-    href: "cases",
+    text: 'Cases',
+    href: 'cases',
     key: 2
   },
   {
-    text: "Meet Us",
-    href: "meetus",
+    text: 'Meet Us',
+    href: 'meetus',
     key: 3
   },
   {
-    text: "Contact",
-    href: "contact",
+    text: 'Contact',
+    href: 'contact',
     key: 4
   },
   {
-    text: "Blog",
-    href: "blog",
+    text: 'Blog',
+    href: 'blog',
     key: 5
   }
 ];

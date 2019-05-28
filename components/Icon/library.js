@@ -1,15 +1,15 @@
-import { library } from "@fortawesome/fontawesome-svg-core"
+import { library } from '@fortawesome/fontawesome-svg-core';
 
-import {} from "@fortawesome/pro-solid-svg-icons"
+import {} from '@fortawesome/pro-solid-svg-icons';
 
-import { faLongArrowRight } from "@fortawesome/pro-regular-svg-icons"
+import { faLongArrowRight } from '@fortawesome/pro-regular-svg-icons';
 
 import {
   faTwitter,
   faFacebookF,
   faInstagram,
   faLinkedinIn
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons';
 
 import {
   faTimes,
@@ -17,7 +17,7 @@ import {
   faBalanceScale,
   faArchive,
   faCheck
-} from "@fortawesome/pro-light-svg-icons"
+} from '@fortawesome/pro-light-svg-icons';
 
 library.add(
   // light
@@ -26,13 +26,15 @@ library.add(
   faBalanceScale,
   faArchive,
   faCheck,
+
   // regular
   faLongArrowRight,
+
   // brands
   faTwitter,
   faFacebookF,
   faInstagram,
   faLinkedinIn
-)
+);
 
-export default library
+export default library;

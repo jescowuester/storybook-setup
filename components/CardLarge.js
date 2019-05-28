@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Box, Text, TextButton } from 'components';
+import { Flex, Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
   width: 50%;

@@ -34,7 +34,6 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  src: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   redirect: PropTypes.string,
