@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Link from "next/link";
+import styled from 'styled-components';
+import Link from 'next/link';
 
 const Nav = styled.nav`
   z-index: 2000;
@@ -14,8 +14,10 @@ const Nav = styled.nav`
 `;
 
 const Main = styled.main`
-  padding-top: 100px;
-  min-height: 100vh;
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 `;
 
 const NavLink = styled(Link)`

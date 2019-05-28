@@ -1,11 +1,13 @@
-import PT from "prop-types";
-import { Box, Text, TextButton } from "components";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+import { Flex, Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
   width: 50%;
   height: 100%;
-  /* padding-left: 100%; */
+
   background-image: url(${p => p.src});
   background-size: cover;
   background-position: center;
@@ -14,7 +16,7 @@ const Img = styled.div`
 const Card = ({ src, title, text, redirect, secondary }) => (
   <Flex mb="160px" mx="30px">
     <Img src={src} />
-    <Box bg={secondary ? "white" : "greyLighter"} p="50px">
+    <Box bg={secondary ? 'white' : 'greyLighter'} p="50px">
       <Text mb="30px" as="h4">
         {title}
       </Text>
@@ -27,16 +29,16 @@ const Card = ({ src, title, text, redirect, secondary }) => (
 );
 
 Card.defaultProps = {
-  redirect: "Learn more",
+  redirect: 'Learn more',
   secondary: false
 };
 
 Card.propTypes = {
-  src: PT.string.isRequired,
-  title: PT.string.isRequired,
-  text: PT.string.isRequired,
-  redirect: PT.string,
-  secondary: PT.bool
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  redirect: PropTypes.string,
+  secondary: PropTypes.bool
 };
 
 export default Card;

@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import {
   fontFamily,
   textAlign,
@@ -8,7 +9,6 @@ import {
   fontSize,
   space
 } from "styled-system";
-import styled from "styled-components";
 
 const Text = styled.span(
   fontFamily,

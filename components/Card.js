@@ -1,6 +1,8 @@
-import PT from "prop-types";
-import { Box, Text, TextButton } from "components";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+import { Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
   width: 100%;
@@ -14,7 +16,7 @@ const Img = styled.div`
 const Card = ({ img, title, text, redirect, secondary }) => (
   <Box mb="160px" mx="30px">
     <Img img={img} />
-    <Box bg={secondary ? "white" : "greyLighter"} p="50px">
+    <Box bg={secondary ? 'white' : 'greyLighter'} p="50px">
       <Text mb="30px" as="h4">
         {title}
       </Text>
@@ -27,16 +29,15 @@ const Card = ({ img, title, text, redirect, secondary }) => (
 );
 
 Card.defaultProps = {
-  redirect: "Learn more",
+  redirect: 'Learn more',
   secondary: false
 };
 
 Card.propTypes = {
-  src: PT.string.isRequired,
-  title: PT.string.isRequired,
-  text: PT.string.isRequired,
-  redirect: PT.string,
-  secondary: PT.bool
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  redirect: PropTypes.string,
+  secondary: PropTypes.bool
 };
 
 export default Card;

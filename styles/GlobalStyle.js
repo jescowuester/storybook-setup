@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700|Roboto:400,500,700&display=swap');
@@ -8,6 +8,19 @@ const GlobalStyle = createGlobalStyle`
 html, body{
   font-family: 'Roboto', sans-serif;
   font-weight: 500px;
+
+  box-sizing: border-box;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -25,7 +38,7 @@ h1 {
 h2 {
   font-size: ${p => p.theme.font.sizes.h2};
   text-transform: uppercase;
-  ${"" /* letter-spacing: 0.2em; */}
+  ${'' /* letter-spacing: 0.2em; */}
 }
 
 h3 {
@@ -41,19 +54,6 @@ hr {
   border-bottom: 2px solid #5a525e;
 }
 
- /* reset */
-html {
-  box-sizing: border-box;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  overflow-x: hidden;
-  position: relative;
-}
-
 button {
   border: none;
   margin: 0;
@@ -67,7 +67,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -102,13 +102,11 @@ img {
   vertical-align: top;
 }
 
-
 pre,
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 
 `;
 

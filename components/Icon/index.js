@@ -12,11 +12,11 @@ const Container = styled.span`
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  /* styled system */
+  cursor: ${props => (props.as === "button" ? "pointer" : "inherit")};
+
   ${space}
   ${color}
   ${fontSize}
-  cursor: ${props => (props.as === "button" ? "pointer" : "inherit")};
 `;
 
 const Icon = ({ as, icon, ...rest }) => (
