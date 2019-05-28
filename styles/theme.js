@@ -72,7 +72,7 @@ const theme = {
     z1: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.15)',
     z2: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.15)'
   },
-  breakpoints: ['900px', '1100px', '1300px']
+  breakpoints: ['900px', '1100px', '1400px']
 };
 
 export default theme;
