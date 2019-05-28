@@ -141,7 +141,7 @@ const Footer = () => (
         <TextButton
           mb={['20px', '80px']}
           color="#94BDF0"
-          alignSelf={['flex-end', 'center']}
+          alignSelf={['flex-end', 'flex-start']}
         >
           Get in touch
         </TextButton>
