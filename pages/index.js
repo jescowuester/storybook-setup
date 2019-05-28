@@ -1,14 +1,15 @@
 import React from 'react';
 
 import {
-  Home,
-  HiringEasy,
-  WhatWeDo,
   ClientCases,
+  Contact,
+  HiringEasy,
+  Home,
   InGreatCompany,
+  TextSection,
   WantToKnowMore,
   WeAreSpecialists,
-  TextSection
+  WhatWeDo
 } from 'containers';
 
 const content = {
@@ -149,6 +150,35 @@ const content = {
     col2:
       'Now, imagine a world where it’s easy to find great candidates, it’s easy for people to show interest in jobs, it’s easy for hiring teams to collaborate, and your recruiting vendors are just a click away.',
     tagline: 'We imagined it. And then we delivered it.'
+  },
+  contact: {
+    location: { lat: 52.3644254, lng: 4.8878303 },
+    text: {
+      title: 'Want to chat?',
+      subTitle: 'We’d love to hear about your scale-up.',
+      smallTxt:
+        '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <span id="privacy-link"> privacy statement </span>here.'
+    },
+    form: {
+      name: { name: 'name', type: 'text', placeholder: 'Your name' },
+      email: { name: 'email', type: 'email', placeholder: 'Your email' },
+      phone: { name: 'tel', type: 'tel', placeholder: 'Your phone number' }
+    },
+    address: {
+      title: 'Our Office',
+      location: {
+        title: 'Address ',
+        street: 'Keizersgracht',
+        number: '555',
+        zipcode: '1017 DR',
+        city: 'Amsterdam'
+      },
+      hours: {
+        title: 'hours',
+        week: { start: '8 AM', end: '6 PM' },
+        weekend: '🎉 Celebrating the weekend'
+      }
+    }
   }
 };
 
@@ -164,6 +194,7 @@ function Index() {
       <WeAreSpecialists content={content.weAreSpecialists} />
       <TextSection content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />
+      <Contact content={content.contact} />
     </>
   );
 }
