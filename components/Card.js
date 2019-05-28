@@ -16,7 +16,7 @@ const Img = styled.div`
 const Card = ({ img, title, text, redirect, secondary }) => (
   <Box mb={['60px', '100px', '160px']} mx={['10px', '10px', '30px']}>
     <Img img={img} />
-    <Box bg={secondary ? 'white' : 'greyLighter'} p="50px">
+    <Box bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
       <Text mb="30px" as="h4">
         {title}
       </Text>

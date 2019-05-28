@@ -36,6 +36,12 @@ const swiperProps = {
   themeColor: '#fff'
 };
 
+const SwiperBox = styled(Box)`
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    display: none;
+  }
+`;
+
 const HiringEasy = ({
   secondary,
   content: { img, images = [], title, text, button }
@@ -60,13 +66,18 @@ const HiringEasy = ({
           </TextButton>
         </Box>
         {images.length ? (
-          <Box position="relative" minHeight="100%" width="45%" minWidth="45%">
+          <SwiperBox
+            position="relative"
+            minHeight="100%"
+            width="45%"
+            minWidth="45%"
+          >
             <Swiper {...swiperProps}>
               {images.map(image => (
                 <SwiperImg src={image.img} key={image._id} />
               ))}
             </Swiper>
-          </Box>
+          </SwiperBox>
         ) : (
           <Img src={img} />
         )}
