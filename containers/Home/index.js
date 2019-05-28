@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Box, Text, Button } from 'components';
 
 const Outer = styled.section`
-  height: calc(100vh - 100px);
+  height: 100%;
   display: flex;
 `;
 
