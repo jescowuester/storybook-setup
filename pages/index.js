@@ -156,8 +156,12 @@ const content = {
     text: {
       title: 'Want to chat?',
       subTitle: 'We’d love to hear about your scale-up.',
-      smallTxt:
-        '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <span id="privacy-link"> privacy statement </span>here.'
+      disclaimer: {
+        txt:
+          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <%- link %> here.',
+        link: 'privacy statement',
+        to: '/privacy-statement'
+      }
     },
     form: {
       name: { name: 'name', type: 'text', placeholder: 'Your name' },
