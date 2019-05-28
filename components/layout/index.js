@@ -50,8 +50,10 @@ const Layout = ({ children }) => {
           ))}
         </Flex>
       </Nav>
-      <Main>{children}</Main>
-      <Footer>footi</Footer>
+      <Main>
+        {children}
+        <Footer>footi</Footer>
+      </Main>
     </>
   );
 };
