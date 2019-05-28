@@ -79,6 +79,10 @@ h4 {
 
 }
 
+.swiper-pagination-bullet-active{
+  background: #fff !important;
+}
+
 button {
   border: none;
   margin: 0;

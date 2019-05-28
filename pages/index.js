@@ -38,6 +38,17 @@ const content = {
       'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.',
     button: 'Book a call'
   },
+  hiringEasyAlt: {
+    images: [
+      { img: '/static/placeholder.jpg', _id: 1 },
+      { img: '/static/placeholder.jpg', _id: 2 },
+      { img: '/static/placeholder.jpg', _id: 3 }
+    ],
+    title: 'Want to make hiring easy?',
+    text:
+      'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.',
+    button: 'Book a call'
+  },
   whatWeDo: {
     title: 'What we do.',
     card1: {
@@ -264,6 +275,7 @@ function Index() {
   return (
     <>
       <Home content={content.home} />
+      <HiringEasy secondary content={content.hiringEasyAlt} />
       <Jobs content={content.jobs} />
       <Article content={content.article} />
       <HiringEasy content={content.hiringEasy} />
