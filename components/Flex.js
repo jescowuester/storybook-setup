@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   flexWrap,
   flexDirection,
+  alignSelf,
   space,
   color,
   width,
@@ -27,6 +28,7 @@ const Flex = styled.div(
   height,
   minWidth,
   flexWrap,
+  alignSelf,
   flexDirection,
   alignItems,
   alignContent,

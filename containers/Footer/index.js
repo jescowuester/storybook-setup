@@ -122,7 +122,12 @@ const Footer = () => (
       flexWrap={['wrap', 'no-wrap']}
       mb="70px"
     >
-      <Col flexDirection={['row', 'column', 'column']} alignItems="flex-start">
+      <Col
+        flexDirection={['row', 'column']}
+        width={['100%', 'auto']}
+        justifyContent={['space-between', 'flex-start']}
+        alignItems={['center', 'flex-start']}
+      >
         <Col flexDirection="column" alignItems="flex-start">
           <img
             css="cursor: pointer"
@@ -138,13 +143,15 @@ const Footer = () => (
             </Text>
           </Col>
         </Col>
-        <TextButton
-          mb={['20px', '80px']}
-          color="#94BDF0"
-          alignSelf={['flex-end', 'flex-start']}
-        >
-          Get in touch
-        </TextButton>
+        <Col mx={['30px', 0]} alignSelf={['flex-end', 'flex-start']}>
+          <TextButton
+            mb={['20px', '80px']}
+            color="#94BDF0"
+            alignSelf={['flex-end', 'flex-start']}
+          >
+            Get in touch
+          </TextButton>
+        </Col>
         <img
           css="cursor: pointer"
           src="/static/xxx.svg"
