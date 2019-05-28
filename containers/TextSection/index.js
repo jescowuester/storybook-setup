@@ -9,7 +9,7 @@ const formatNewLine = text =>
   ));
 
 const TextSection = ({ content: { col1, col2, title, tagline } }) => (
-  <Section p={['40px', '40px', '160px 255px']}>
+  <Section p={['40px', '100 150px', '160px 255px']}>
     <Text mb="40px" as="h3">
       {title}
     </Text>

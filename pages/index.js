@@ -5,6 +5,7 @@ import {
   HiringEasy,
   Home,
   InGreatCompany,
+  LargeCards,
   TextSection,
   WantToKnowMore,
   WeAreSpecialists,
@@ -203,7 +204,21 @@ const content = {
         weekend: '🎉 Celebrating the weekend'
       }
     }
-  }
+  },
+  largeCards: [
+    {
+      img: '/static/placeholder.jpg',
+      title: 'We do recruitment',
+      text:
+        '<p>From a single to multiple key hires, from your next international hire to filling in one of your leadership roles… Done it, been there. Building entire teams?</p>  <p>Yep, done that too. Nearly 20 years of recruitment experience,</p> <p>combined with a large network and all the gear needed, we are here to help you.</p> '
+    },
+    {
+      img: '/static/placeholder.jpg',
+      title: 'We do recruitment',
+      text:
+        '<p>From a single to multiple key hires, from your next international hire to filling in one of your leadership roles… Done it, been there. Building entire teams?</p>  <p>Yep, done that too. Nearly 20 years of recruitment experience,</p> <p>combined with a large network and all the gear needed, we are here to help you.</p> '
+    }
+  ]
 };
 
 function Index() {
@@ -219,6 +234,7 @@ function Index() {
       <TextSection content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />
       <Contact content={content.contact} />
+      <LargeCards content={content.largeCards} />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Contact from './Contact';
 import HiringEasy from './HiringEasy';
 import Home from './Home';
 import InGreatCompany from './InGreatCompany';
+import LargeCards from './LargeCards';
 import Maps from './Maps';
 import TextSection from './TextSection';
 import WantToKnowMore from './WantToKnowMore';
@@ -15,6 +16,7 @@ export {
   HiringEasy,
   Home,
   InGreatCompany,
+  LargeCards,
   Maps,
   TextSection,
   WantToKnowMore,
