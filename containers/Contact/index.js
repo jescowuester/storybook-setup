@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import _ from 'lodash';
 
 import { Box, Button, Text, Flex, Input, Section } from 'components';
@@ -30,13 +31,30 @@ const Form = styled(Flex)`
   width: 455px;
 `;
 
+const StyledLink = styled(Link)`
+  color: purple;
+`;
+
 const Contact = ({ content: { location, text, form, address } }) => {
-  const { title, subTitle, smallTxt } = text;
+  const { title, subTitle, disclaimer } = text;
   const { title: addressTitle, location: addressLocation, hours } = address;
+
+  const disclaimerTemplate = _.template(disclaimer.txt);
+
+  const DisclaimerLink = (to, link) => (
+    <Link href={to}>
+      <a> {link} </a>
+    </Link>
+  );
+
+  const disclaimerCompiledText = disclaimerTemplate({
+    link: DisclaimerLink(disclaimer.to, disclaimer.link)
+  });
 
   const renderInputs = () =>
     _.map(form, f => (
       <Input
+        key={f.id}
         name={`${f.name}-input`}
         type={f.type}
         placeholder={f.placeholder}
@@ -47,7 +65,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   return (
     <Section>
       <ContactContainer>
-        <Box p="100px 86px 100px 160px">
+        <Box px={['86px 160px']} py={['100px']}>
           <Text mb="30px" as="h1">
             {title}
           </Text>
@@ -56,12 +74,10 @@ const Contact = ({ content: { location, text, form, address } }) => {
           </Text>
           <Form>
             {renderInputs()}
-            <Text
-              mb="40px"
-              fontSize="14px"
-              as="p"
-              dangerouslySetInnerHTML={{ __html: smallTxt }}
-            />
+            <Text mb="40px" fontSize="14px" as="p">
+              {disclaimerCompiledText}
+              {DisclaimerLink(disclaimer.to, disclaimer.link)}
+            </Text>
             <Button secondary width="132px" type="submit">
               submit
             </Button>
@@ -80,10 +96,10 @@ const Contact = ({ content: { location, text, form, address } }) => {
               <Text as="h3" fontSize="24px" mb="20px">
                 {addressLocation.title}
               </Text>
-              <Text as="p">
+              <Text as="p" color="#52606D">
                 {`${addressLocation.street} ${addressLocation.number}`}
               </Text>
-              <Text as="p">
+              <Text as="p" color="#52606D">
                 {`${addressLocation.zipcode} ${addressLocation.city}`}
               </Text>
             </LocationContainer>
@@ -91,13 +107,13 @@ const Contact = ({ content: { location, text, form, address } }) => {
               <Text as="h3" fontSize="24px" mb="20px">
                 {hours.title}
               </Text>
-              <Flex>
+              <Flex color="#52606D">
                 <Text as="p" mr="30px">
                   Mon - Fri
                 </Text>
                 <Text as="p">{`${hours.week.start} ${hours.week.end}`}</Text>
               </Flex>
-              <Flex>
+              <Flex color="#52606D">
                 <Text as="p" mr="30px">
                   Sat - Sun
                 </Text>

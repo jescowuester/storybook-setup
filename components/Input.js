@@ -8,10 +8,6 @@ const Input = styled.input`
   color: ${p => p.theme.colors.blackLighter};
   transition: background 0.2s, box-shadow 0.2s;
 
-  &:hover {
-
-  };
-
   &:disabled {
     background: ${p => p.theme.colors.grey};
   }
