@@ -51,7 +51,8 @@ h4 {
 
 hr {
   border: none;
-  border-bottom: 2px solid #5a525e;
+  border-bottom: 2px solid ${p => p.theme.colors.greyLight};
+  width: 100%;
 }
 
 @media (max-width: ${p => p.theme.breakpoints[1]}){
@@ -74,8 +75,8 @@ h3 {
 
 h4 {
   font-size: ${p => p.theme.font.sizes.small.h4};
-}rder-bottom: 2px solid #5a525e;
 }
+
 }
 
 button {
