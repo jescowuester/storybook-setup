@@ -11,6 +11,7 @@ import TextSection from './TextSection';
 import WantToKnowMore from './WantToKnowMore';
 import WeAreSpecialists from './WeAreSpecialists';
 import WhatWeDo from './WhatWeDo';
+import Jobs from './Jobs';
 
 export {
   Article,
@@ -25,5 +26,6 @@ export {
   TextSection,
   WantToKnowMore,
   WeAreSpecialists,
-  WhatWeDo
+  WhatWeDo,
+  Jobs
 };

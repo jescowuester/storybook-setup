@@ -10,7 +10,8 @@ import {
   TextSection,
   WantToKnowMore,
   WeAreSpecialists,
-  WhatWeDo
+  WhatWeDo,
+  Jobs
 } from 'containers';
 
 const content = {
@@ -223,7 +224,39 @@ const content = {
   article: {
     text:
       '<p> Al 6 jaar verbindt Ageras klanten met accountants en boekhouders in Denemarken, Zweden, Noorwegen, Nederland, Duitsland en het Verenigd Koninkrijk. </p> <p> Het succesverhaal begon in Kopenhagen, maar nu is het tijd voor een spannend nieuw hoofdstuk: de opening van een kantoor in Amsterdam! Ageras en One. zitten op dezelfde verdieping en een partnership was dan ook snel gesloten. Voor het opzetten van het eerste buitenlandse team helpt One. met o.a. employer branding en het vinden van de juiste mensen om van Ageras Nederland een groot succes te maken. Het Nederlandse team onder leiding van Nick bestaat nu uit Customer Success Managers Romy en Hans, en als Account Manager Sophie. Ageras is een slim platform dat boekhouders en accountants aan klanten koppelt. In het team zorgen de accountmanagers er voor dat er nieuwe accountants </p> <img src="/static/placeholder.jpg" /> <p> aan het platform worden aangesloten, en de customer success managers zijn verantwoordelijk voor de B2C zijde van de ‘marktplaats’. </p> ',
-    shareText: 'Share this story'
+    shareText: 'Share this story',
+    title: 'Setting up a team from scratch in The Netherlands',
+    backButton: 'Back to blog overview'
+  },
+  jobs: {
+    title: 'Jobs at One.',
+    buttonText: 'View all vacancies',
+    jobs: [
+      {
+        _id: 1,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: true
+      },
+      {
+        _id: 2,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      },
+      {
+        _id: 3,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      }
+    ]
   }
 };
 
@@ -231,6 +264,7 @@ function Index() {
   return (
     <>
       <Home content={content.home} />
+      <Jobs content={content.jobs} />
       <Article content={content.article} />
       <HiringEasy content={content.hiringEasy} />
       <WhatWeDo content={content.whatWeDo} />
