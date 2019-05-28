@@ -44,7 +44,7 @@ const theme = {
     family: {
       primary: 'Roboto, sans-serif',
       system:
-        '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'
+        "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif"
     },
     weights: {
       bold: 600,
