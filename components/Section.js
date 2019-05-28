@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { space, color, position, height, textAlign } from "styled-system";
+import styled from 'styled-components';
+import { space, color, position, height, textAlign } from 'styled-system';
 
-const Section = styled.div`
+const Section = styled.section`
   width: 100%;
 
   ${space}

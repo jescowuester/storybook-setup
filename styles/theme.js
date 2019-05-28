@@ -26,11 +26,20 @@ const theme = {
   },
   font: {
     sizes: {
-      h1: '73px',
-      h2: '14px',
-      h3: '46px',
-      h4: '36px',
-      p: '20px'
+      small: {
+        h1: '50px',
+        h2: '14px',
+        h3: '40px',
+        h4: '30px',
+        p: '18px'
+      },
+      large: {
+        h1: '73px',
+        h2: '14px',
+        h3: '46px',
+        h4: '36px',
+        p: '20px'
+      }
     },
     family: {
       primary: 'Roboto, sans-serif',
@@ -62,12 +71,8 @@ const theme = {
   shadows: {
     z1: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.15)',
     z2: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.15)'
-  }
-  // ,
-  // breakpoints: {
-  //   // use like  ${({theme})=>theme.breakpoints.max-xs}{...}
-  //   ...breakpoints
-  // }
+  },
+  breakpoints: ['900px', '1100px', '1300px']
 };
 
 export default theme;

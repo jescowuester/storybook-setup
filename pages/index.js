@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   ClientCases,
   Contact,
@@ -95,32 +94,38 @@ const content = {
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 1
       },
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 2
       },
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 3
       },
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 4
       },
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 5
       },
       {
         name: 'vanmoof',
         href: 'https://www.vanmoof.com/en_nl/',
-        img: '/static/placeholder-logo.png'
+        img: '/static/placeholder-logo.png',
+        _id: 6
       }
     ]
   },
