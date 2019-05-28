@@ -27,11 +27,11 @@ const theme = {
   font: {
     sizes: {
       small: {
-        h1: '55px',
+        h1: '50px',
         h2: '14px',
         h3: '40px',
         h4: '30px',
-        p: '16px'
+        p: '18px'
       },
       large: {
         h1: '73px',
@@ -72,7 +72,7 @@ const theme = {
     z1: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.15)',
     z2: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.15)'
   },
-  breakpoints: ['765px', '900px', '1300px']
+  breakpoints: ['900px', '1100px', '1300px']
 };
 
 export default theme;

@@ -23,8 +23,8 @@ const HiringEasy = ({ content: { img, title, text, button } }) => {
           <Text mb="50px" as="p">
             {text}
           </Text>
-          <Button>{button}</Button>
-          <TextButton ml="30px">Download our pitch</TextButton>
+          <Button mb={['10px', '10px', 0]}>{button}</Button>
+          <TextButton ml={[0, '30px', '30px']}>Download our pitch</TextButton>
         </Box>
         <Img src={img} />
       </Flex>

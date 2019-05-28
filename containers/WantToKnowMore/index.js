@@ -13,7 +13,7 @@ const WantToKnowMore = ({ content: { title, text, button, img } }) => (
   <SectionWithBackground
     src={img}
     textAlign="center"
-    p="160px"
+    p={['50px 10px', '40px', '160px']}
     bg="greyLighter"
   >
     <Text mb="30px" as="h3">

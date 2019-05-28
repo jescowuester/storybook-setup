@@ -13,9 +13,8 @@ const Img = styled.div`
   border-radius: 5px;
 `;
 
-const Container = styled(Flex).attrs({
-  flexWrap: 'wrap'
-})`
+const Container = styled(Flex)`
+  flex-wrap: wrap;
   margin-bottom: 80px;
   text-align: left;
   h4 {
@@ -26,9 +25,13 @@ const Container = styled(Flex).attrs({
     color: ${p => p.theme.colors.blackLight};
     font-size: 18px;
   }
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    margin-bottom: 0;
+  }
 `;
 
 const cardWidth = ['98%', '98%', '48%'];
+const cardMargin = ['20px', '10px', '0'];
 
 const ClientCases = ({ content: { card1, card2, card3, card4, button } }) => (
   <Section
@@ -40,24 +43,24 @@ const ClientCases = ({ content: { card1, card2, card3, card4, button } }) => (
       Client Cases.
     </Text>
     <Container justifyContent="space-between" width="100%">
-      <Box width={cardWidth}>
+      <Box mb={cardMargin} width={cardWidth}>
         <Img img={card1.img} />
         <Text as="h4">{card1.title}</Text>
         <Text as="p">{card1.text}</Text>
       </Box>
-      <Box width={cardWidth}>
+      <Box mb={cardMargin} width={cardWidth}>
         <Img img={card2.img} />
         <Text as="h4">{card2.title}</Text>
         <Text as="p">{card2.text}</Text>
       </Box>
     </Container>
     <Container justifyContent="space-between" width="100%">
-      <Box width={cardWidth}>
+      <Box mb={cardMargin} width={cardWidth}>
         <Img img={card3.img} />
         <Text as="h4">{card3.title}</Text>
         <Text as="p">{card3.text}</Text>
       </Box>
-      <Box width={cardWidth}>
+      <Box mb={cardMargin} width={cardWidth}>
         <Img img={card4.img} />
         <Text as="h4">{card4.title}</Text>
         <Text as="p">{card4.text}</Text>

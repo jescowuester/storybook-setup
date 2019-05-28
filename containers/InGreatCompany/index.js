@@ -12,16 +12,19 @@ const LogoContainer = styled.div`
 `;
 
 const InGreatCompany = ({ content: { title, text, companies } }) => (
-  <Section p="130px 160px 30px" textAlign="center">
+  <Section
+    p={['50px 40px 10px', '50px 60px 10px', '130px 160px 30px']}
+    textAlign="center"
+  >
     <Text mb="30px" as="h3">
       {title}
     </Text>
-    <Text mx="20%" mb="120px" as="p">
+    <Text mx={['5%', '10%', '20%']} mb="120px" as="p">
       {text}
     </Text>
-    <Flex flexWrap="wrap">
-      {companies.map(({ name, href, img }, key) => (
-        <LogoContainer key={key}>
+    <Flex justifyContent="center" flexWrap="wrap">
+      {companies.map(({ name, href, img, _id }) => (
+        <LogoContainer key={_id}>
           <Link href={href}>
             <a target="blank">
               <img src={img} alt={name} />

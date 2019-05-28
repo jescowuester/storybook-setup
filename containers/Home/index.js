@@ -3,10 +3,17 @@ import styled from 'styled-components';
 import { Box, Text, Button } from 'components';
 
 const Outer = styled.section`
-  height: 100%;
   display: flex;
+  @media (min-width: ${p => p.theme.breakpoints[1]}) {
+    height: 100%;
+  }
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     flex-direction: column;
+    /* min-height: 100%; */
+
+    & > div {
+      min-height: 420px;
+    }
   }
 `;
 

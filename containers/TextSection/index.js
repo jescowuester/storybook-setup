@@ -9,13 +9,14 @@ const formatNewLine = text =>
   ));
 
 const TextSection = ({ content: { col1, col2, title, tagline } }) => (
-  <Section p="160px 255px">
+  <Section p={['40px', '40px', '160px 255px']}>
     <Text mb="40px" as="h3">
       {title}
     </Text>
     <Flex
       justifyContent="space-between"
       alignItems={col2 ? 'flex-start' : 'center'}
+      flexDirection={['column', 'column', 'row']}
     >
       <Box flexBasis="50%">{formatNewLine(col1)}</Box>
       <Box flexBasis="40%" alignItems="center">
@@ -24,7 +25,13 @@ const TextSection = ({ content: { col1, col2, title, tagline } }) => (
             {col2}
           </Text>
         )}
-        <Text lineHeight="46px" fontSize="36px" color="blue" as="p">
+        <Text
+          mt={['20px', '20px', '0']}
+          lineHeight="46px"
+          fontSize="36px"
+          color="blue"
+          as="p"
+        >
           {tagline}
         </Text>
       </Box>
