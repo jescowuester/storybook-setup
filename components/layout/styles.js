@@ -12,6 +12,9 @@ const Nav = styled.nav`
   background: ${p => p.theme.colors.white};
   display: flex;
   align-items: center;
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    padding: 0 20px;
+  }
 `;
 
 const Main = styled.main`
@@ -32,4 +35,24 @@ const StyledFooter = styled.footer`
   ${space}
 `;
 
-export { Main, StyledFooter, Nav, NavLink };
+const NavSwitcher = styled.div`
+  margin-left: auto;
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    .text {
+      display: none;
+    }
+    .bars {
+      display: block;
+    }
+  }
+  @media (min-width: ${p => p.theme.breakpoints[1]}) {
+    .text {
+      display: flex;
+    }
+    .bars {
+      display: none;
+    }
+  }
+`;
+
+export { Main, StyledFooter, Nav, NavLink, NavSwitcher };
