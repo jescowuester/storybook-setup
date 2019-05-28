@@ -106,11 +106,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
                 {`${addressLocation.zipcode} ${addressLocation.city}`}
               </Text>
             </LocationContainer>
-            <HoursContainer
-              flexDirection="column"
-              mt={[0, '20px']}
-              maxWidth={['100%', '360px']}
-            >
+            <HoursContainer flexDirection="column" maxWidth={['100%', '360px']}>
               <Text as="h3" fontSize="24px" mb="20px">
                 {hours.title}
               </Text>
