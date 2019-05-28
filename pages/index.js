@@ -1,15 +1,16 @@
 import React from 'react';
 import {
   Article,
-  Home,
-  HiringEasy,
-  WhatWeDo,
   ClientCases,
+  Contact,
+  HiringEasy,
+  Home,
   InGreatCompany,
+  LargeCards,
+  TextSection,
   WantToKnowMore,
   WeAreSpecialists,
-  TextSection,
-  LargeCards
+  WhatWeDo
 } from 'containers';
 
 const content = {
@@ -157,6 +158,54 @@ const content = {
       'Now, imagine a world where it’s easy to find great candidates, it’s easy for people to show interest in jobs, it’s easy for hiring teams to collaborate, and your recruiting vendors are just a click away.',
     tagline: 'We imagined it. And then we delivered it.'
   },
+  contact: {
+    location: { lat: 52.3644254, lng: 4.8878303 },
+    text: {
+      title: 'Want to chat?',
+      subTitle: 'We’d love to hear about your scale-up.',
+      disclaimer: {
+        txt:
+          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <%- link %> here.',
+        link: 'privacy statement',
+        to: '/privacy-statement'
+      }
+    },
+    form: {
+      name: {
+        name: 'name',
+        type: 'text',
+        placeholder: 'Your name',
+        id: 'eb4a5b0f-b3b2-4782-8a90-2c896a4bbc2c'
+      },
+      email: {
+        name: 'email',
+        type: 'email',
+        placeholder: 'Your email',
+        id: 'dd754897-da20-4cb9-8bed-0ebbedd1e497'
+      },
+      phone: {
+        name: 'tel',
+        type: 'tel',
+        placeholder: 'Your phone number',
+        id: '49b90960-e3c1-402b-9803-0a34a61ea1d5'
+      }
+    },
+    address: {
+      title: 'Our Office',
+      location: {
+        title: 'Address ',
+        street: 'Keizersgracht',
+        number: '555',
+        zipcode: '1017 DR',
+        city: 'Amsterdam'
+      },
+      hours: {
+        title: 'hours',
+        week: { start: '8 AM', end: '6 PM' },
+        weekend: '🎉 Celebrating the weekend'
+      }
+    }
+  },
   largeCards: [
     {
       img: '/static/placeholder.jpg',
@@ -191,6 +240,7 @@ function Index() {
       <WeAreSpecialists content={content.weAreSpecialists} />
       <TextSection secondary content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />
+      <Contact content={content.contact} />
       <LargeCards content={content.largeCards} />
     </>
   );

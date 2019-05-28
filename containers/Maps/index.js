@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import Script from 'react-load-script';
 
-const styles = [{}];
+import { Icon } from 'components';
+
+import styles from './styles';
 
 class Maps extends PureComponent {
   constructor(props) {

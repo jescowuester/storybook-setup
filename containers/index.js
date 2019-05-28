@@ -1,23 +1,27 @@
 import Article from './Article';
-import Home from './Home';
-import HiringEasy from './HiringEasy';
-import WhatWeDo from './WhatWeDo';
 import ClientCases from './ClientCases';
-import WantToKnowMore from './WantToKnowMore';
+import Contact from './Contact';
+import HiringEasy from './HiringEasy';
+import Home from './Home';
 import InGreatCompany from './InGreatCompany';
-import WeAreSpecialists from './WeAreSpecialists';
-import TextSection from './TextSection';
 import LargeCards from './LargeCards';
+import Maps from './Maps';
+import TextSection from './TextSection';
+import WantToKnowMore from './WantToKnowMore';
+import WeAreSpecialists from './WeAreSpecialists';
+import WhatWeDo from './WhatWeDo';
 
 export {
   Article,
-  Home,
-  HiringEasy,
-  WhatWeDo,
   ClientCases,
-  WantToKnowMore,
+  Contact,
+  HiringEasy,
+  Home,
   InGreatCompany,
-  WeAreSpecialists,
+  LargeCards,
+  Maps,
   TextSection,
-  LargeCards
+  WantToKnowMore,
+  WeAreSpecialists,
+  WhatWeDo
 };
