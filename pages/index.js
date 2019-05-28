@@ -7,7 +7,8 @@ import {
   InGreatCompany,
   WantToKnowMore,
   WeAreSpecialists,
-  TextSection
+  TextSection,
+  LargeCards
 } from 'containers';
 
 const content = {
@@ -154,7 +155,21 @@ const content = {
     col2:
       'Now, imagine a world where it’s easy to find great candidates, it’s easy for people to show interest in jobs, it’s easy for hiring teams to collaborate, and your recruiting vendors are just a click away.',
     tagline: 'We imagined it. And then we delivered it.'
-  }
+  },
+  largeCards: [
+    {
+      img: '/static/placeholder.jpg',
+      title: 'We do recruitment',
+      text:
+        '<p>From a single to multiple key hires, from your next international hire to filling in one of your leadership roles… Done it, been there. Building entire teams?</p>  <p>Yep, done that too. Nearly 20 years of recruitment experience,</p> <p>combined with a large network and all the gear needed, we are here to help you.</p> '
+    },
+    {
+      img: '/static/placeholder.jpg',
+      title: 'We do recruitment',
+      text:
+        '<p>From a single to multiple key hires, from your next international hire to filling in one of your leadership roles… Done it, been there. Building entire teams?</p>  <p>Yep, done that too. Nearly 20 years of recruitment experience,</p> <p>combined with a large network and all the gear needed, we are here to help you.</p> '
+    },
+  ]
 };
 
 function Index() {
@@ -169,6 +184,7 @@ function Index() {
       <WeAreSpecialists content={content.weAreSpecialists} />
       <TextSection content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />
+      <LargeCards content={content.largeCards} />
     </>
   );
 }

@@ -5,40 +5,59 @@ import styled from 'styled-components';
 import { Flex, Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
-  width: 50%;
-  height: 100%;
-
-  background-image: url(${p => p.src});
+  min-width: 50%;
+  height: 600px;
+  background: url(${p => p.img}) no-repeat center;
   background-size: cover;
-  background-position: center;
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    width: 100%;
+  height: 0;
+  padding-top: 56%;
+  }
 `;
 
-const Card = ({ src, title, text, redirect, secondary }) => (
-  <Flex mb="160px" mx="30px">
-    <Img src={src} />
-    <Box bg={secondary ? 'white' : 'greyLighter'} p="50px">
-      <Text mb="30px" as="h4">
+const TextSection = styled.div`
+  font-size: 18px;
+  color: ${p=>p.theme.colors.blackLight};
+  p{
+    margin-bottom: 20px;
+    &:last-child{
+    margin-bottom: 30px;
+    }
+  }
+`
+
+
+const CardLarge = ({ img, title, text, redirect, secondary, reverse }) => {
+const flexDirection = ["column","column", reverse ? "row-reverse" : 'row']
+  
+  return(
+  <Flex width={['100%','100%','auto']} flexDirection={flexDirection} mb={['40px','40px',"160px"]} mx={[0,0,"30px"]}>
+    <Img img={img} />
+    <Box bg={secondary ? 'greyLighter' : 'white'} p={["50px 40px","50px 40px","100px 80px"]}>
+      <Text mb="40px" as="h4">
         {title}
       </Text>
-      <Text mb="40px" fontSize="18px" as="p">
-        {text}
-      </Text>
+      <TextSection
+        dangerouslySetInnerHTML={{ __html: text }} />
       <TextButton secondary={secondary}>{redirect}</TextButton>
     </Box>
   </Flex>
-);
+)};
 
-Card.defaultProps = {
+CardLarge.defaultProps = {
   redirect: 'Learn more',
-  secondary: false
+  secondary: false,
+  reverse: false
 };
 
-Card.propTypes = {
-  src: PropTypes.string.isRequired,
+CardLarge.propTypes = {
+  img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   redirect: PropTypes.string,
-  secondary: PropTypes.bool
+  secondary: PropTypes.bool,
+  reverse: PropTypes.bool
 };
 
-export default Card;
+export default CardLarge;
