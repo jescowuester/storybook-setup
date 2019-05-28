@@ -37,6 +37,9 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^2.3.0",
-    "stylelint-config-recommended": "^2.2.0"
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   }
 }
