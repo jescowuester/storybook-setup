@@ -11,7 +11,8 @@ import {
   WantToKnowMore,
   WeAreSpecialists,
   WhatWeDo,
-  Jobs
+  Jobs,
+  OurTeam
 } from 'containers';
 
 const content = {
@@ -268,6 +269,45 @@ const content = {
         liked: false
       }
     ]
+  },
+  ourTeam: {
+    title: 'This is our team.',
+    text:
+      'We’re crazy about recruitment, more about people. We’re a team of innovators, scale-up enthusiasts, 360 recruiters, sourcers, growth hackers, and content specialists. We work together to help Scale-Up’s grow & prosper, by working with them to find the perfect people to make it happen. We have the network, experience and tools, to make the recruitment process easy for you, simply, because we take care of it.',
+    teamMembers: [
+      {
+        img: '/static/placeholder.jpg',
+        name: 'Justin Swart',
+        text:
+          'Meet Tim. Tim was the first One team player and is one heck of a guy...',
+        buttonText: 'Learn more',
+        _id: 1
+      },
+      {
+        img: '/static/placeholder.jpg',
+        name: 'Justin Swart',
+        text:
+          'Meet Tim. Tim was the first One team player and is one heck of a guy...',
+        buttonText: 'Learn more',
+        _id: 2
+      },
+      {
+        img: '/static/placeholder.jpg',
+        name: 'Justin Swart',
+        text:
+          'Meet Tim. Tim was the first One team player and is one heck of a guy...',
+        buttonText: 'Learn more',
+        _id: 3
+      },
+      {
+        img: '/static/placeholder.jpg',
+        name: 'Justin Swart',
+        text:
+          'Meet Tim. Tim was the first One team player and is one heck of a guy...',
+        buttonText: 'Learn more',
+        _id: 4
+      }
+    ]
   }
 };
 
@@ -275,6 +315,7 @@ function Index() {
   return (
     <>
       <Home content={content.home} />
+      <OurTeam content={content.ourTeam} />
       <HiringEasy secondary content={content.hiringEasyAlt} />
       <Jobs content={content.jobs} />
       <Article content={content.article} />

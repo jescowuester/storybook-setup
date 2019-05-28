@@ -9,7 +9,8 @@ import {
 import {
   faLongArrowRight,
   faHeart as faHeartRegular,
-  faLongArrowLeft
+  faLongArrowLeft,
+  faBars
 } from '@fortawesome/pro-regular-svg-icons';
 
 import {
@@ -38,6 +39,7 @@ library.add(
   // regular
   faLongArrowRight,
   faHeartRegular,
+  faBars,
 
   //solid
   faHeart,

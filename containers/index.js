@@ -12,6 +12,7 @@ import WantToKnowMore from './WantToKnowMore';
 import WeAreSpecialists from './WeAreSpecialists';
 import WhatWeDo from './WhatWeDo';
 import Jobs from './Jobs';
+import OurTeam from './OurTeam';
 
 export {
   Article,
@@ -27,5 +28,6 @@ export {
   WantToKnowMore,
   WeAreSpecialists,
   WhatWeDo,
-  Jobs
+  Jobs,
+  OurTeam
 };
