@@ -1,5 +1,11 @@
 import React from 'react';
-import { ClientCases, HiringEasy, InGreatCompany, WhatWeDo } from 'containers';
+import {
+  ClientCases,
+  HiringEasy,
+  InGreatCompany,
+  WhatWeDo,
+  WantToKnowMore
+} from 'containers';
 
 const content = {
   hiringEasy: {
@@ -124,6 +130,12 @@ const content = {
         _id: 9
       }
     ]
+  },
+  wantToKnowMore: {
+    img: '/static/placeholder-background.jpg',
+    title: 'Want to know more?',
+    text: 'Read our Pitch deck for more information',
+    button: 'Download'
   }
 };
 
@@ -134,6 +146,7 @@ function HomePage() {
       <WhatWeDo content={content.whatWeDo} />
       <ClientCases content={content.clientCases} />
       <InGreatCompany content={content.inGreatCompany} />
+      <WantToKnowMore content={content.wantToKnowMore} />
     </>
   );
 }

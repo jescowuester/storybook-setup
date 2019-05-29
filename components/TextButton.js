@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { space, alignSelf } from 'styled-system';
 
-import { Icon } from 'components';
+import Icon from './Icon';
 
 const A = styled.a`
   ${space}

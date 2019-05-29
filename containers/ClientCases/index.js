@@ -13,7 +13,7 @@ const Img = styled.div`
   border-radius: 5px;
 `;
 
-const Container = styled(Flex)`
+const Container = styled(props => <Flex {...props} />)`
   flex-wrap: wrap;
   margin-bottom: 80px;
   text-align: left;

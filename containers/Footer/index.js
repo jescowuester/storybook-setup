@@ -62,11 +62,11 @@ const rightNav = [
   }
 ];
 
-const TradeMarkContainer = styled(Flex)``;
-const Content = styled(Flex)``;
-const Col = styled(Flex)``;
-const RatingContainer = styled(Flex)``;
-const NavItemContainer = styled(Flex)``;
+const TradeMarkContainer = styled(props => <Flex {...props} />)``;
+const Content = styled(props => <Flex {...props} />)``;
+const Col = styled(props => <Flex {...props} />)``;
+const RatingContainer = styled(props => <Flex {...props} />)``;
+const NavItemContainer = styled(props => <Flex {...props} />)``;
 
 const rating = [1, 1, 1, 1, 1, 1, 1, 1, 0.5];
 

@@ -6,23 +6,23 @@ import _ from 'lodash';
 import { Box, Button, Text, Flex, Input, Section } from 'components';
 import { Maps } from 'containers';
 
-const ContactContainer = styled(Flex)``;
+const ContactContainer = styled(props => <Flex {...props} />)``;
 
-const AddressContainer = styled(Flex)``;
-const LocationContainer = styled(Flex)``;
-const HoursContainer = styled(Flex)``;
+const AddressContainer = styled(props => <Flex {...props} />)``;
+const LocationContainer = styled(props => <Flex {...props} />)``;
+const HoursContainer = styled(props => <Flex {...props} />)``;
 
-const MapsContainer = styled(Flex)`
+const MapsContainer = styled(props => <Flex {...props} />)`
   width: 100%;
 `;
 
-const Form = styled(Flex)`
+const Form = styled(props => <Flex {...props} />)`
   flex-direction: column;
   width: 455px;
   max-width: 90%;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(props => <Link {...props} />)`
   color: purple;
 `;
 

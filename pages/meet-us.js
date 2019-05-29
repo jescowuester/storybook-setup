@@ -1,0 +1,113 @@
+import React from 'react';
+import {
+  HiringEasy,
+  TextSection,
+  Jobs,
+  OurTeam,
+  WantToKnowMore
+} from 'containers';
+
+const content = {
+  hero: {
+    img: '/static/home-hero.png',
+    title: 'Connecting leaders to scale-ups',
+    text:
+      "As a team of entrepreneurs, we're all here with a mission to help companies change the world. We're not an agency, which means we don't compete, we work together.",
+    button: 'View open positions'
+  },
+  ourTeam: {
+    title: 'This is our team.',
+    text:
+      'We’re crazy about recruitment, more about people. We’re a team of innovators, scale-up enthusiasts, 360 recruiters, sourcers, growth hackers, and content specialists.',
+    teamMembers: [
+      {
+        img: '/static/meet-us-tim.png',
+        name: 'Tim Goedhart',
+        text:
+          'Meet Tim. Tim was the first One team player and is one heck of a guy. Punching well above 6 feet, he is also one of our ambitious Head of Recruitment, with clear plans to help grow our recruitment side of the business and really turn us into a force to be reckoned with in the Netherlands, and the world. Although he didn’t quite say “world domination” it isn’t entirely off the cards it seems.',
+        buttonText: 'Learn more',
+        _id: 1
+      },
+      {
+        img: '/static/meet-us-justin.png',
+        name: 'Justin Swart',
+        text:
+          "Meet Justin, our resident Growth Hacker. As fancy and badass as the title sounds, he doesn’t actually do a lot of hacking - but the growth part, he definitely has down pact. He is a born and bread Amsterdammer and couldn't imagine living anywhere else. He joined our team shortly after it all started, and was enticed by the challenge of growing a business from scratch, and the unbridled enthusiasm from Kaan, our founder",
+        buttonText: 'Learn more',
+        _id: 2
+      },
+      {
+        img: '/static/meet-us-debbie.png',
+        name: 'Debbie Breg',
+        text:
+          'Meet Debbie, Debbie is our secretary of state - which basically means she knows literally everything, all of the time - sort of like a covert agent. As our queen of operations, Debbie keeps things ticking over, and without her I’m sure we would all be pulling our hair out - and that wouldn’t make for good looking team pictures.',
+        buttonText: 'Learn more',
+        _id: 3
+      },
+      {
+        img: '/static/meet-us-kaan.png',
+        name: 'Kaan Anit',
+        text:
+          'Meet Kaan, Kaan is our founder - so I guess it’s kudos to him for bringing us all together (we won’t say that too loud though in case he gets big head). With 18 years within the recruitment industry, he is a veteran. Kaan fell into recruitment entirely by accident however, but says retrospectively it makes perfect sense that he did.',
+        buttonText: 'Learn more',
+        _id: 4
+      }
+    ]
+  },
+  jobs: {
+    title: 'Jobs at One.',
+    buttonText: 'View all vacancies',
+    jobs: [
+      {
+        _id: 1,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: true
+      },
+      {
+        _id: 2,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      },
+      {
+        _id: 3,
+        jobTitle: 'Designer',
+        jobTitlePrefix: 'Senior User Experience',
+        location: 'Amsterdam, the Netherlands',
+        company: 'Oneworks',
+        liked: false
+      }
+    ]
+  },
+  fixRecruitmentGame: {
+    title: 'Our mission.',
+    col1:
+      'We believe the brightest founders and entrepreneurs will turn their disruptive ideas into world-changing businesses. We want to be there with them, supporting & empowering their growth by connecting them to world class people and helping them build all star teams.',
+    tagline: '‘Connecting awesome leaders to scale-ups’'
+  },
+  wantToKnowMore: {
+    img: '/static/meet-us-banner.jpg',
+    title: 'Want to know more?',
+    text: 'Read our Pitch deck for more information',
+    button: 'Download'
+  }
+};
+
+function Index() {
+  return (
+    <>
+      <HiringEasy secondary content={content.hero} />
+      <OurTeam content={content.ourTeam} />
+      <TextSection secondary content={content.fixRecruitmentGame} />
+      <Jobs content={content.jobs} />
+      <WantToKnowMore white content={content.wantToKnowMore} />
+    </>
+  );
+}
+
+export default Index;

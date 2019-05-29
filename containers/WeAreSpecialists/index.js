@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Text, Button, Section } from 'components';
 
-const SectionWithBackground = styled(Section)`
+const SectionWithBackground = styled(props => <Section {...props} />)`
   background-image: url(${p => p.src});
   background-size: cover;
   background-position: center;

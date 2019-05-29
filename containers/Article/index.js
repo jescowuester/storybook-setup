@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ShareButton, Section, Text, Flex, Box, Icon } from 'components';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 const FormatedText = styled.div`
   width: 60%;
   color: ${p => p.theme.colors.blackLight};
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     width: 100%;
+  }
+  h2 {
+    font-family: Roboto;
+    text-transform: none;
+    margin-bottom: 1.5rem;
+    font-size: 26px;
+  }
+  .blog-post__quote {
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: justify;
+    color: ${p => p.theme.colors.greyDarker};
+    margin-bottom: 100px;
   }
   p {
     margin-bottom: 1rem;
@@ -32,7 +46,9 @@ const BackButton = styled.button`
   }
 `;
 
-const Article = ({ content: { text, shareText, title, backButton } }) => {
+const Article = ({
+  content: { text, shareText, title, backButton, backHref }
+}) => {
   return (
     <Section>
       <Flex
@@ -42,10 +58,12 @@ const Article = ({ content: { text, shareText, title, backButton } }) => {
         bg="greyLighter"
         width="100%"
       >
-        <BackButton>
-          <Icon mr="8px" icon={['far', 'long-arrow-left']} />
-          <Text as="span"> {backButton} </Text>
-        </BackButton>
+        <Link href={backHref}>
+          <BackButton>
+            <Icon mr="8px" icon={['far', 'long-arrow-left']} />
+            <Text as="span"> {backButton} </Text>
+          </BackButton>
+        </Link>
         <Text as="h1">{title}</Text>
       </Flex>
       <Flex
@@ -71,8 +89,9 @@ const Article = ({ content: { text, shareText, title, backButton } }) => {
 Article.propTypes = {
   content: PropTypes.objectOf({
     text: PropTypes.string,
-    shareText: PropTypes.string
-  })
+    shareText: PropTypes.string,
+    backHref: PropTypes.string
+  }).isRequired
 };
 
 export default Article;

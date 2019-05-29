@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'components';
 import styled from 'styled-components';
-import {space} from "styled-system"
+import { space } from 'styled-system';
+import Icon from './Icon';
 
 const Outer = styled.button`
   background: ${p => p.theme.colors.greyLighter};
@@ -12,8 +12,8 @@ const Outer = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover{
-  background: ${p => p.theme.colors.greyLight};
+  &:hover {
+    background: ${p => p.theme.colors.greyLight};
   }
   transition: background 0.1s;
   ${space}
@@ -21,14 +21,14 @@ const Outer = styled.button`
 
 const ShareButton = ({ icon, ...props }) => {
   return (
-    <Outer {...props} >
+    <Outer {...props}>
       <Icon fontSize="20px" color="redLight" icon={icon} />
     </Outer>
   );
 };
 
 ShareButton.propTypes = {
-    icon: PropTypes.array.isRequired
+  icon: PropTypes.array.isRequired
 };
 
 export default ShareButton;

@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Flex, Box, Text, TextButton } from 'components';
+import Flex from './Flex';
+import Box from './Box';
+import Text from './Text';
+import TextButton from './TextButton';
 
 const Img = styled.div`
   min-width: 50%;
@@ -54,9 +57,11 @@ const CardLarge = ({
           {title}
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />
-        <Link href={href}>
-          <TextButton secondary={secondary}>{buttonText}</TextButton>
-        </Link>
+        <Box mt="37px">
+          <Link href={href}>
+            <TextButton secondary={secondary}>{buttonText}</TextButton>
+          </Link>
+        </Box>
       </Box>
     </Flex>
   );

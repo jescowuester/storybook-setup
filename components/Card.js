@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Box, Text, TextButton } from 'components';
+import Box from './Box';
+import Text from './Text';
+import TextButton from './TextButton';
 
 const Img = styled.div`
   width: 100%;
@@ -14,7 +16,11 @@ const Img = styled.div`
 `;
 
 const Card = ({ img, title, text, redirect, secondary, href }) => (
-  <Box mb={['60px', '100px', '160px']} mx={['10px', '10px', '30px']}>
+  <Box
+    minHeight="100%"
+    mb={['60px', '100px', '160px']}
+    mx={['10px', '10px', '30px']}
+  >
     <Img img={img} />
     <Box bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
       <Text mb="30px" as="h4">
@@ -34,14 +40,17 @@ const Card = ({ img, title, text, redirect, secondary, href }) => (
 
 Card.defaultProps = {
   redirect: 'Learn more',
-  secondary: false
+  secondary: false,
+  href: '/'
 };
 
 Card.propTypes = {
+  img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   redirect: PropTypes.string,
-  secondary: PropTypes.bool
+  secondary: PropTypes.bool,
+  href: PropTypes.string
 };
 
 export default Card;

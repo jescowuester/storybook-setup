@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { withRouter } from 'next/router';
 import Link from 'next/link';
-import { Flex, Text, Icon } from 'components';
-import { Footer, WantToKnowMore } from 'containers';
 import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher } from './styles';
-import { withRouter } from 'next/router';
+import Footer from '../../containers/Footer';
+
+import Flex from '../Flex';
+import Text from '../Text';
+import Icon from '../Icon';
 
 const navItems = [
   {
@@ -19,7 +22,7 @@ const navItems = [
   },
   {
     text: 'Meet Us',
-    href: '/meetus',
+    href: '/meet-us',
     key: 3
   },
   {
@@ -34,22 +37,12 @@ const navItems = [
   }
 ];
 
-const content = {
-  wantToKnowMore: {
-    img: '/static/placeholder-background.jpg',
-    title: 'Want to know more?',
-    text: 'Read our Pitch deck for more information',
-    button: 'Download'
-  }
-};
-
 const Layout = ({ children, router }) => {
   const [menuOpen, setMenu] = useState(false);
   const close = () => setMenu(false);
   const open = () => setMenu(true);
 
-  const isHome = router.pathname === '/' ? true : false;
-
+  const isHome = router.pathname === '/';
   return (
     <>
       <Nav>
@@ -89,7 +82,7 @@ const Layout = ({ children, router }) => {
         {!isHome && (
           <>
             {' '}
-            <WantToKnowMore content={content.wantToKnowMore} /> <Footer />{' '}
+            <Footer />{' '}
           </>
         )}
       </Main>
