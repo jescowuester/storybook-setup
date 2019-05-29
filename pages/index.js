@@ -28,8 +28,7 @@ const content = {
       tagLine: 'You are a',
       title: 'Scale-up',
       text:
-        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.',
-      button: 'Find opportunities here'
+        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best leaders today.'
     }
   },
   hiringEasy: {
@@ -324,6 +323,7 @@ function Index() {
       <ClientCases content={content.clientCases} />
       <InGreatCompany content={content.inGreatCompany} />
       <WantToKnowMore content={content.wantToKnowMore} />
+      text
       <WeAreSpecialists content={content.weAreSpecialists} />
       <TextSection secondary content={content.fixRecruitmentGame} />
       <TextSection content={content.makingHiringEasy} />

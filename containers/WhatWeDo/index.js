@@ -12,10 +12,10 @@ const index = ({ content: { title, card1, card2, card3, card4 } }) => (
     <Flex flexDirection={['column', 'column', 'row']}>
       <Flex width={colWidth} flexDirection="column">
         <Card {...card1} />
-        <Card {...card2} />
+        <Card {...card3} />
       </Flex>
       <Flex pt={['0', '0', '150px']} flexDirection="column" width={colWidth}>
-        <Card {...card3} />
+        <Card {...card2} />
         <Card {...card4} />
       </Flex>
     </Flex>

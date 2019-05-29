@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 import { Flex, Text, Icon } from 'components';
-import { Footer } from 'containers';
+import { Footer, WantToKnowMore } from 'containers';
 import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher } from './styles';
 import { withRouter } from 'next/router';
@@ -10,30 +9,39 @@ import { withRouter } from 'next/router';
 const navItems = [
   {
     text: 'About',
-    href: 'about',
+    href: '/about',
     key: 1
   },
   {
     text: 'Cases',
-    href: 'cases',
+    href: '/cases',
     key: 2
   },
   {
     text: 'Meet Us',
-    href: 'meetus',
+    href: '/meetus',
     key: 3
   },
   {
     text: 'Contact',
-    href: 'contact',
+    href: '/contact',
     key: 4
   },
   {
     text: 'Blog',
-    href: 'blog',
+    href: '/blog',
     key: 5
   }
 ];
+
+const content = {
+  wantToKnowMore: {
+    img: '/static/placeholder-background.jpg',
+    title: 'Want to know more?',
+    text: 'Read our Pitch deck for more information',
+    button: 'Download'
+  }
+};
 
 const Layout = ({ children, router }) => {
   const [menuOpen, setMenu] = useState(false);
@@ -45,13 +53,13 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav>
-        <Link href="/">
+        <Link href="/home">
           <img css="cursor: pointer" src="/static/logo.svg" />
         </Link>
 
         {isHome ? (
           <Text fontSize="18px" color="blackDark" as="p" ml="auto">
-            Connecting awesome people to scale-ups.
+            Connecting awesome leaders to scale-ups.
           </Text>
         ) : (
           <NavSwitcher>
@@ -77,7 +85,13 @@ const Layout = ({ children, router }) => {
       <MobileMenu isOpen={menuOpen} close={close} navItems={navItems} />
       <Main>
         {children}
-        {!isHome && <Footer />}
+
+        {!isHome && (
+          <>
+            {' '}
+            <WantToKnowMore content={content.wantToKnowMore} /> <Footer />{' '}
+          </>
+        )}
       </Main>
     </>
   );

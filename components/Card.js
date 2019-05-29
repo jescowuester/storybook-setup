@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 import { Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
@@ -13,17 +13,21 @@ const Img = styled.div`
   background-position: center;
 `;
 
-const Card = ({ img, title, text, redirect, secondary }) => (
+const Card = ({ img, title, text, redirect, secondary, href }) => (
   <Box mb={['60px', '100px', '160px']} mx={['10px', '10px', '30px']}>
     <Img img={img} />
     <Box bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
       <Text mb="30px" as="h4">
         {title}
       </Text>
-      <Text mb="40px" fontSize="18px" as="p">
+      <Text color="blackLight" mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <TextButton secondary={secondary}>{redirect}</TextButton>
+      <Link href={href}>
+        <TextButton as="a" secondary={secondary}>
+          {redirect}
+        </TextButton>
+      </Link>
     </Box>
   </Box>
 );

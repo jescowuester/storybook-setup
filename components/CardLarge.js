@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 import { Flex, Box, Text, TextButton } from 'components';
 
 const Img = styled.div`
@@ -27,7 +27,15 @@ const TextSection = styled.div`
   }
 `;
 
-const CardLarge = ({ img, title, text, redirect, secondary, reverse }) => {
+const CardLarge = ({
+  img,
+  title,
+  text,
+  buttonText,
+  secondary,
+  reverse,
+  href
+}) => {
   const flexDirection = ['column', 'column', reverse ? 'row-reverse' : 'row'];
 
   return (
@@ -46,25 +54,29 @@ const CardLarge = ({ img, title, text, redirect, secondary, reverse }) => {
           {title}
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />
-        <TextButton secondary={secondary}>{redirect}</TextButton>
+        <Link href={href}>
+          <TextButton secondary={secondary}>{buttonText}</TextButton>
+        </Link>
       </Box>
     </Flex>
   );
 };
 
 CardLarge.defaultProps = {
-  redirect: 'Learn more',
+  buttonText: 'Learn more',
   secondary: false,
-  reverse: false
+  reverse: false,
+  href: '/about'
 };
 
 CardLarge.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  redirect: PropTypes.string,
+  buttonText: PropTypes.string,
   secondary: PropTypes.bool,
-  reverse: PropTypes.bool
+  reverse: PropTypes.bool,
+  href: PropTypes.string
 };
 
 export default CardLarge;

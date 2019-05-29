@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 import { Text, Button, Section } from 'components';
 
 const SectionWithBackground = styled(Section)`
@@ -22,7 +22,9 @@ const WantToKnowMore = ({ content: { title, text, button, img } }) => (
     <Text mb="40px" as="p">
       {text}
     </Text>
-    <Button>{button}</Button>
+    <Button as="a" href="https://docsend.com/view/tfewsuf">
+      {button}
+    </Button>
   </SectionWithBackground>
 );
 

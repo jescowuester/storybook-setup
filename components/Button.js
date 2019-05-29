@@ -13,6 +13,7 @@ const Button = styled.button`
   &:hover{
     background: ${({ secondary, theme: { colors } }) =>
       secondary ? colors.redLighter : colors.blue};
+    opacity: 1;
   };
 
   &:disabled{

@@ -9,7 +9,7 @@ const SectionWithBackground = styled(Section)`
   background-position: center;
 `;
 
-const WeAreSpecialists = ({ content: { img, title, text, button } }) => (
+const WeAreSpecialists = ({ content: { img, title, text, buttonText } }) => (
   <SectionWithBackground
     src={img}
     textAlign={['left', 'center', 'left']}
@@ -23,7 +23,9 @@ const WeAreSpecialists = ({ content: { img, title, text, button } }) => (
     <Text mb="40px" as="p">
       {text}
     </Text>
-    <Button> {button} </Button>
+    <Button as="a" href="https://docsend.com/view/tfewsuf">
+      {buttonText}
+    </Button>
   </SectionWithBackground>
 );
 
