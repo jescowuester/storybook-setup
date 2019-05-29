@@ -1,8 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { ShareButton, Section, Text, Flex, Box, Icon } from 'components';
 import styled from 'styled-components';
 import Link from 'next/link';
+
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton
+} from 'react-share';
+
 const FormatedText = styled.div`
   width: 60%;
   color: ${p => p.theme.colors.blackLight};
@@ -47,6 +55,7 @@ const BackButton = styled.button`
 `;
 
 const Article = ({
+  router,
   content: { text, shareText, title, backButton, backHref }
 }) => {
   return (
@@ -76,9 +85,18 @@ const Article = ({
             {shareText}
           </Text>
           <Flex>
-            <ShareButton icon={['fab', 'linkedin-in']} />
-            <ShareButton mx="30px" icon={['fab', 'facebook-f']} />
-            <ShareButton icon={['fab', 'twitter']} />
+            <LinkedinShareButton url={`https://oneworks.co/${router.route}`}>
+              <ShareButton icon={['fab', 'linkedin-in']} />
+            </LinkedinShareButton>
+            <FacebookShareButton
+              hashtag="oneworks"
+              url={`https://oneworks.co/${router.route}`}
+            >
+              <ShareButton mx="30px" icon={['fab', 'facebook-f']} />
+            </FacebookShareButton>
+            <TwitterShareButton url={`https://oneworks.co/${router.route}`}>
+              <ShareButton icon={['fab', 'twitter']} />
+            </TwitterShareButton>
           </Flex>
         </Box>
       </Flex>
@@ -94,4 +112,4 @@ Article.propTypes = {
   }).isRequired
 };
 
-export default Article;
+export default withRouter(Article);
