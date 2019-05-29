@@ -24,7 +24,7 @@ const Main = styled.main`
   overflow-y: auto;
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(props => <Link {...props} />)`
   font-size: 18px;
   margin: 0 20px;
 `;

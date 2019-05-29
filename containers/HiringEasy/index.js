@@ -36,7 +36,7 @@ const swiperProps = {
   themeColor: '#fff'
 };
 
-const SwiperBox = styled(Box)`
+const SwiperBox = styled(props => <Box {...props} />)`
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     display: none;
   }
@@ -58,12 +58,14 @@ const HiringEasy = ({
           <Text mb="50px" as="p">
             {text}
           </Text>
-          <Button secondary={secondary} mb={['10px', '10px', 0]}>
-            {button}
-          </Button>
-          <TextButton secondary={secondary} ml={[0, '30px', '30px']}>
-            Download our pitch
-          </TextButton>
+          <Flex m="-5px" flexWrap="wrap" alignItems="center">
+            <Button secondary={secondary} m="7px">
+              {button}
+            </Button>
+            <TextButton secondary={secondary} m="7px">
+              Download our pitch
+            </TextButton>
+          </Flex>
         </Box>
         {images.length ? (
           <SwiperBox

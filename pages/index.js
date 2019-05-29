@@ -28,8 +28,8 @@ const content = {
       tagLine: 'You are a',
       title: 'Scale-up',
       text:
-        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.',
-      button: 'Find opportunities here'
+        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best leaders today.',
+      button: 'Find me the one '
     }
   },
   hiringEasy: {
@@ -315,20 +315,6 @@ function Index() {
   return (
     <>
       <Home content={content.home} />
-      <OurTeam content={content.ourTeam} />
-      <HiringEasy secondary content={content.hiringEasyAlt} />
-      <Jobs content={content.jobs} />
-      <Article content={content.article} />
-      <HiringEasy content={content.hiringEasy} />
-      <WhatWeDo content={content.whatWeDo} />
-      <ClientCases content={content.clientCases} />
-      <InGreatCompany content={content.inGreatCompany} />
-      <WantToKnowMore content={content.wantToKnowMore} />
-      <WeAreSpecialists content={content.weAreSpecialists} />
-      <TextSection secondary content={content.fixRecruitmentGame} />
-      <TextSection content={content.makingHiringEasy} />
-      <Contact content={content.contact} />
-      <LargeCards content={content.largeCards} />
     </>
   );
 }

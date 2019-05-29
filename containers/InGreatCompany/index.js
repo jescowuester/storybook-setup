@@ -9,6 +9,10 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 130px;
+  img {
+    width: 200px;
+    height: auto;
+  }
 `;
 
 const InGreatCompany = ({ content: { title, text, companies } }) => (
@@ -22,14 +26,14 @@ const InGreatCompany = ({ content: { title, text, companies } }) => (
     <Text mx={['5%', '10%', '20%']} mb="120px" as="p">
       {text}
     </Text>
-    <Flex justifyContent="center" flexWrap="wrap">
+    <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
       {companies.map(({ name, href, img, _id }) => (
         <LogoContainer key={_id}>
-          <Link href={href}>
-            <a target="blank">
-              <img src={img} alt={name} />
-            </a>
-          </Link>
+          {/* <Link href={href}> */}
+          {/* <a target="blank"> */}
+          <img src={img} alt={name} />
+          {/* </a> */}
+          {/* </Link> */}
         </LogoContainer>
       ))}
     </Flex>

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Text, Icon } from 'components';
+import Text from '../Text';
+import Icon from '../Icon';
 
 const Outer = styled.div`
   height: 100vh;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Text, Button } from 'components';
+import Link from 'next/link';
 
 const Outer = styled.section`
   display: flex;
@@ -34,7 +35,9 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {leftCol.text}
       </Text>
-      <Button secondary>{leftCol.button}</Button>
+      <Button as="a" href="https://careers.oneworks.co" secondary>
+        {leftCol.button}
+      </Button>
     </Box>
     <Box
       height={['50%', '50%', '100%']}
@@ -52,7 +55,9 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {rightCol.text}
       </Text>
-      <Button>{rightCol.button}</Button>
+      <Link href="/home">
+        <Button as="a">{rightCol.button}</Button>
+      </Link>
     </Box>
   </Outer>
 );
