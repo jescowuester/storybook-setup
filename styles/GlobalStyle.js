@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 
 /* defaults */
 
-html, body{
+html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
@@ -17,10 +17,13 @@ html, body{
   height: 100%;
   width: 100%;
 
-  overflow: hidden;
-
   margin: 0;
   padding: 0;
+}
+
+#__next {
+  min-height: 100%;
+  position: relative;
 }
 
 p {
