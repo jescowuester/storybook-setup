@@ -18,10 +18,8 @@ const Nav = styled.nav`
 `;
 
 const Main = styled.main`
-  margin-top: 100px;
-  height: calc(100vh - 100px);
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
+  padding-top: 100px;
+  height: 100%;
 `;
 
 const NavLink = styled(props => <Link {...props} />)`

@@ -18,9 +18,14 @@ html, body{
   width: 100%;
 
   overflow: hidden;
+  overflow-y: scroll;
 
   margin: 0;
   padding: 0;
+}
+
+#__next {
+  height: 100%;
 }
 
 p {
