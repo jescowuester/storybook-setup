@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 
 /* defaults */
 
-html, body{
+html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
