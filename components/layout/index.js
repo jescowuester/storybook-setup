@@ -5,6 +5,7 @@ import { Flex, Text, Icon } from 'components';
 import { Footer } from 'containers';
 import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher } from './styles';
+import { withRouter } from 'next/router';
 
 const navItems = [
   {
@@ -34,10 +35,13 @@ const navItems = [
   }
 ];
 
-const Layout = ({ children }) => {
+const Layout = ({ children, router }) => {
   const [menuOpen, setMenu] = useState(false);
   const close = () => setMenu(false);
   const open = () => setMenu(true);
+
+  const isHome = router.pathname === '/' ? true : false;
+
   return (
     <>
       <Nav>
@@ -45,32 +49,38 @@ const Layout = ({ children }) => {
           <img css="cursor: pointer" src="/static/logo.svg" />
         </Link>
 
-        <NavSwitcher>
-          <Flex className="text">
-            {navItems.map(({ href, text, key }) => (
-              <Link href={href} key={key}>
-                <Text mx="25px" fontSize="18px" as="a">
-                  {text}
-                </Text>
-              </Link>
-            ))}
-          </Flex>
-          <Icon
-            onClick={open}
-            as="button"
-            fontSize="25px"
-            className="bars"
-            icon={['far', 'bars']}
-          />
-        </NavSwitcher>
+        {isHome ? (
+          <Text fontSize="18px" color="blackDark" as="p" ml="auto">
+            Connecting awesome people to scale-ups.
+          </Text>
+        ) : (
+          <NavSwitcher>
+            <Flex className="text">
+              {navItems.map(({ href, text, key }) => (
+                <Link href={href} key={key}>
+                  <Text mx="25px" fontSize="18px" as="a">
+                    {text}
+                  </Text>
+                </Link>
+              ))}
+            </Flex>
+            <Icon
+              onClick={open}
+              as="button"
+              fontSize="25px"
+              className="bars"
+              icon={['far', 'bars']}
+            />
+          </NavSwitcher>
+        )}
       </Nav>
       <MobileMenu isOpen={menuOpen} close={close} navItems={navItems} />
       <Main>
         {children}
-        <Footer />
+        {!isHome && <Footer />}
       </Main>
     </>
   );
 };
 
-export default Layout;
+export default withRouter(Layout);
