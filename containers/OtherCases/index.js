@@ -24,7 +24,7 @@ const content = {
 
 const OtherCases = () => {
   return (
-    <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
+    <Section bg="greyLighter" p={['80px 40px 0', '80px 40px 0', '80px 160px 0']} mx={['-10px', '-10px', '-30px']}>
       <Flex flexWrap="wrap">
         {content.cards.map(props => (
           <Box key={props.title} flexBasis={['100%', '50%', '50%']}>

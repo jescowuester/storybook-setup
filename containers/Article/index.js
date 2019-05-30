@@ -44,13 +44,19 @@ const BackButton = styled.button`
   color: ${p => p.theme.colors.redLight};
   margin-bottom: 60px;
   font-size: 18px;
+
   svg {
     transition: transform 0.15s;
   }
+
   &:hover {
     svg {
       transform: translateX(-8px);
     }
+  }
+
+  @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    margin-bottom: 20px;
   }
 `;
 
@@ -63,7 +69,7 @@ const Article = ({
       <Flex
         textAlign="center"
         flexDirection="column"
-        p={['20px 50px 40px', '60px 350px 90px', '60px 350px 90px']}
+        p={['40px 50px', '60px 350px 90px', '60px 350px 90px']}
         bg="greyLighter"
         width="100%"
       >
@@ -76,11 +82,11 @@ const Article = ({
         <Text as="h1">{title}</Text>
       </Flex>
       <Flex
-        p={['60px 40px', '80px 40px', '80px 160px']}
+        p={['80px 40px', '80px 40px', '80px 160px']}
         flexDirection={['column', 'column', 'row']}
       >
         <FormatedText dangerouslySetInnerHTML={{ __html: text }} />
-        <Box ml={[0, 0, '100px']}>
+        <Box mt={['60px', '60px', 0]} ml={[0, 0, '100px']}>
           <Text mb="30px" as="h4" fontSize="24px">
             {shareText}
           </Text>

@@ -22,6 +22,10 @@ const Nav = styled.nav`
 const Main = styled.main`
   padding-top: 100px;
   height: 100%;
+
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    padding-top: 60px;
+  }
 `;
 
 const NavLink = styled.a`
