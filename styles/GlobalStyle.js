@@ -60,26 +60,25 @@ hr {
 
 @media (max-width: ${p => p.theme.breakpoints[1]}){
   p {
-  font-size: ${p => p.theme.font.sizes.small.p};
-}
+    font-size: ${p => p.theme.font.sizes.small.p};
+  }
 
-h1 {
-  font-size: ${p => p.theme.font.sizes.small.h1};
-  line-height: 63px;
-}
+  h1 {
+    font-size: ${p => p.theme.font.sizes.small.h1};
+    line-height: 63px;
+  }
 
-h2 {
-  font-size: ${p => p.theme.font.sizes.small.h2};
-}
+  h2 {
+    font-size: ${p => p.theme.font.sizes.small.h2};
+  }
 
-h3 {
-  font-size: ${p => p.theme.font.sizes.small.h3};
-}
+  h3 {
+    font-size: ${p => p.theme.font.sizes.small.h3};
+  }
 
-h4 {
-  font-size: ${p => p.theme.font.sizes.small.h4};
-}
-
+  h4 {
+    font-size: ${p => p.theme.font.sizes.small.h4};
+  }
 }
 
 .swiper-pagination-bullet-active{

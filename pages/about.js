@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { LargeCards, TextSection, WeAreSpecialists } from 'containers';
 
 const content = {
@@ -47,6 +48,22 @@ const content = {
 function AboutPage() {
   return (
     <>
+      <Head>
+        <title>About - ONE.</title>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries."/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="About - ONE." />
+        <meta property="og:description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries." />
+        <meta property="og:url" content="https://oneworks.co/making-hiring-easy-for-scale-ups/about-one/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries." />
+        <meta name="twitter:title" content="About - ONE." />
+      </Head>
       <WeAreSpecialists content={content.weAreSpecialists} />
       <TextSection content={content.fixRecruitmentGame} />
       <LargeCards content={content.largeCards} />

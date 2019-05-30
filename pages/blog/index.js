@@ -1,6 +1,7 @@
 import { Card, CardLarge, Flex, Box, Section } from 'components';
 import { WantToKnowMore } from 'containers';
 import React from 'react';
+import Head from 'next/head';
 
 const content = {
   largeCard: {
@@ -57,6 +58,19 @@ const content = {
 const BlogPosts = () => {
   return (
     <>
+      <Head>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>Inspiration Blog - ONE.</title>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Inspiration Blog - ONE." />
+        <meta property="og:url" content="https://oneworks.co/news/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Inspiration Blog - ONE." />
+      </Head>
       <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
         <CardLarge {...content.largeCard} />
         <Flex flexWrap="wrap">

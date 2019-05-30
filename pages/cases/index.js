@@ -1,4 +1,5 @@
 import { Card, CardLarge, Flex, Box, Section } from 'components';
+import Head from 'next/head';
 import { WantToKnowMore } from 'containers';
 import React from 'react';
 
@@ -48,6 +49,22 @@ const content = {
 const Cases = () => {
   return (
     <>
+      <Head>
+        <title>Cases - ONE.</title>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="Our cases."/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Cases - ONE." />
+        <meta property="og:description" content="Our cases." />
+        <meta property="og:url" content="https://oneworks.co/cases/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Our cases." />
+        <meta name="twitter:title" content="Cases - ONE." />
+      </Head>
       <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
         <CardLarge {...content.largeCard} />
         <Flex margin="-20px" flexWrap="wrap">

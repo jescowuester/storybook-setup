@@ -1,4 +1,6 @@
 import React from 'react';
+import Head from 'next/head';
+
 import {
   HiringEasy,
   TextSection,
@@ -104,6 +106,19 @@ const content = {
 function Index() {
   return (
     <>
+      <Head>
+        <title>Meet us - ONE.</title>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Meet us - ONE." />
+        <meta property="og:url" content="https://oneworks.co/meet-us/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Meet us - ONE." />
+      </Head>
       <HiringEasy secondary content={content.hero} />
       <OurTeam content={content.ourTeam} />
       <TextSection secondary content={content.fixRecruitmentGame} />

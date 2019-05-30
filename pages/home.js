@@ -1,4 +1,6 @@
 import React from 'react';
+import Head from 'next/head';
+
 import {
   ClientCases,
   HiringEasy,
@@ -148,6 +150,20 @@ const content = {
 function HomePage() {
   return (
     <>
+      <Head>
+        <title>ONE. making hiring easy for scale-ups.</title>
+        <meta name="description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="ONE. making hiring easy for scale-ups." />
+        <meta property="og:description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed." />
+        <meta property="og:url" content="https://oneworks.co/making-hiring-easy-for-scale-ups/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed." />
+        <meta name="twitter:title" content="ONE. making hiring easy for scale-ups." />
+      </Head>
       <HiringEasy content={content.hiringEasy} />
       <WhatWeDo content={content.whatWeDo} />
       <ClientCases content={content.clientCases} />

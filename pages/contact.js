@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { Contact } from 'containers';
 
 const content = {
@@ -209,6 +210,22 @@ const content = {
 function Index() {
   return (
     <>
+      <Head>
+        <title>Contact - ONE.</title>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you."/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Contact - ONE." />
+        <meta property="og:description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you." />
+        <meta property="og:url" content="https://oneworks.co/contact/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you." />
+        <meta name="twitter:title" content="Contact - ONE." />
+      </Head>
       <Contact content={content.contact} />
     </>
   );
