@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher } from './styles';
 import Footer from '../../containers/Footer';
-import styled from 'styled-components';
 import Flex from '../Flex';
 import Text from '../Text';
 import Icon from '../Icon';
 
 const navItems = [
+  {
+    text: 'Home',
+    href: '/home',
+    key: 0
+  },
   {
     text: 'About',
     href: '/about',
@@ -53,8 +58,10 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav>
-        <Link href="/home">
-          <img css="cursor: pointer" src="/static/logo.svg" />
+        <Link href="/">
+          <a>
+            <img src="/static/logo.svg" />
+          </a>
         </Link>
 
         {isHome ? (
