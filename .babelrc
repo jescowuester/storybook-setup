@@ -1,4 +1,20 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "targets": {
+            "browsers": [
+              "> 1%",
+              "last 2 versions",
+              "IE >= 11"
+            ]
+          },
+          "useBuiltIns": "usage"
+        }
+      }
+    ]
+  ],
   "plugins": ["lodash"]
 }
