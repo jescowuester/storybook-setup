@@ -22,6 +22,8 @@ const StyledBox = styled(Box)`
 
 const Card = ({ img, title, text, redirect, secondary, href }) => (
   <StyledBox
+    as="a"
+    href={href}
     minHeight="100%"
     mb={['60px', '80px', '80px']}
     mx={['10px', '10px', '30px']}

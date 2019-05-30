@@ -52,22 +52,26 @@ const content = {
     card1: {
       img: '/static/client-cases1.jpg',
       title: 'Impraise',
-      text: 'Kudos from Impraise!'
+      text: 'Kudos from Impraise!',
+      href: '/cases/impraise'
     },
     card2: {
       img: '/static/client-cases2.jpg',
       title: '50five',
-      text: 'Expanding the team for 50Five.'
+      text: 'Expanding the team for 50Five.',
+      href: '/cases/fiftyfive'
     },
     card3: {
       img: '/static/client-cases3.jpg',
       title: 'Talmundo',
-      text: 'Adding some key-hires to a company in transition.'
+      text: 'Adding some key-hires to a company in transition.',
+      href: '/cases/talmundo'
     },
     card4: {
       img: '/static/client-cases4.jpg',
       title: 'October',
-      text: 'Setting up a team from scratch in The Netherlands.'
+      text: 'Setting up a team from scratch in The Netherlands.',
+      href: '/cases/october'
     },
     button: 'Read more',
     href: '/cases'

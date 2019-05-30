@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-import { Nav, Main, NavSwitcher } from './styles';
+import { Nav, Main, NavSwitcher, NavLink } from './styles';
 import Footer from '../../containers/Footer';
-
 import Flex from '../Flex';
 import Text from '../Text';
 import Icon from '../Icon';
 
 const navItems = [
+  {
+    text: 'Home',
+    href: '/home',
+    key: 0
+  },
   {
     text: 'About',
     href: '/about',
@@ -37,6 +42,13 @@ const navItems = [
   }
 ];
 
+const StyledText = styled(p => <Text {...p} />)`
+  margin-left: auto;
+  @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    display: none;
+  }
+`;
+
 const Layout = ({ children, router }) => {
   const [menuOpen, setMenu] = useState(false);
   const close = () => setMenu(false);
@@ -46,22 +58,26 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav>
-        <Link href="/home">
-          <img css="cursor: pointer" src="/static/logo.svg" />
+        <Link href="/">
+          <a>
+            <img src="/static/logo.svg" />
+          </a>
         </Link>
 
         {isHome ? (
-          <Text fontSize="18px" color="blackDark" as="p" ml="auto">
+          <StyledText fontSize="18px" color="blackDark" as="p">
             Connecting awesome leaders to scale-ups.
-          </Text>
+          </StyledText>
         ) : (
           <NavSwitcher>
             <Flex className="text">
               {navItems.map(({ href, text, key }) => (
                 <Link passHref href={href} key={key}>
-                  <Text mx="25px" fontSize="18px" as="a">
+                  <NavLink
+                    className={router.pathname.match(href) ? 'active' : ''}
+                  >
                     {text}
-                  </Text>
+                  </NavLink>
                 </Link>
               ))}
             </Flex>

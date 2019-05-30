@@ -13,7 +13,8 @@ const content = {
     title: 'Connecting leaders to scale-ups',
     text:
       "As a team of entrepreneurs, we're all here with a mission to help companies change the world. We're not an agency, which means we don't compete, we work together.",
-    button: 'View open positions'
+    button: 'View open positions',
+    externalHref: 'https://careers.oneworks.co/jobs?company=One'
   },
   ourTeam: {
     title: 'This is our team.',
@@ -57,6 +58,7 @@ const content = {
   jobs: {
     title: 'Jobs at One.',
     buttonText: 'View all vacancies',
+    href: 'https://careers.oneworks.co/jobs?company=One',
     jobs: [
       {
         _id: 1,

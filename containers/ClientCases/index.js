@@ -30,9 +30,6 @@ const Container = styled(props => <Flex {...props} />)`
   }
 `;
 
-const cardWidth = ['98%', '98%', '48%'];
-const cardMargin = ['20px', '10px', '0'];
-
 const ClientCases = ({
   content: { card1, card2, card3, card4, button, href }
 }) => (
@@ -44,33 +41,30 @@ const ClientCases = ({
     <Text mb="80px" as="h3">
       Client Cases.
     </Text>
-    <Container justifyContent="space-between" width="100%">
-      <Box mb={cardMargin} width={cardWidth}>
-        <Img img={card1.img} />
-        <Text as="h4">{card1.title}</Text>
-        <Text as="p">{card1.text}</Text>
-      </Box>
-      <Box mb={cardMargin} width={cardWidth}>
-        <Img img={card2.img} />
-        <Text as="h4">{card2.title}</Text>
-        <Text as="p">{card2.text}</Text>
-      </Box>
+    <Container m="-20px" justifyContent="space-between" width="100%">
+      {[card1, card2, card3, card4].map(({ img, title, text, href }) => (
+        <Link passHref href={href}>
+          <Box
+            as="a"
+            m="20px"
+            flexBasis={[
+              'calc(100% - 40px)',
+              'calc(100% - 40px)',
+              'calc(50% - 40px)'
+            ]}
+          >
+            <Img img={img} />
+            <Text as="h4">{title}</Text>
+            <Text as="p">{text}</Text>
+          </Box>
+        </Link>
+      ))}
     </Container>
-    <Container justifyContent="space-between" width="100%">
-      <Box mb={cardMargin} width={cardWidth}>
-        <Img img={card3.img} />
-        <Text as="h4">{card3.title}</Text>
-        <Text as="p">{card3.text}</Text>
-      </Box>
-      <Box mb={cardMargin} width={cardWidth}>
-        <Img img={card4.img} />
-        <Text as="h4">{card4.title}</Text>
-        <Text as="p">{card4.text}</Text>
-      </Box>
-    </Container>
-    <Link passHref href={href}>
-      <Button as="a">{button}</Button>
-    </Link>
+    <Box mt="40px">
+      <Link passHref href={href}>
+        <Button as="a">{button}</Button>
+      </Link>
+    </Box>
   </Section>
 );
 

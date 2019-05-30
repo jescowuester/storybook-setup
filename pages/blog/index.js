@@ -14,12 +14,13 @@ const content = {
   },
   cards: [
     {
-      img: '/static/client-cases3.jpg',
-      title: 'Adding some key-hires to a company in transition.',
+      img: '/static/blog1.jpg',
+      title: '4 Reasons for leaving the Corporate Rat Race to join a Scaleup',
       text:
-        'Talmundo is a European HR Tech company founded in 2012 out of a growing frustration around HR information systems. Stijn, the CEO, was tired of the tools he tried to implement ...',
+        'Remember when leaving a cushy corporate gig to take a job at a high-growth tech company was considered risky, or even foolish? Much was talked about jeopardising secure career trajectories or risking unexplainable, even downright embarrassing gaps in one’s CV should the startup ...',
       secondary: true,
-      href: '/cases/talmundo'
+      href:
+        '/blog/4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up/'
     },
     {
       img: '/static/client-cases1.jpg',
@@ -45,7 +46,7 @@ const content = {
   }
 };
 
-const Cases = () => {
+const BlogPosts = () => {
   return (
     <>
       <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
@@ -63,4 +64,4 @@ const Cases = () => {
   );
 };
 
-export default Cases;
+export default BlogPosts;
