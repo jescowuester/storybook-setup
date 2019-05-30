@@ -8,7 +8,7 @@ import TextButton from './TextButton';
 
 const Img = styled.div`
   min-width: 50%;
-  min-height: 600px;
+  /* min-height: 600px; */
   background: url(${p => p.img}) no-repeat center;
   background-size: cover;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
@@ -29,6 +29,11 @@ const TextSection = styled.div`
   }
 `;
 
+const StyledFlex = styled(Flex)`
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
 const CardLarge = ({
   img,
   title,
@@ -41,12 +46,12 @@ const CardLarge = ({
   const flexDirection = ['column', 'column', reverse ? 'row-reverse' : 'row'];
 
   return (
-    <Flex
+    <StyledFlex
       as="a"
       href={href}
       width={['100%', '100%', 'auto']}
       flexDirection={flexDirection}
-      mb={['40px', '40px', '160px']}
+      mb={['40px', '40px', '80px']}
       mx={[0, 0, '30px']}
     >
       <Img img={img} />
@@ -61,7 +66,7 @@ const CardLarge = ({
           </TextButton>
         </Box>
       </Box>
-    </Flex>
+    </StyledFlex>
   );
 };
 

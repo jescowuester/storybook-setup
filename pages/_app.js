@@ -1,10 +1,12 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import 'components/Icon/library';
+import { Layout } from 'components';
 import theme from '../styles/theme';
 import GlobalStyle from '../styles/GlobalStyle';
-import { Layout } from 'components';
-import 'components/Icon/library';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import '../styles/fonts.css';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
