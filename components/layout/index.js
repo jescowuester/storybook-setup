@@ -70,6 +70,7 @@ const Layout = ({ children, router }) => {
               as="button"
               fontSize="25px"
               className="bars"
+              mt="3px"
               icon={['far', 'bars']}
             />
           </NavSwitcher>

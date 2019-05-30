@@ -13,9 +13,9 @@ const WeAreSpecialists = ({ content: { img, title, text, buttonText } }) => (
   <SectionWithBackground
     src={img}
     textAlign={['left', 'center', 'left']}
-    p={['40px 20px', '40px', '160px']}
+    p={['80px 20px', '80px 40px', '160px']}
     bg="greyLighter"
-    pr={['20px', '40px', '45%']}
+    pr={['20px', '40px', '56%']}
   >
     <Text mb="30px" as="h3">
       {title}

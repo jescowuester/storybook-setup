@@ -7,8 +7,11 @@ import Icon from './Icon';
 const A = styled.a`
   ${space}
   ${alignSelf}
-  color: ${({ secondary, theme: { colors } }) =>
-    secondary ? colors.redLight : colors.blueDark};
+  color: ${({ secondary, color, theme: { colors } }) => {
+    if (color) return colors[color];
+    if (secondary) {return colors.redLight}
+    return colors.blueDark
+  }};
   font-size: 20px;
   position: relative;
   white-space: nowrap;

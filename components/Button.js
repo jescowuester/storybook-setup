@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { space, color, width, fontSize } from 'styled-system';
 
 const Button = styled.button`
+  display: inline-block;
   box-shadow: ${p => p.theme.shadows.z2};
   border-radius: 5px;
   border: 2px solid transparent;
