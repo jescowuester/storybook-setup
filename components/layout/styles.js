@@ -24,7 +24,7 @@ const Main = styled.main`
   overflow-y: auto;
 `;
 
-const NavLink = styled(props => <Link {...props} />)`
+const NavLink = styled(props => <Link passHref {...props} />)`
   font-size: 18px;
   margin: 0 20px;
 `;

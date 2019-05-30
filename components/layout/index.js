@@ -58,7 +58,7 @@ const Layout = ({ children, router }) => {
           <NavSwitcher>
             <Flex className="text">
               {navItems.map(({ href, text, key }) => (
-                <Link href={href} key={key}>
+                <Link passHref href={href} key={key}>
                   <Text mx="25px" fontSize="18px" as="a">
                     {text}
                   </Text>

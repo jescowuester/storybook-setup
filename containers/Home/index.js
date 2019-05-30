@@ -55,7 +55,7 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {rightCol.text}
       </Text>
-      <Link href="/home">
+      <Link passHref href="/home">
         <Button as="a">{rightCol.button}</Button>
       </Link>
     </Box>

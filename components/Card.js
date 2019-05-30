@@ -29,7 +29,7 @@ const Card = ({ img, title, text, redirect, secondary, href }) => (
       <Text color="blackLight" mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <Link href={href}>
+      <Link passHref href={href}>
         <TextButton as="a" secondary={secondary}>
           {redirect}
         </TextButton>

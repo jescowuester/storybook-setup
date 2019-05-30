@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { ShareButton, Section, Text, Flex, Box, Icon } from 'components';
@@ -67,7 +67,7 @@ const Article = ({
         bg="greyLighter"
         width="100%"
       >
-        <Link href={backHref}>
+        <Link passHref href={backHref}>
           <BackButton>
             <Icon mr="8px" icon={['far', 'long-arrow-left']} />
             <Text as="span"> {backButton} </Text>

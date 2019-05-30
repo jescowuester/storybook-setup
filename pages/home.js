@@ -13,7 +13,8 @@ const content = {
     title: 'We are on a mission to match future leaders',
     text:
       'Over the past 20 years, we have gotten to know the right people, in the right places, at the right time. Whether you are looking for a CTO, a VP Marketing, a Head of Product or even for an entirely new team of experts - we handpicked the ‘Who is Who’.',
-    button: 'Read more'
+    button: 'Read more',
+    href: '/about'
   },
   whatWeDo: {
     title: 'What we do.',
@@ -64,11 +65,12 @@ const content = {
       text: 'Adding some key-hires to a company in transition.'
     },
     card4: {
-      img: '/static/client-cases4.png',
+      img: '/static/client-cases4.jpg',
       title: 'October',
       text: 'Setting up a team from scratch in The Netherlands.'
     },
-    button: 'Read more'
+    button: 'Read more',
+    href: '/cases'
   },
   inGreatCompany: {
     title: "You're in great company",

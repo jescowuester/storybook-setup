@@ -29,7 +29,10 @@ const Overlay = styled.div`
   background: rgba(255, 255, 255, 0.3);
 `;
 
-const WantToKnowMore = ({ white, content: { title, text, button, img } }) => {
+const WantToKnowMore = ({
+  white,
+  content: { title, text, button, img, href }
+}) => {
   const [jobs, setJobs] = useState([]);
 
   // todo get cors permission
@@ -54,7 +57,11 @@ const WantToKnowMore = ({ white, content: { title, text, button, img } }) => {
       <Text mb="40px" as="p">
         {text}
       </Text>
-      <Button as="a" href="https://docsend.com/view/tfewsuf">
+      <Button
+        as="a"
+        target="blank"
+        href={href || 'https://docsend.com/view/tfewsuf'}
+      >
         {button}
       </Button>
     </SectionWithBackground>
