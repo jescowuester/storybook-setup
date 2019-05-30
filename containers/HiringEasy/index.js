@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Img = styled.div`
   width: 45% !important;
   min-width: 45% !important;
-  height: 680px !important;
+  min-height: 680px !important;
   background: url(${p => p.src}) no-repeat center;
   background-size: cover;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
@@ -45,11 +45,11 @@ const SwiperBox = styled(props => <Box {...props} />)`
 
 const HiringEasy = ({
   secondary,
-  content: { img, images = [], title, text, button, href }
+  content: { img, images = [], title, text, button, href, externalHref }
 }) => {
   return (
     <Section bg="greyLighter">
-      <Flex>
+      <Flex alignItems="stretch">
         <Box
           p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 190px']}
         >
@@ -60,11 +60,23 @@ const HiringEasy = ({
             {text}
           </Text>
           <Flex m="-5px" flexWrap="wrap" alignItems="center">
-            <Link passHref href={href || '/about'}>
-              <Button as="a" secondary={secondary} m="7px">
+            {externalHref ? (
+              <Button
+                as="a"
+                target="blank"
+                href={externalHref}
+                secondary={secondary}
+                m="7px"
+              >
                 {button}
               </Button>
-            </Link>
+            ) : (
+              <Link passHref href={href || '/about'}>
+                <Button as="a" secondary={secondary} m="7px">
+                  {button}
+                </Button>
+              </Link>
+            )}
             <TextButton
               as="a"
               target="blank"

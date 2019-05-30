@@ -9,7 +9,7 @@ const Button = styled.button`
   background: ${({ secondary, theme: { colors } }) =>
     secondary ? colors.redLight : colors.blueDark};
   transition: background 0.2s, box-shadow 0.2s;
-
+  display: inline-block;
   &:hover{
     background: ${({ secondary, theme: { colors } }) =>
       secondary ? colors.redLighter : colors.blue};

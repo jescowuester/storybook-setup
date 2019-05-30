@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 import { Text, Button, Section } from 'components';
 
 const SectionWithBackground = styled(props => <Section {...props} />)`
@@ -33,15 +32,6 @@ const WantToKnowMore = ({
   white,
   content: { title, text, button, img, href }
 }) => {
-  const [jobs, setJobs] = useState([]);
-
-  // todo get cors permission
-  useEffect(() => {
-    axios
-      .get('https://careers.oneworks.co/api/jobs?company=One.')
-      .then(res => console.log(res.data.data));
-  }, []);
-
   return (
     <SectionWithBackground
       white={white}

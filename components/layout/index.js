@@ -4,7 +4,7 @@ import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher } from './styles';
 import Footer from '../../containers/Footer';
-
+import styled from 'styled-components';
 import Flex from '../Flex';
 import Text from '../Text';
 import Icon from '../Icon';
@@ -37,6 +37,13 @@ const navItems = [
   }
 ];
 
+const StyledText = styled(p => <Text {...p} />)`
+  margin-left: auto;
+  @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    display: none;
+  }
+`;
+
 const Layout = ({ children, router }) => {
   const [menuOpen, setMenu] = useState(false);
   const close = () => setMenu(false);
@@ -51,9 +58,9 @@ const Layout = ({ children, router }) => {
         </Link>
 
         {isHome ? (
-          <Text fontSize="18px" color="blackDark" as="p" ml="auto">
+          <StyledText fontSize="18px" color="blackDark" as="p">
             Connecting awesome leaders to scale-ups.
-          </Text>
+          </StyledText>
         ) : (
           <NavSwitcher>
             <Flex className="text">

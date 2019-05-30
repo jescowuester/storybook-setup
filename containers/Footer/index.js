@@ -42,10 +42,22 @@ const centerNav = [
   {
     title: 'Legal',
     links: [
-      { to: '', name: 'Cookie Policy', isExternal: true },
-      { to: '', name: 'Privacy Policy', isExternal: false },
-      { to: '', name: 'GDPR', isExternal: true },
-      { to: '', name: 'Terms & Conditions', isExternal: false }
+      {
+        to: '/static/pdf/cookie_policy.pdf',
+        name: 'Cookie Policy',
+        isExternal: true
+      },
+      {
+        to: '/static/pdf/privacy_policy.pdf',
+        name: 'Privacy Policy',
+        isExternal: true
+      },
+      { to: '/static/pdf/gdpr.pdf', name: 'GDPR', isExternal: true },
+      {
+        to: '/static/pdf/terms_and_conditions.pdf',
+        name: 'Terms & Conditions',
+        isExternal: true
+      }
     ]
   }
 ];
