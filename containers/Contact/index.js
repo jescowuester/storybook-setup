@@ -28,6 +28,10 @@ const Form = styled(props => <Flex {...props} />)`
   flex-direction: column;
   width: 455px;
   max-width: 90%;
+
+  > p {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(props => <Link {...props} />)`

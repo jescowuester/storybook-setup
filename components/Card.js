@@ -35,7 +35,7 @@ const Card = ({ img, title, text, redirect, secondary, href, noFlex }) => (
     noFlex={noFlex}
   >
     <Img img={img} />
-    <Box flex={noFlex ? false : "1"} bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
+    <Box flex={noFlex ? false : "1 1 auto"} bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
       <Text mb="30px" as="h4">
         {title}
       </Text>
