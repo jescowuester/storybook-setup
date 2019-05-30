@@ -169,7 +169,7 @@ const Footer = () => (
             mb={['40px', '80px']}
             color="blueLight"
             alignSelf={['flex-end', 'flex-start']}
-            as="a"
+            external
             target="blank"
             href="mailto:tim@oneworks.co"
           >
