@@ -25,7 +25,7 @@ const Outer = styled.div`
 const IconPosition = styled.div`
   position: fixed;
   right: 20px;
-  top: 35px;
+  top: 20px;
 `;
 
 const MobileMenu = ({ navItems, close, isOpen }) => {

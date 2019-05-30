@@ -37,7 +37,7 @@ const WantToKnowMore = ({
       white={white}
       src={img}
       textAlign="center"
-      p={['50px 10px', '40px', '160px']}
+      p={['80px 10px', '80px 40px', '160px']}
       bg="greyLighter"
     >
       {white && <Overlay />}
