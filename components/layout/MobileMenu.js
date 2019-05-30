@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Text, Icon } from 'components';
+import Text from '../Text';
+import Icon from '../Icon';
 
 const Outer = styled.div`
   height: 100vh;
@@ -24,7 +25,7 @@ const Outer = styled.div`
 const IconPosition = styled.div`
   position: fixed;
   right: 20px;
-  top: 35px;
+  top: 20px;
 `;
 
 const MobileMenu = ({ navItems, close, isOpen }) => {
@@ -41,7 +42,7 @@ const MobileMenu = ({ navItems, close, isOpen }) => {
         />
       </IconPosition>
       {navItems.map(({ href, text, key }) => (
-        <Link href={href} key={key}>
+        <Link onClick={close} passHref href={href} key={key}>
           <Text color="white" my="20px" fontSize="30px" as="a">
             {text}
           </Text>

@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 
 /* defaults */
 
-html, body{
+html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
@@ -17,22 +17,25 @@ html, body{
   height: 100%;
   width: 100%;
 
-  overflow: hidden;
-
   margin: 0;
   padding: 0;
 }
 
+#__next {
+  min-height: 100%;
+  position: relative;
+}
+
 p {
   font-size: ${p => p.theme.font.sizes.large.p};
-  line-height: 31px;
+  line-height: 1.6;
 }
 
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: ${p => p.theme.font.sizes.large.h1};
   font-weight: bold;
-  line-height: 73px;
+  line-height: 1.2;
 }
 
 h2 {
@@ -57,26 +60,25 @@ hr {
 
 @media (max-width: ${p => p.theme.breakpoints[1]}){
   p {
-  font-size: ${p => p.theme.font.sizes.small.p};
-}
+    font-size: ${p => p.theme.font.sizes.small.p};
+  }
 
-h1 {
-  font-size: ${p => p.theme.font.sizes.small.h1};
-  line-height: 63px;
-}
+  h1 {
+    font-size: ${p => p.theme.font.sizes.small.h1};
+    line-height: 63px;
+  }
 
-h2 {
-  font-size: ${p => p.theme.font.sizes.small.h2};
-}
+  h2 {
+    font-size: ${p => p.theme.font.sizes.small.h2};
+  }
 
-h3 {
-  font-size: ${p => p.theme.font.sizes.small.h3};
-}
+  h3 {
+    font-size: ${p => p.theme.font.sizes.small.h3};
+  }
 
-h4 {
-  font-size: ${p => p.theme.font.sizes.small.h4};
-}
-
+  h4 {
+    font-size: ${p => p.theme.font.sizes.small.h4};
+  }
 }
 
 .swiper-pagination-bullet-active{
@@ -118,7 +120,7 @@ a {
   &:hover{
     opacity: 0.7;
   }
-  transition: opacity 0.1s;
+  transition: opacity 0.2s ease-in-out;
 }
 
 ul,

@@ -1,4 +1,6 @@
 import React from 'react';
+import Head from 'next/head';
+
 import {
   Article,
   ClientCases,
@@ -28,8 +30,8 @@ const content = {
       tagLine: 'You are a',
       title: 'Scale-up',
       text:
-        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best new talents today.',
-      button: 'Find opportunities here'
+        'We have an extremely large network. Built up from more than 20 years of experience. Let us find your next best leaders today.',
+      button: 'Find me the one '
     }
   },
   hiringEasy: {
@@ -314,21 +316,22 @@ const content = {
 function Index() {
   return (
     <>
+      <Head>
+        <meta charset='UTF-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>ONE. - We are one, your solution to talent, growth and recruitment.</title>
+        <meta name="description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent."/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ONE. - We are one, your solution to talent, growth and recruitment." />
+        <meta property="og:description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent." />
+        <meta property="og:url" content="https://oneworks.co/" />
+        <meta property="og:site_name" content="ONE." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent." />
+        <meta name="twitter:title" content="ONE. - We are one, your solution to talent, growth and recruitment." />
+      </Head>
       <Home content={content.home} />
-      <OurTeam content={content.ourTeam} />
-      <HiringEasy secondary content={content.hiringEasyAlt} />
-      <Jobs content={content.jobs} />
-      <Article content={content.article} />
-      <HiringEasy content={content.hiringEasy} />
-      <WhatWeDo content={content.whatWeDo} />
-      <ClientCases content={content.clientCases} />
-      <InGreatCompany content={content.inGreatCompany} />
-      <WantToKnowMore content={content.wantToKnowMore} />
-      <WeAreSpecialists content={content.weAreSpecialists} />
-      <TextSection secondary content={content.fixRecruitmentGame} />
-      <TextSection content={content.makingHiringEasy} />
-      <Contact content={content.contact} />
-      <LargeCards content={content.largeCards} />
     </>
   );
 }

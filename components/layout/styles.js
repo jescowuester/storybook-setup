@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import { space } from 'styled-system';
 
 const Nav = styled.nav`
@@ -12,21 +11,38 @@ const Nav = styled.nav`
   background: ${p => p.theme.colors.white};
   display: flex;
   align-items: center;
+
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     padding: 0 20px;
+    height: 60px;
   }
 `;
 
 const Main = styled.main`
-  margin-top: 100px;
-  height: calc(100vh - 100px);
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
+  padding-top: 100px;
+  height: 100%;
+
+  @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    padding-top: 60px;
+  }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   font-size: 18px;
   margin: 0 20px;
+  color: ${p => p.theme.colors.black};
+  position: relative;
+  &.active {
+    &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      background: ${p => p.theme.colors.blueDark};
+    }
+  }
 `;
 
 const StyledFooter = styled.footer`

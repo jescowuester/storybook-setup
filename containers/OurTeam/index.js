@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Text, Flex, Box, TextButton } from 'components';
 import styled from 'styled-components';
+
 const Img = styled.div`
   width: 100%;
   height: 0;
@@ -14,13 +15,13 @@ const TeamMember = ({ img, name, text, buttonText }) => (
   <Box flexBasis={['100%', '50%', '50%']}>
     <Flex m="30px" flexDirection="column">
       <Img img={img} />
-      <Text mt="20px" mb="20px" as="h4">
+      <Text fontSize="24px" mt="20px" mb="20px" as="h4">
         {name}
       </Text>
       <Text mb="30px" as="p">
         {text}
       </Text>
-      <TextButton secondary>buttonText</TextButton>
+      <TextButton secondary>{buttonText}</TextButton>
     </Flex>
   </Box>
 );
@@ -38,7 +39,7 @@ const OurTeam = ({ content: { title, text, teamMembers } }) => {
       </Box>
       <Flex mx="-30px" justifyContent="space-between" flexWrap="wrap">
         {teamMembers.map(member => (
-          <TeamMember {...member} />
+          <TeamMember key={member.name} {...member} />
         ))}
       </Flex>
     </Section>

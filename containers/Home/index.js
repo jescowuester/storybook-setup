@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Text, Button } from 'components';
+import Link from 'next/link';
 
 const Outer = styled.section`
   display: flex;
+  min-height: calc(100vh - 100px);
   @media (min-width: ${p => p.theme.breakpoints[1]}) {
     height: 100%;
   }
@@ -20,7 +22,7 @@ const Outer = styled.section`
 const Home = ({ content: { leftCol, rightCol } }) => (
   <Outer>
     <Box
-      height={['50%', '50%', '100%']}
+      minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="greyLighter"
       p={['40px', '40px', '180px 160px']}
@@ -34,10 +36,12 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {leftCol.text}
       </Text>
-      <Button secondary>{leftCol.button}</Button>
+      <Button as="a" href="https://careers.oneworks.co" secondary>
+        {leftCol.button}
+      </Button>
     </Box>
     <Box
-      height={['50%', '50%', '100%']}
+      minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="blackDark"
       color="white"
@@ -52,7 +56,9 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {rightCol.text}
       </Text>
-      <Button>{rightCol.button}</Button>
+      <Link passHref href="/home">
+        <Button as="a">{rightCol.button}</Button>
+      </Link>
     </Box>
   </Outer>
 );

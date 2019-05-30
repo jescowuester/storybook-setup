@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-import { Flex, Box, Text, TextButton } from 'components';
+import Flex from './Flex';
+import Box from './Box';
+import Text from './Text';
+import TextButton from './TextButton';
 
 const Img = styled.div`
   min-width: 50%;
@@ -27,44 +29,57 @@ const TextSection = styled.div`
   }
 `;
 
-const CardLarge = ({ img, title, text, redirect, secondary, reverse }) => {
+const CardLarge = ({
+  img,
+  title,
+  text,
+  buttonText,
+  secondary,
+  reverse,
+  href
+}) => {
   const flexDirection = ['column', 'column', reverse ? 'row-reverse' : 'row'];
 
   return (
     <Flex
+      as="a"
+      href={href}
       width={['100%', '100%', 'auto']}
       flexDirection={flexDirection}
       mb={['40px', '40px', '160px']}
       mx={[0, 0, '30px']}
     >
       <Img img={img} />
-      <Box
-        bg={secondary ? 'greyLighter' : 'white'}
-        p={['50px 40px', '50px 40px', '100px 80px']}
-      >
+      <Box bg="white" p={['50px 40px', '50px 40px', '100px 80px']}>
         <Text mb="40px" as="h4">
           {title}
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />
-        <TextButton secondary={secondary}>{redirect}</TextButton>
+        <Box mt="37px">
+          <TextButton noLink secondary={secondary}>
+            {buttonText}
+          </TextButton>
+        </Box>
       </Box>
     </Flex>
   );
 };
 
 CardLarge.defaultProps = {
-  redirect: 'Learn more',
+  buttonText: 'Learn more',
   secondary: false,
-  reverse: false
+  reverse: false,
+  href: '/about'
 };
 
 CardLarge.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  redirect: PropTypes.string,
+  buttonText: PropTypes.string,
   secondary: PropTypes.bool,
-  reverse: PropTypes.bool
+  reverse: PropTypes.bool,
+  href: PropTypes.string
 };
 
 export default CardLarge;

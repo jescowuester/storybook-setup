@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-import { Box, Text, TextButton } from 'components';
+import Box from './Box';
+import Text from './Text';
+import TextButton from './TextButton';
 
 const Img = styled.div`
   width: 100%;
@@ -13,31 +14,52 @@ const Img = styled.div`
   background-position: center;
 `;
 
-const Card = ({ img, title, text, redirect, secondary }) => (
-  <Box mb={['60px', '100px', '160px']} mx={['10px', '10px', '30px']}>
+const StyledBox = styled(Box)`
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+
+  // :last-child {
+  //   margin-bottom: 0;
+  // }
+`;
+
+const Card = ({ img, title, text, redirect, secondary, href }) => (
+  <StyledBox
+    as="a"
+    href={href}
+    minHeight="100%"
+    mb={['60px', '80px', '80px']}
+    mx={['10px', '10px', '30px']}
+  >
     <Img img={img} />
     <Box bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
       <Text mb="30px" as="h4">
         {title}
       </Text>
-      <Text mb="40px" fontSize="18px" as="p">
+      <Text color="blackLight" mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <TextButton secondary={secondary}>{redirect}</TextButton>
+      <TextButton noLink secondary={secondary}>
+        {redirect}
+      </TextButton>
     </Box>
-  </Box>
+  </StyledBox>
 );
 
 Card.defaultProps = {
   redirect: 'Learn more',
-  secondary: false
+  secondary: false,
+  href: '/'
 };
 
 Card.propTypes = {
+  img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   redirect: PropTypes.string,
-  secondary: PropTypes.bool
+  secondary: PropTypes.bool,
+  href: PropTypes.string
 };
 
 export default Card;

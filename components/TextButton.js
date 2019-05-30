@@ -1,14 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import { space, alignSelf } from 'styled-system';
-
-import { Icon } from 'components';
+import Link from 'next/link';
+import Icon from './Icon';
 
 const A = styled.a`
   ${space}
   ${alignSelf}
-  color: ${({ secondary, theme: { colors } }) =>
-    secondary ? colors.redLight : colors.blueDark};
+  color: ${({ secondary, color, theme: { colors } }) => {
+    if (color) return colors[color];
+    if (secondary) {
+      return colors.redLight;
+    }
+    return colors.blueDark;
+  }};
   font-size: 20px;
   position: relative;
   white-space: nowrap;
@@ -29,11 +34,33 @@ const A = styled.a`
   }
 `;
 
-const TextButton = ({ children, ...props }) => (
-  <A {...props}>
-    {children}
-    <Icon ml="10px" icon={['far', 'long-arrow-right']} />{' '}
-  </A>
-);
+const TextButton = ({ children, external, noLink, ...props }) => {
+  const normal = (
+    <Link passHref href={props.href}>
+      <A {...props}>
+        {children}
+        <Icon ml="10px" icon={['far', 'long-arrow-right']} />{' '}
+      </A>
+    </Link>
+  );
+
+  const externalButton = (
+    <A {...props}>
+      {children}
+      <Icon ml="10px" icon={['far', 'long-arrow-right']} />{' '}
+    </A>
+  );
+
+  const noLinkButton = (
+    <A as="span" {...props}>
+      {children}
+      <Icon ml="10px" icon={['far', 'long-arrow-right']} />{' '}
+    </A>
+  );
+
+  if (external) return externalButton;
+  if (noLink) return noLinkButton;
+  return normal;
+};
 
 export default TextButton;

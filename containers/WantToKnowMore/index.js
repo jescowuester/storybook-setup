@@ -1,29 +1,61 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { Text, Button, Section } from 'components';
 
-const SectionWithBackground = styled(Section)`
+const SectionWithBackground = styled(props => <Section {...props} />)`
   background-image: url(${p => p.src});
   background-size: cover;
   background-position: center;
+  position: relative;
+  h3 {
+    position: relative;
+  }
+  p {
+    position: relative;
+  }
+  a {
+    position: relative;
+  }
 `;
 
-const WantToKnowMore = ({ content: { title, text, button, img } }) => (
-  <SectionWithBackground
-    src={img}
-    textAlign="center"
-    p={['50px 10px', '40px', '160px']}
-    bg="greyLighter"
-  >
-    <Text mb="30px" as="h3">
-      {title}
-    </Text>
-    <Text mb="40px" as="p">
-      {text}
-    </Text>
-    <Button>{button}</Button>
-  </SectionWithBackground>
-);
+const Overlay = styled.div`
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+`;
+
+const WantToKnowMore = ({
+  white,
+  content: { title, text, button, img, href }
+}) => {
+  return (
+    <SectionWithBackground
+      white={white}
+      src={img}
+      textAlign="center"
+      p={['80px 10px', '80px 40px', '160px']}
+      bg="greyLighter"
+    >
+      {white && <Overlay />}
+      <Text mb="30px" as="h3">
+        {title}
+      </Text>
+      <Text mb="40px" as="p">
+        {text}
+      </Text>
+      <Button
+        as="a"
+        target="blank"
+        href={href || 'https://docsend.com/view/tfewsuf'}
+      >
+        {button}
+      </Button>
+    </SectionWithBackground>
+  );
+};
 
 export default WantToKnowMore;

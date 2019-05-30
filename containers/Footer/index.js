@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import _ from 'lodash';
+import { map } from 'lodash';
 import Link from 'next/link';
 
 import { Text, Flex, TextButton } from 'components';
@@ -10,42 +10,54 @@ const leftNav = [
   {
     title: 'Candidates',
     links: [
-      { to: '', name: 'Overview', isExternal: false },
-      { to: '', name: 'About', isExternal: false }
+      { to: '/cases', name: 'Overview', isExternal: true },
+      { to: '/about', name: 'About', isExternal: true }
     ]
   },
   {
     title: 'Clients',
     links: [
-      { to: '', name: 'Overview', isExternal: false },
-      { to: '', name: 'About', isExternal: false }
-    ]
-  },
-  {
-    title: '',
-    links: [
-      { to: 'Press', name: '', isExternal: false },
-      { to: 'Blog', name: '', isExternal: false }
+      { to: '/cases', name: 'Overview', isExternal: false },
+      { to: '/about', name: 'About', isExternal: false }
     ]
   }
+  // {
+  //   title: '',
+  //   links: [
+  //     { to: '/Press', name: '', isExternal: false },
+  //     { to: '/Blog', name: '', isExternal: false }
+  //   ]
+  // }
 ];
 
 const centerNav = [
   {
     title: 'Quick Links',
     links: [
-      { to: '', name: 'Home', isExternal: false },
-      { to: '', name: 'News', isExternal: false },
-      { to: '', name: 'Contact', isExternal: false }
+      { to: '/home', name: 'Home', isExternal: false },
+      { to: '/news', name: 'News', isExternal: false },
+      { to: '/meet-us', name: 'Contact', isExternal: false }
     ]
   },
   {
     title: 'Legal',
     links: [
-      { to: '', name: 'Cookie Policy', isExternal: true },
-      { to: '', name: 'Privacy Policy', isExternal: false },
-      { to: '', name: 'GDPR', isExternal: true },
-      { to: '', name: 'Terms & Conditions', isExternal: false }
+      {
+        to: '/static/pdf/cookie_policy.pdf',
+        name: 'Cookie Policy',
+        isExternal: true
+      },
+      {
+        to: '/static/pdf/privacy_policy.pdf',
+        name: 'Privacy Policy',
+        isExternal: true
+      },
+      { to: '/static/pdf/gdpr.pdf', name: 'GDPR', isExternal: true },
+      {
+        to: '/static/pdf/terms_and_conditions.pdf',
+        name: 'Terms & Conditions',
+        isExternal: true
+      }
     ]
   }
 ];
@@ -54,42 +66,43 @@ const rightNav = [
   {
     title: 'Find Us',
     links: [
-      { to: '', name: 'LinkedIn', isExternal: true },
+      {
+        to: 'https://www.linkedin.com/company/fixingtherecruitmentgame',
+        name: 'LinkedIn',
+        isExternal: true
+      },
       { to: '', name: 'Twitter', isExternal: true },
-      { to: '', name: 'Instagram', isExternal: true },
-      { to: '', name: 'Facebook', isExternal: true }
+      {
+        to: 'https://www.instagram.com/oneworks.ams/',
+        name: 'Instagram',
+        isExternal: true
+      },
+      {
+        to: 'https://www.facebook.com/Oneteam-2476326322397423',
+        name: 'Facebook',
+        isExternal: true
+      }
     ]
   }
 ];
 
-const TradeMarkContainer = styled(Flex)``;
-const Content = styled(Flex)``;
-const Col = styled(Flex)``;
-const RatingContainer = styled(Flex)``;
-const NavItemContainer = styled(Flex)``;
-
-const rating = [1, 1, 1, 1, 1, 1, 1, 1, 0.5];
-
-const renderRating = () =>
-  _.map(rating, r =>
-    r === 1 ? (
-      <img css="cursor: pointer" src="/static/star.svg" alt="one-star-rating" />
-    ) : (
-      <img
-        css="cursor: pointer"
-        src="/static/half-star.svg"
-        alt="half-star-rating"
-      />
-    )
-  );
+const TradeMarkContainer = styled(props => <Flex {...props} />)``;
+const Content = styled(props => <Flex {...props} />)``;
+const Col = styled(props => <Flex {...props} />)``;
+const NavItemContainer = styled(props => <Flex {...props} />)``;
+const Image = styled.img`
+  @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    display: none;
+  }
+`;
 
 const renderNav = nav => {
   const navTitle = nav.title;
-  const navItems = _.map(nav.links, item =>
+  const navItems = map(nav.links, item =>
     item.isExternal ? (
       <Text
         as="a"
-        mb="10"
+        mb="8px"
         href={item.to}
         target="_blank"
         rel="noopener noreferrer"
@@ -97,8 +110,10 @@ const renderNav = nav => {
         {item.name}
       </Text>
     ) : (
-      <Link to={item.to} mb="10">
-        <Text as="a">{item.name}</Text>
+      <Link passHref href={item.to}>
+        <Text as="a" mb="8px">
+          {item.name}
+        </Text>
       </Link>
     )
   );
@@ -116,10 +131,11 @@ const renderNav = nav => {
 };
 
 const Footer = () => (
-  <StyledFooter p={['45px 34px', '45px 110px', '90px 220px']}>
+  <StyledFooter p={['45px 34px', '45px 110px', '90px 160px']}>
     <Content
       justifyContent="space-between"
       flexWrap={['wrap', 'no-wrap']}
+      flexDirection={['column', 'row']}
       mb="70px"
     >
       <Col
@@ -127,15 +143,20 @@ const Footer = () => (
         width={['100%', 'auto']}
         justifyContent={['space-between', 'flex-start']}
         alignItems={['center', 'flex-start']}
+        flexWrap="wrap"
       >
-        <Col flexDirection="column" alignItems="flex-start">
+        <Col
+          width={['100%', 'auto']}
+          flexDirection="column"
+          alignItems="flex-start"
+        >
           <img
             css="cursor: pointer"
             src="/static/logo-small.svg"
             alt="logo-small"
           />
           <Col flexDirection="column">
-            <Text fontSize="16px" mt="30px">
+            <Text fontSize="16px" mt="30px" mb="8px">
               Keizersgracht 555
             </Text>
             <Text fontSize="16px" mb="30px">
@@ -143,36 +164,32 @@ const Footer = () => (
             </Text>
           </Col>
         </Col>
-        <Col mx={['30px', 0]} alignSelf={['flex-end', 'flex-start']}>
+        <Col mx={0} alignSelf={['flex-end', 'flex-start']}>
           <TextButton
             mb={['40px', '80px']}
-            color="#94BDF0"
+            color="blueLight"
             alignSelf={['flex-end', 'flex-start']}
+            external
+            target="blank"
+            href="mailto:tim@oneworks.co"
           >
             Get in touch
           </TextButton>
         </Col>
-        <img
+        <Image
           css="cursor: pointer"
           src="/static/xxx.svg"
           alt="three crosses (amsterdam)"
         />
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(leftNav, nav => renderNav(nav))}
+        {map(leftNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(centerNav, nav => renderNav(nav))}
+        {map(centerNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(rightNav, nav => renderNav(nav))}
-        <Text mt="40px"> 8.6 / 10 </Text>
-        <RatingContainer mb="30px">{renderRating()}</RatingContainer>
-        <img
-          css="cursor: pointer"
-          src="/static/google-icon.svg"
-          alt="google-logo"
-        />
+        {map(rightNav, nav => renderNav(nav))}
       </Col>
     </Content>
     <TradeMarkContainer justifyContent="center">

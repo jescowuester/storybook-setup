@@ -2,11 +2,12 @@ import React from 'react';
 import { Section, Box, Text, Flex, Button, TextButton } from 'components';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Link from 'next/link';
 
 const Img = styled.div`
   width: 45% !important;
   min-width: 45% !important;
-  height: 680px !important;
+  min-height: 680px !important;
   background: url(${p => p.src}) no-repeat center;
   background-size: cover;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
@@ -36,7 +37,7 @@ const swiperProps = {
   themeColor: '#fff'
 };
 
-const SwiperBox = styled(Box)`
+const SwiperBox = styled(props => <Box {...props} />)`
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     display: none;
   }
@@ -44,26 +45,48 @@ const SwiperBox = styled(Box)`
 
 const HiringEasy = ({
   secondary,
-  content: { img, images = [], title, text, button }
+  content: { img, images = [], title, text, button, href, externalHref }
 }) => {
   return (
     <Section bg="greyLighter">
-      <Flex>
+      <Flex alignItems="stretch">
         <Box
-          p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 190px']}
+          p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
         >
-          <Text mb="30px" as="h1">
+          <Text mb="30px" fontSize="56px" as="h1">
             {title}
           </Text>
           <Text mb="50px" as="p">
             {text}
           </Text>
-          <Button secondary={secondary} mb={['10px', '10px', 0]}>
-            {button}
-          </Button>
-          <TextButton secondary={secondary} ml={[0, '30px', '30px']}>
-            Download our pitch
-          </TextButton>
+          <Flex m="-5px" flexWrap="wrap" alignItems="center">
+            {externalHref ? (
+              <Button
+                as="a"
+                target="blank"
+                href={externalHref}
+                secondary={secondary}
+                m="7px"
+              >
+                {button}
+              </Button>
+            ) : (
+              <Link passHref href={href || '/about'}>
+                <Button as="a" secondary={secondary} m="7px">
+                  {button}
+                </Button>
+              </Link>
+            )}
+            <TextButton
+              external
+              target="blank"
+              href="https://docsend.com/view/tfewsuf"
+              secondary={secondary}
+              m="7px"
+            >
+              Download our pitch
+            </TextButton>
+          </Flex>
         </Box>
         {images.length ? (
           <SwiperBox

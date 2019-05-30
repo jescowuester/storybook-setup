@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { space, color, width, fontSize } from 'styled-system';
 
 const Button = styled.button`
+  display: inline-block;
   box-shadow: ${p => p.theme.shadows.z2};
   border-radius: 5px;
   border: 2px solid transparent;
@@ -9,10 +10,11 @@ const Button = styled.button`
   background: ${({ secondary, theme: { colors } }) =>
     secondary ? colors.redLight : colors.blueDark};
   transition: background 0.2s, box-shadow 0.2s;
-
+  display: inline-block;
   &:hover{
     background: ${({ secondary, theme: { colors } }) =>
       secondary ? colors.redLighter : colors.blue};
+    opacity: 1;
   };
 
   &:disabled{
