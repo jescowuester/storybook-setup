@@ -43,6 +43,8 @@ const CardLarge = ({
 
   return (
     <Flex
+      as="a"
+      href={href}
       width={['100%', '100%', 'auto']}
       flexDirection={flexDirection}
       mb={['40px', '40px', '160px']}

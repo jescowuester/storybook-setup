@@ -22,9 +22,22 @@ const Main = styled.main`
   height: 100%;
 `;
 
-const NavLink = styled(props => <Link passHref {...props} />)`
+const NavLink = styled.a`
   font-size: 18px;
   margin: 0 20px;
+  color: ${p => p.theme.colors.black};
+  position: relative;
+  &.active {
+    &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      background: ${p => p.theme.colors.blueDark};
+    }
+  }
 `;
 
 const StyledFooter = styled.footer`

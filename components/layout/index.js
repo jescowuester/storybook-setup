@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-import { Nav, Main, NavSwitcher } from './styles';
+import { Nav, Main, NavSwitcher, NavLink } from './styles';
 import Footer from '../../containers/Footer';
 import Flex from '../Flex';
 import Text from '../Text';
@@ -73,9 +73,11 @@ const Layout = ({ children, router }) => {
             <Flex className="text">
               {navItems.map(({ href, text, key }) => (
                 <Link passHref href={href} key={key}>
-                  <Text mx="25px" fontSize="18px" as="a">
+                  <NavLink
+                    className={router.pathname.match(href) ? 'active' : ''}
+                  >
                     {text}
-                  </Text>
+                  </NavLink>
                 </Link>
               ))}
             </Flex>
