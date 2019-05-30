@@ -24,8 +24,8 @@ const content = {
 
 const OtherCases = () => {
   return (
-    <Section bg="greyLighter" p={['80px 40px 20px', '80px 40px 0', '80px 160px 0']} mx={['-10px', '-10px', '-30px']}>
-      <Flex flexWrap="wrap">
+    <Section bg="greyLighter" p={['80px 40px 20px', '80px 40px 0', '80px 160px 0']}>
+      <Flex flexWrap="wrap"  mx={['-10px', '-10px', '-30px']}>
         {content.cards.map(props => (
           <Box
             key={props.title}
