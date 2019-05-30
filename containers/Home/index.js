@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const Outer = styled.section`
   display: flex;
+  min-height: calc(100vh - 100px);
   @media (min-width: ${p => p.theme.breakpoints[1]}) {
     height: 100%;
   }
@@ -21,7 +22,7 @@ const Outer = styled.section`
 const Home = ({ content: { leftCol, rightCol } }) => (
   <Outer>
     <Box
-      height={['50%', '50%', '100%']}
+      minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="greyLighter"
       p={['40px', '40px', '180px 160px']}
@@ -40,7 +41,7 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       </Button>
     </Box>
     <Box
-      height={['50%', '50%', '100%']}
+      minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="blackDark"
       color="white"

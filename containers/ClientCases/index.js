@@ -68,7 +68,7 @@ const ClientCases = ({
         <Text as="p">{card4.text}</Text>
       </Box>
     </Container>
-    <Link href={href}>
+    <Link passHref href={href}>
       <Button as="a">{button}</Button>
     </Link>
   </Section>
