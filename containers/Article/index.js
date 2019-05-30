@@ -60,6 +60,13 @@ const BackButton = styled.button`
   }
 `;
 
+const Sticky = styled.div`
+  @supports (position: sticky) {
+    position: sticky;
+    top: 160px;
+  }
+`;
+
 const Article = ({
   router,
   content: { text, shareText, title, backButton, backHref }
@@ -87,23 +94,25 @@ const Article = ({
       >
         <FormatedText dangerouslySetInnerHTML={{ __html: text }} />
         <Box mt={['60px', '60px', 0]} ml={[0, 0, '100px']}>
-          <Text mb="30px" as="h4" fontSize="24px">
-            {shareText}
-          </Text>
-          <Flex>
-            <LinkedinShareButton url={`https://oneworks.co/${router.route}`}>
-              <ShareButton icon={['fab', 'linkedin-in']} />
-            </LinkedinShareButton>
-            <FacebookShareButton
-              hashtag="oneworks"
-              url={`https://oneworks.co/${router.route}`}
-            >
-              <ShareButton mx="30px" icon={['fab', 'facebook-f']} />
-            </FacebookShareButton>
-            <TwitterShareButton url={`https://oneworks.co/${router.route}`}>
-              <ShareButton icon={['fab', 'twitter']} />
-            </TwitterShareButton>
-          </Flex>
+          <Sticky>
+            <Text mb="30px" as="h4" fontSize="24px">
+              {shareText}
+            </Text>
+            <Flex>
+              <LinkedinShareButton url={`https://oneworks.co/${router.route}`}>
+                <ShareButton icon={['fab', 'linkedin-in']} />
+              </LinkedinShareButton>
+              <FacebookShareButton
+                hashtag="oneworks"
+                url={`https://oneworks.co/${router.route}`}
+              >
+                <ShareButton mx="30px" icon={['fab', 'facebook-f']} />
+              </FacebookShareButton>
+              <TwitterShareButton url={`https://oneworks.co/${router.route}`}>
+                <ShareButton icon={['fab', 'twitter']} />
+              </TwitterShareButton>
+            </Flex>
+          </Sticky>
         </Box>
       </Flex>
     </Section>
