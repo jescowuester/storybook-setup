@@ -79,7 +79,6 @@ const Job = ({ title, address, clientCorporation, liked, id }) => {
 
 const Jobs = ({ content: { buttonText, title, jobs, href } }) => {
   const [jobsList, setJobsList] = useState([]);
-  console.log(jobsList);
   // todo get cors permission
   useEffect(() => {
     axios

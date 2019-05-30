@@ -52,7 +52,15 @@ const Cases = () => {
         <CardLarge {...content.largeCard} />
         <Flex flexWrap="wrap">
           {content.cards.map(props => (
-            <Box key={props.title} flexBasis={['100%', '50%', '50%']}>
+            <Box
+              key={props.title}
+              margin="20px"
+              flexBasis={[
+                'calc(100% - 40px)',
+                'calc(50% - 40px)',
+                'calc(50% - 40px)'
+              ]}
+            >
               <Card {...props} />
             </Box>
           ))}
