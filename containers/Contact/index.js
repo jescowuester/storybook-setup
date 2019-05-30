@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useReducer, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { map, template } from 'lodash';
-
+import axios from 'axios';
 import { Box, Button, Text, Flex, Input, Section } from 'components';
 import { Maps } from 'containers';
 
@@ -26,7 +26,25 @@ const StyledLink = styled(props => <Link {...props} />)`
   color: purple;
 `;
 
+const reducer = (state, { type, target, value }) => {
+  switch (type) {
+    case 'MODIFY':
+      return { ...state, [target]: value };
+    default:
+      throw new Error(
+        'There seems to be an error, are all your fields specified in init?'
+      );
+  }
+};
+
 const Contact = ({ content: { location, text, form, address } }) => {
+  const [state, dispatch] = useReducer(reducer, {
+    name: '',
+    email: '',
+    phone: ''
+  });
+  const [formSent, setFormSent] = useState(false);
+
   const { title, subTitle, disclaimer } = text;
   const { title: addressTitle, location: addressLocation, hours } = address;
 
@@ -45,13 +63,31 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const renderInputs = () =>
     map(form, f => (
       <Input
+        width="100%"
+        required
         key={f.id}
         name={`${f.name}-input`}
         type={f.type}
         placeholder={f.placeholder}
         mb="30px"
+        onChange={e => {
+          dispatch({ type: 'MODIFY', target: f.name, value: e.target.value });
+        }}
       />
     ));
+
+  const onSubmit = e => {
+    e.preventDefault();
+    axios
+      .post('https://careers.oneworks.co/api/nacho/v1/collections/contacts', {
+        ...state
+      })
+      .then(res => {
+        if (res.status === 200) {
+          setFormSent(true);
+        }
+      });
+  };
 
   return (
     <Section>
@@ -66,17 +102,20 @@ const Contact = ({ content: { location, text, form, address } }) => {
           <Text mb="40px" as="h3" fontSize="20px" fontWeight="normal">
             {subTitle}
           </Text>
-          <Form>
-            {renderInputs()}
-            <Text mb="40px" fontSize="14px" as="p">
-              {disclaimer.txtStart}
-              {DisclaimerLink(disclaimer.to, disclaimer.link)}
-              {disclaimer.txtEnd}
-            </Text>
-            <Button secondary width="132px" type="submit">
-              submit
-            </Button>
-          </Form>
+
+          <form onSubmit={onSubmit}>
+            <Form alignItems="flex-start">
+              {renderInputs()}
+              <Text mb="40px" fontSize="14px" as="p">
+                {disclaimer.txtStart}
+                {DisclaimerLink(disclaimer.to, disclaimer.link)}
+                {disclaimer.txtEnd}
+              </Text>
+              <Button secondary disabled={formSent} type="submit">
+                {formSent ? 'thank you for your submission' : 'submit'}
+              </Button>
+            </Form>
+          </form>
         </Box>
         <>
           <Maps location={location} />
