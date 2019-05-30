@@ -14,6 +14,7 @@ import WhatWeDo from './WhatWeDo';
 import Jobs from './Jobs';
 import OurTeam from './OurTeam';
 import OtherCases from './OtherCases';
+import OtherBlogPosts from './OtherBlogPosts';
 
 export {
   Article,
@@ -31,5 +32,6 @@ export {
   WhatWeDo,
   Jobs,
   OurTeam,
-  OtherCases
+  OtherCases,
+  OtherBlogPosts
 };
