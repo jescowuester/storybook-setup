@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import _ from 'lodash';
+import { map, template } from 'lodash';
 
 import { Box, Button, Text, Flex, Input, Section } from 'components';
 import { Maps } from 'containers';
@@ -30,7 +30,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const { title, subTitle, disclaimer } = text;
   const { title: addressTitle, location: addressLocation, hours } = address;
 
-  const disclaimerTemplate = _.template(disclaimer.txt);
+  const disclaimerTemplate = template(disclaimer.txt);
 
   const DisclaimerLink = (to, link) => (
     <StyledLink passHref href={to}>
@@ -43,7 +43,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   });
 
   const renderInputs = () =>
-    _.map(form, f => (
+    map(form, f => (
       <Input
         key={f.id}
         name={`${f.name}-input`}
