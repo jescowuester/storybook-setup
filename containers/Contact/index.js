@@ -30,7 +30,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const { title, subTitle, disclaimer } = text;
   const { title: addressTitle, location: addressLocation, hours } = address;
 
-  const disclaimerTemplate = template(disclaimer.txt);
+  // const disclaimerTemplate = template(disclaimer.txt);
 
   const DisclaimerLink = (to, link) => (
     <StyledLink passHref href={to}>
@@ -38,9 +38,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
     </StyledLink>
   );
 
-  const disclaimerCompiledText = disclaimerTemplate({
-    link: DisclaimerLink(disclaimer.to, disclaimer.link)
-  });
+  // const disclaimerCompiledText = disclaimerTemplate({
+  //   link: DisclaimerLink(disclaimer.to, disclaimer.link)
+  // });
 
   const renderInputs = () =>
     map(form, f => (
@@ -69,8 +69,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
           <Form>
             {renderInputs()}
             <Text mb="40px" fontSize="14px" as="p">
-              {disclaimerCompiledText}
+              {disclaimer.txtStart}
               {DisclaimerLink(disclaimer.to, disclaimer.link)}
+              {disclaimer.txtEnd}
             </Text>
             <Button secondary width="132px" type="submit">
               submit
@@ -90,7 +91,11 @@ const Contact = ({ content: { location, text, form, address } }) => {
       <AddressContainer>
         <Box p={['80px 40px', '100px 86px 160px 100px']}>
           <Text as="h1">{addressTitle}</Text>
-          <Flex mt="40px" flexDirection={['column', 'row', 'row']} flexWrap={['wrap', 'nowrap']}>
+          <Flex
+            mt="40px"
+            flexDirection={['column', 'row', 'row']}
+            flexWrap={['wrap', 'nowrap']}
+          >
             <LocationContainer
               flexDirection="column"
               mr="80px"
@@ -106,7 +111,11 @@ const Contact = ({ content: { location, text, form, address } }) => {
                 {`${addressLocation.zipcode} ${addressLocation.city}`}
               </Text>
             </LocationContainer>
-            <HoursContainer mt={["40px", 0, 0]} flexDirection="column" maxWidth={['100%', '360px']}>
+            <HoursContainer
+              mt={['40px', 0, 0]}
+              flexDirection="column"
+              maxWidth={['100%', '360px']}
+            >
               <Text as="h3" fontSize="24px" mb="20px">
                 {hours.title}
               </Text>

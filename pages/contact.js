@@ -163,8 +163,9 @@ const content = {
       title: 'Want to chat?',
       subTitle: 'We’d love to hear about your scale-up.',
       disclaimer: {
-        txt:
-          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <%- link %> here.',
+        txtStart:
+          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our',
+        txtEnd: 'here.',
         link: 'privacy statement',
         to: '/privacy-statement'
       }
@@ -194,8 +195,8 @@ const content = {
       location: {
         title: 'Address ',
         street: 'Keizersgracht',
-        number: '555',
-        zipcode: '1017 DR',
+        number: '620',
+        zipcode: '1017 ER',
         city: 'Amsterdam'
       },
       hours: {
@@ -212,18 +213,33 @@ function Index() {
     <>
       <Head>
         <title>Contact - ONE.</title>
-        <meta charset='UTF-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you."/>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta
+          name="description"
+          content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you."
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Contact - ONE." />
-        <meta property="og:description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you." />
+        <meta
+          property="og:description"
+          content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you."
+        />
         <meta property="og:url" content="https://oneworks.co/contact/" />
         <meta property="og:site_name" content="ONE." />
-        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/WeAreOne.Works/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you." />
+        <meta
+          name="twitter:description"
+          content="We are One. A Scale Up&#039;s solution for talent. If you&#039;re a growing business or an ambitious indvidual get in touch to see how we can help you."
+        />
         <meta name="twitter:title" content="Contact - ONE." />
       </Head>
       <Contact content={content.contact} />
