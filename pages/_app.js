@@ -6,6 +6,7 @@ import { Layout } from 'components';
 import theme from '../styles/theme';
 import GlobalStyle from '../styles/GlobalStyle';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import '../styles/fonts.css';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

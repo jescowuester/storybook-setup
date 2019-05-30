@@ -60,7 +60,7 @@ const Layout = ({ children, router }) => {
       <Nav>
         <Link href="/">
           <a>
-            <img src="/static/logo.svg" />
+            <img style={{ height: '24px' }} src="/static/logo.png" />
           </a>
         </Link>
 

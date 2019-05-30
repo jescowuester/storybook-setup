@@ -22,28 +22,28 @@ const content = {
     title: 'What we do.',
     card1: {
       img: '/static/what-we-do1.jpg',
-      title: 'Smart hiring as integral to the business strategy: ',
+      title: 'Smart hiring as integral to the business strategy',
       text:
         'To be sustainable, leadership hiring must be part of your business plan and your long-term vision. We will develop a rich understanding of your culture, the stage of growth you are in, the current team and the talent market. Our team will then align roles and skills with your growth strategy.',
       href: '/about'
     },
     card2: {
       img: '/static/what-we-do2.jpg',
-      title: 'Branding as the secret sauce:',
+      title: 'Branding as the secret sauce',
       text:
         'You’ve got the attractive culture and inspiring work environment nailed, we make sure that world-class talent knows about it. With our 360 team, we use contemporary content marketing, digital advertising, and SEO tactics to make sure the right messaging lands in front of the right people at the right time, using the right channels. LinkedIn, email, Facebook ads, direct message - brand consistency is key, and we’ve got you covered.',
       href: '/about'
     },
     card3: {
       img: '/static/what-we-do3.jpg',
-      title: 'Sourcing - our black book at work:',
+      title: 'Sourcing - our black book at work',
       text:
         'Here is where our experience and our black book will really come into play. We know our network, and we know how to speak to them. Clear, honest and personable. It’s this legwork that defines the beginning of an exceptional candidate experience. All you need to do is set aside time to meet those qualified professionals that will be the closest match to your own unique culture and vision.',
       href: '/about'
     },
     card4: {
       img: '/static/what-we-do4.jpg',
-      title: 'Coaching from beginning to end:',
+      title: 'Coaching from beginning to end',
       text:
         'Leadership talent is high maintenance (rightly so!), and hiring at this level is a reputational tightrope walk. You only get one chance to make a first impression. We will coach you through every stage of the hiring process to create a best-in-class candidate experience that will help you win the race for talent: from interviews and assessments, to reference checking, to rejections, to offer negotiations and to onboarding.',
       href: '/about'
