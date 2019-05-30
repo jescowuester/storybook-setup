@@ -30,7 +30,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const { title, subTitle, disclaimer } = text;
   const { title: addressTitle, location: addressLocation, hours } = address;
 
-  const disclaimerTemplate = _.template(disclaimer.txt);
+  // const disclaimerTemplate = _.template(disclaimer.txt);
 
   const DisclaimerLink = (to, link) => (
     <StyledLink passHref href={to}>
@@ -38,9 +38,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
     </StyledLink>
   );
 
-  const disclaimerCompiledText = disclaimerTemplate({
-    link: DisclaimerLink(disclaimer.to, disclaimer.link)
-  });
+  // const disclaimerCompiledText = disclaimerTemplate({
+  //   link: DisclaimerLink(disclaimer.to, disclaimer.link)
+  // });
 
   const renderInputs = () =>
     _.map(form, f => (
@@ -69,8 +69,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
           <Form>
             {renderInputs()}
             <Text mb="40px" fontSize="14px" as="p">
-              {disclaimerCompiledText}
+              {disclaimer.txtStart}
               {DisclaimerLink(disclaimer.to, disclaimer.link)}
+              {disclaimer.txtEnd}
             </Text>
             <Button secondary width="132px" type="submit">
               submit

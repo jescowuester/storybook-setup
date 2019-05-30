@@ -163,8 +163,9 @@ const content = {
       title: 'Want to chat?',
       subTitle: 'We’d love to hear about your scale-up.',
       disclaimer: {
-        txt:
-          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our <%- link %> here.',
+        txtStart:
+          '*By submitting the above form you are giving us permission to use your details to contact you. Under EU General Data Protection Regulations compliance we will not share these details with any other party. See our',
+        txtEnd: 'here.',
         link: 'privacy statement',
         to: '/privacy-statement'
       }

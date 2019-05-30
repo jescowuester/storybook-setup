@@ -98,8 +98,7 @@ const Layout = ({ children, router }) => {
 
         {!isHome && (
           <>
-            {' '}
-            <Footer />{' '}
+            <Footer />
           </>
         )}
       </Main>
