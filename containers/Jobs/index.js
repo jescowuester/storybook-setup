@@ -87,7 +87,7 @@ const Jobs = ({ content: { buttonText, title, jobs, href } }) => {
   }, []);
   return (
     <Section p={['40px', '40px', '160px']} textAlign="center">
-      <Text as="h3" mb="80px">
+      <Text mb={['20px', '40px', '80px']} as="h3">
         {title}
       </Text>
       <hr />

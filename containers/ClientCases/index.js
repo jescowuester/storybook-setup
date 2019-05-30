@@ -38,7 +38,7 @@ const ClientCases = ({
     p={['60px 40px', '60px 40px', '160px']}
     bg="greyLighter"
   >
-    <Text mb="80px" as="h3">
+    <Text mb={['20px', '40px', '80px']} as="h3">
       Client Cases.
     </Text>
     <Container m="-20px" justifyContent="space-between" width="100%">

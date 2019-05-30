@@ -152,6 +152,11 @@ function HomePage() {
     <>
       <Head>
         <title>ONE. making hiring easy for scale-ups.</title>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
         <meta
           name="description"
           content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."

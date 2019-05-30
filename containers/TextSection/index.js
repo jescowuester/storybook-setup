@@ -17,7 +17,7 @@ const TextSection = ({
 }) => (
   <Section
     bg={secondary ? 'greyLighter' : 'white'}
-    p={['40px', '100 150px', '160px 255px']}
+    p={['80px 40px', '100 150px', '160px 255px']}
   >
     <Text mb="40px" as="h3">
       {title}
