@@ -67,9 +67,17 @@ const Cases = () => {
       </Head>
       <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
         <CardLarge {...content.largeCard} />
-        <Flex flexWrap="wrap">
+        <Flex margin="-20px" flexWrap="wrap">
           {content.cards.map(props => (
-            <Box key={props.title} flexBasis={['100%', '50%', '50%']}>
+            <Box
+              key={props.title}
+              margin="20px"
+              flexBasis={[
+                'calc(100% - 40px)',
+                'calc(50% - 40px)',
+                'calc(50% - 40px)'
+              ]}
+            >
               <Card {...props} />
             </Box>
           ))}

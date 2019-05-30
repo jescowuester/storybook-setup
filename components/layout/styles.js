@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import { space } from 'styled-system';
 
 const Nav = styled.nav`
