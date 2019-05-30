@@ -42,7 +42,7 @@ const Card = ({ img, title, text, redirect, secondary, href, noFlex }) => (
       <Text color="blackLight" mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <TextButton secondary={secondary}>
+      <TextButton noLink secondary={secondary}>
         {redirect}
       </TextButton>
     </Box>

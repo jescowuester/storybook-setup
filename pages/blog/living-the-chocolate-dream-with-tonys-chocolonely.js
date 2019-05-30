@@ -5,7 +5,7 @@ import { blogPosts } from '../../data';
 
 const Case = () => {
   const { title, text, backButton } = blogPosts[
-    '4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
+    'living-the-chocolate-dream-with-tonys-chocolonely'
   ];
 
   const content = {
@@ -24,14 +24,12 @@ const Case = () => {
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
-        <title>
-          4 Reasons for leaving the Corporate Rat Race to join a Scaleup
-        </title>
+        <title>Living the chocolate dream with Tony’s Chocolonely</title>
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="4 Reasons for leaving the Corporate Rat Race to join a Scaleup"
+          content="Living the chocolate dream with Tony’s Chocolonely"
         />
         <meta
           property="og:url"
@@ -45,7 +43,7 @@ const Case = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="4 Reasons for leaving the Corporate Rat Race to join a Scaleup"
+          content="Living the chocolate dream with Tony’s Chocolonely"
         />
       </Head>
       <Article content={content} />

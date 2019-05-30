@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Link from 'next/link';
 import Flex from './Flex';
 import Box from './Box';
 import Text from './Text';
@@ -62,9 +61,9 @@ const CardLarge = ({
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />
         <Box mt="37px">
-          <Link passHref href={href}>
-            <TextButton secondary={secondary}>{buttonText}</TextButton>
-          </Link>
+          <TextButton noLink secondary={secondary}>
+            {buttonText}
+          </TextButton>
         </Box>
       </Box>
     </StyledFlex>
