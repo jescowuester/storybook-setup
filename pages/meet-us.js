@@ -29,7 +29,8 @@ const content = {
         text:
           'Meet Tim. Tim was the first One team player and is one heck of a guy. Punching well above 6 feet, he is also one of our ambitious Head of Recruitment, with clear plans to help grow our recruitment side of the business and really turn us into a force to be reckoned with in the Netherlands, and the world. Although he didn’t quite say “world domination” it isn’t entirely off the cards it seems.',
         buttonText: 'Learn more',
-        _id: 1
+        _id: 1,
+        href: 'https://www.linkedin.com/in/fixingtherecruitmentgame/'
       },
       {
         img: '/static/meet-us-justin.png',
@@ -37,7 +38,8 @@ const content = {
         text:
           "Meet Justin, our resident Growth Hacker. As fancy and badass as the title sounds, he doesn’t actually do a lot of hacking - but the growth part, he definitely has down pact. He is a born and bread Amsterdammer and couldn't imagine living anywhere else. He joined our team shortly after it all started, and was enticed by the challenge of growing a business from scratch, and the unbridled enthusiasm from Kaan, our founder",
         buttonText: 'Learn more',
-        _id: 2
+        _id: 2,
+        href: 'https://www.linkedin.com/in/justin-swart/'
       },
       {
         img: '/static/meet-us-debbie.png',
@@ -45,7 +47,8 @@ const content = {
         text:
           'Meet Debbie, Debbie is our secretary of state - which basically means she knows literally everything, all of the time - sort of like a covert agent. As our queen of operations, Debbie keeps things ticking over, and without her I’m sure we would all be pulling our hair out - and that wouldn’t make for good looking team pictures.',
         buttonText: 'Learn more',
-        _id: 3
+        _id: 3,
+        href: 'https://www.linkedin.com/in/debbie-breg-242b8313b/'
       },
       {
         img: '/static/meet-us-kaan.png',
@@ -53,7 +56,8 @@ const content = {
         text:
           'Meet Kaan, Kaan is our founder - so I guess it’s kudos to him for bringing us all together (we won’t say that too loud though in case he gets big head). With 18 years within the recruitment industry, he is a veteran. Kaan fell into recruitment entirely by accident however, but says retrospectively it makes perfect sense that he did.',
         buttonText: 'Learn more',
-        _id: 4
+        _id: 4,
+        href: 'https://www.linkedin.com/in/kaananit/'
       }
     ]
   },
@@ -108,14 +112,20 @@ function Index() {
     <>
       <Head>
         <title>Meet us - ONE.</title>
-        <meta charset='UTF-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Meet us - ONE." />
         <meta property="og:url" content="https://oneworks.co/meet-us/" />
         <meta property="og:site_name" content="ONE." />
-        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/WeAreOne.Works/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Meet us - ONE." />
       </Head>

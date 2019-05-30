@@ -99,16 +99,16 @@ const Article = ({
               {shareText}
             </Text>
             <Flex>
-              <LinkedinShareButton url={`https://oneworks.co/${router.route}`}>
+              <LinkedinShareButton url={`https://oneworks.co${router.route}`}>
                 <ShareButton icon={['fab', 'linkedin-in']} />
               </LinkedinShareButton>
               <FacebookShareButton
                 hashtag="oneworks"
-                url={`https://oneworks.co/${router.route}`}
+                url={`https://oneworks.co${router.route}`}
               >
                 <ShareButton mx="30px" icon={['fab', 'facebook-f']} />
               </FacebookShareButton>
-              <TwitterShareButton url={`https://oneworks.co/${router.route}`}>
+              <TwitterShareButton url={`https://oneworks.co${router.route}`}>
                 <ShareButton icon={['fab', 'twitter']} />
               </TwitterShareButton>
             </Flex>

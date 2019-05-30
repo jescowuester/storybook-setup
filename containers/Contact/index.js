@@ -3,7 +3,15 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { map, template } from 'lodash';
 import axios from 'axios';
-import { Box, Button, Text, Flex, Input, Section } from 'components';
+import {
+  Box,
+  Button,
+  TextButton,
+  Text,
+  Flex,
+  Input,
+  Section
+} from 'components';
 import { Maps } from 'containers';
 
 const ContactContainer = styled(props => <Flex {...props} />)``;
@@ -111,9 +119,20 @@ const Contact = ({ content: { location, text, form, address } }) => {
                 {DisclaimerLink(disclaimer.to, disclaimer.link)}
                 {disclaimer.txtEnd}
               </Text>
-              <Button secondary disabled={formSent} type="submit">
-                {formSent ? 'thank you for your submission' : 'submit'}
-              </Button>
+              <Flex flexWrap="wrap" alignItems="center" m="-15px">
+                <Button m="15px" secondary disabled={formSent} type="submit">
+                  {formSent ? 'thank you for your submission' : 'Submit'}
+                </Button>
+                <TextButton
+                  m="15px"
+                  external
+                  secondary
+                  target="blank"
+                  href="https://cal.mixmax.com/kaan-one./catch-up-call"
+                >
+                  Or schedule a call
+                </TextButton>
+              </Flex>
             </Form>
           </form>
         </Box>

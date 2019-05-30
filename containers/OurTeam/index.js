@@ -11,7 +11,7 @@ const Img = styled.div`
   background-position: center;
 `;
 
-const TeamMember = ({ img, name, text, buttonText }) => (
+const TeamMember = ({ img, name, text, buttonText, href }) => (
   <Box flexBasis={['100%', '50%', '50%']}>
     <Flex m="30px" flexDirection="column">
       <Img img={img} />
@@ -21,7 +21,9 @@ const TeamMember = ({ img, name, text, buttonText }) => (
       <Text mb="30px" as="p">
         {text}
       </Text>
-      <TextButton secondary>{buttonText}</TextButton>
+      <TextButton target="blank" external href={href} secondary>
+        {buttonText}
+      </TextButton>
     </Flex>
   </Box>
 );

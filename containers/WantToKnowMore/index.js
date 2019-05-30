@@ -25,7 +25,7 @@ const Overlay = styled.div`
   left: 0;
   top: 0;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${p => p.theme.colors.greyLight};
 `;
 
 const WantToKnowMore = ({
