@@ -88,12 +88,12 @@ const Contact = ({ content: { location, text, form, address } }) => {
         </>
       </ContactContainer>
       <AddressContainer>
-        <Box p={['40px', '100px 86px 160px 100px']}>
+        <Box p={['80px 40px', '100px 86px 160px 100px']}>
           <Text as="h1">{addressTitle}</Text>
-          <Flex mt="40px" flexWrap={['wrap', 'nowrap']}>
+          <Flex mt="40px" flexDirection={['column', 'row', 'row']} flexWrap={['wrap', 'nowrap']}>
             <LocationContainer
               flexDirection="column"
-              mr="20px"
+              mr="80px"
               maxWidth={['100%', '360px']}
             >
               <Text as="h3" fontSize="24px" mb="20px">
@@ -106,7 +106,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
                 {`${addressLocation.zipcode} ${addressLocation.city}`}
               </Text>
             </LocationContainer>
-            <HoursContainer flexDirection="column" maxWidth={['100%', '360px']}>
+            <HoursContainer mt={["40px", 0, 0]} flexDirection="column" maxWidth={['100%', '360px']}>
               <Text as="h3" fontSize="24px" mb="20px">
                 {hours.title}
               </Text>

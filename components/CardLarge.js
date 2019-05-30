@@ -30,6 +30,11 @@ const TextSection = styled.div`
   }
 `;
 
+const StyledFlex = styled(Flex)`
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
 const CardLarge = ({
   img,
   title,
@@ -42,12 +47,12 @@ const CardLarge = ({
   const flexDirection = ['column', 'column', reverse ? 'row-reverse' : 'row'];
 
   return (
-    <Flex
+    <StyledFlex
       as="a"
       href={href}
       width={['100%', '100%', 'auto']}
       flexDirection={flexDirection}
-      mb={['40px', '40px', '160px']}
+      mb={['40px', '40px', '80px']}
       mx={[0, 0, '30px']}
     >
       <Img img={img} />
@@ -62,7 +67,7 @@ const CardLarge = ({
           </Link>
         </Box>
       </Box>
-    </Flex>
+    </StyledFlex>
   );
 };
 

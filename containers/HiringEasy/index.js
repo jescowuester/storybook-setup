@@ -53,7 +53,7 @@ const HiringEasy = ({
         <Box
           p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
         >
-          <Text mb="30px" fontSize="56px" as="h1">
+          <Text mb="30px" as="h1">
             {title}
           </Text>
           <Text mb="50px" as="p">

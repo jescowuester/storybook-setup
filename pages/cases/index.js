@@ -65,17 +65,18 @@ const Cases = () => {
         <meta name="twitter:description" content="Our cases." />
         <meta name="twitter:title" content="Cases - ONE." />
       </Head>
-      <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
+      <Section bg="greyLighter" p={['40px 40px 20px', '40px 80px 20px', '100px 160px 20px']}>
         <CardLarge {...content.largeCard} />
-        <Flex margin="-20px" flexWrap="wrap">
+        <Flex flexWrap="wrap" mx={['-10px', '-10px', '0']}>
           {content.cards.map(props => (
             <Box
               key={props.title}
-              margin="20px"
+              mb={['60px', '80px', '80px']}
+              mx={['10px', '10px', '30px']}
               flexBasis={[
-                'calc(100% - 40px)',
-                'calc(50% - 40px)',
-                'calc(50% - 40px)'
+                'calc(100% - 20px)',
+                'calc(50% - 20px)',
+                'calc(50% - 60px)'
               ]}
             >
               <Card {...props} />

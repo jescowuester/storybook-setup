@@ -67,7 +67,16 @@ const BlogPosts = () => {
         <CardLarge {...content.largeCard} />
         <Flex flexWrap="wrap">
           {content.cards.map(props => (
-            <Box key={props.title} flexBasis={['100%', '50%', '50%']}>
+            <Box
+              key={props.title}
+              mb={['60px', '80px', '80px']}
+              mx={['10px', '10px', '30px']}
+              flexBasis={[
+                'calc(100% - 20px)',
+                'calc(50% - 20px)',
+                'calc(50% - 60px)'
+              ]}
+            >
               <Card {...props} />
             </Box>
           ))}

@@ -199,7 +199,7 @@ const content = {
         city: 'Amsterdam'
       },
       hours: {
-        title: 'hours',
+        title: 'Hours',
         week: { start: '8 AM', end: '6 PM' },
         weekend: '🎉 Celebrating the weekend'
       }
