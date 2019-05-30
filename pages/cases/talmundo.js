@@ -1,5 +1,5 @@
 import { Article, OtherCases } from 'containers';
-import cases from '../../data';
+import { cases } from '../../data';
 
 const Case = () => {
   const { title, text, backButton, backHref } = cases.talmundo;

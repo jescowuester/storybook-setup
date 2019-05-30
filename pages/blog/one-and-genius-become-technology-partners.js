@@ -4,7 +4,7 @@ import { blogPosts } from '../../data';
 
 const Case = () => {
   const { title, text, backButton, backHref } = blogPosts[
-    '4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
+    'one-and-genius-become-technology-partners'
   ];
 
   const content = {

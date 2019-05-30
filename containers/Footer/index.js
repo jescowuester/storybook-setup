@@ -10,8 +10,8 @@ const leftNav = [
   {
     title: 'Candidates',
     links: [
-      { to: '/cases', name: 'Overview', isExternal: false },
-      { to: '/about', name: 'About', isExternal: false }
+      { to: '/cases', name: 'Overview', isExternal: true },
+      { to: '/about', name: 'About', isExternal: true }
     ]
   },
   {

@@ -4,38 +4,46 @@ import React from 'react';
 
 const content = {
   largeCard: {
-    img: '/static/client-cases4.jpg',
-    title: 'Setting up a team from scratch in The Netherlands',
+    img: '/static/blog1.jpg',
+    title: '4 Reasons for leaving the Corporate Rat Race to join a Scaleup',
     text:
-      'October was founded in 2014 in Paris, under the name Lendix, due to new regulations for lending to the SME market. The mission of this amazing scale-up is to allow entrepreneurs ...',
+      'Remember when leaving a cushy corporate gig to take a job at a high-growth tech company was considered risky, or even foolish? Much was talked about jeopardising secure career trajectories or risking unexplainable, even downright embarrassing gaps in one’s CV should the startup ...',
     buttonText: 'Read more',
     secondary: true,
-    href: '/cases/october'
+    href: '/blog/4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
   },
   cards: [
     {
-      img: '/static/blog1.jpg',
-      title: '4 Reasons for leaving the Corporate Rat Race to join a Scaleup',
+      img: '/static/blog2.jpg',
+      title: 'Building up the Ageras team in the Netherlands',
       text:
-        'Remember when leaving a cushy corporate gig to take a job at a high-growth tech company was considered risky, or even foolish? Much was talked about jeopardising secure career trajectories or risking unexplainable, even downright embarrassing gaps in one’s CV should the startup ...',
+        'Al 6 jaar verbindt Ageras klanten met accountants en boekhouders in Denemarken, Zweden, Noorwegen, Nederland, Duitsland en het Verenigd Koninkrijk. Het succesverhaal begon ...',
       secondary: true,
-      href:
-        '/blog/4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up/'
+      href: '/blog/building-up-the-ageras-team-in-the-netherlands'
     },
     {
-      img: '/static/client-cases1.jpg',
-      title: 'Kudos from Impraise! Growing their people.',
+      img: '/static/blog3.jpg',
+      title: 'One. and Genius become technology partners.',
       text:
-        'Impraise were one of our early adopters, they’re a scale up working in the HR tech space and are making some productive and innovative changes. As a fun team of dedicated innovators ...',
+        'Cutting edge technologies like AI, machine learning, blockchain and the internet of things can change the world for the better. But they only do so when effectively trained, trusted and ...',
       secondary: true,
-      href: '/cases/impraise'
+      href: '/blog/one-and-genius-become-technology-partners'
     },
     {
-      img: '/static/client-cases2.jpg',
-      title: '50Five',
-      text: 'Expanding the team for 50Five.',
+      img: '/static/blog4.jpg',
+      title: 'Vying for Vinted - Clothing Scale Up on the way up.',
+      text:
+        'We’re pretty excited to be working with Vinted – a Scale Up that’s on its way to even greater things. Hailing originally from Lithuania, vinted was born in 2008 when Milda – the founder – was ...',
       secondary: true,
-      href: '/cases/fiftyfive'
+      href: '/blog/vying-for-vinted-clothing-scale-up-on-the-way-up'
+    },
+    {
+      img: '/static/blog5.png',
+      title: 'Living the chocolate dream with Tony’s ...',
+      text:
+        'A generation who grew up reading and watching the various variations of Charlie and the Chocolate factory. With edible chocolate rivers and trees made of lollipops, it’s any child’s ...',
+      secondary: true,
+      href: '/blog/living-the-chocolate-dream-with-tonys-chocolonely'
     }
   ],
   wantToKnowMore: {
