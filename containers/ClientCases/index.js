@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { Text, Button, Flex, Box, Section } from 'components';
+import Link from 'next/link';
 
 const Img = styled.div`
   width: 100%;
@@ -33,7 +33,9 @@ const Container = styled(props => <Flex {...props} />)`
 const cardWidth = ['98%', '98%', '48%'];
 const cardMargin = ['20px', '10px', '0'];
 
-const ClientCases = ({ content: { card1, card2, card3, card4, button } }) => (
+const ClientCases = ({
+  content: { card1, card2, card3, card4, button, href }
+}) => (
   <Section
     textAlign="center"
     p={['60px 40px', '60px 40px', '160px']}
@@ -66,7 +68,9 @@ const ClientCases = ({ content: { card1, card2, card3, card4, button } }) => (
         <Text as="p">{card4.text}</Text>
       </Box>
     </Container>
-    <Button>{button}</Button>
+    <Link passHref href={href}>
+      <Button as="a">{button}</Button>
+    </Link>
   </Section>
 );
 

@@ -109,7 +109,7 @@ const renderNav = nav => {
         {item.name}
       </Text>
     ) : (
-      <Link to={item.to} mb="10">
+      <Link passHref to={item.to} mb="10">
         <Text as="a">{item.name}</Text>
       </Link>
     )
@@ -160,6 +160,9 @@ const Footer = () => (
             mb={['40px', '80px']}
             color="#94BDF0"
             alignSelf={['flex-end', 'flex-start']}
+            as="a"
+            target="blank"
+            href="mailto:tim@oneworks.co"
           >
             Get in touch
           </TextButton>

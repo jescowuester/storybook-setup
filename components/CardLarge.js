@@ -58,7 +58,7 @@ const CardLarge = ({
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />
         <Box mt="37px">
-          <Link href={href}>
+          <Link passHref href={href}>
             <TextButton secondary={secondary}>{buttonText}</TextButton>
           </Link>
         </Box>

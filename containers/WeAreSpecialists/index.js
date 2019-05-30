@@ -23,7 +23,7 @@ const WeAreSpecialists = ({ content: { img, title, text, buttonText } }) => (
     <Text mb="40px" as="p">
       {text}
     </Text>
-    <Button as="a" href="https://docsend.com/view/tfewsuf">
+    <Button as="a" target="blank" href="https://docsend.com/view/tfewsuf">
       {buttonText}
     </Button>
   </SectionWithBackground>

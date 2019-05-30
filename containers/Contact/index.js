@@ -33,7 +33,7 @@ const Contact = ({ content: { location, text, form, address } }) => {
   const disclaimerTemplate = _.template(disclaimer.txt);
 
   const DisclaimerLink = (to, link) => (
-    <StyledLink href={to}>
+    <StyledLink passHref href={to}>
       <a> {link} </a>
     </StyledLink>
   );

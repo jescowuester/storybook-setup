@@ -92,9 +92,10 @@ const content = {
   },
   wantToKnowMore: {
     img: '/static/meet-us-banner.jpg',
-    title: 'Want to know more?',
-    text: 'Read our Pitch deck for more information',
-    button: 'Download'
+    title: 'Want to join the team?',
+    text: 'Get in contact with One. of our team members.',
+    button: 'Contact us',
+    href: 'mailto:tim@oneworks.co'
   }
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Section, Box, Text, Flex, Button, TextButton } from 'components';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Link from 'next/link';
 
 const Img = styled.div`
   width: 45% !important;
@@ -44,7 +45,7 @@ const SwiperBox = styled(props => <Box {...props} />)`
 
 const HiringEasy = ({
   secondary,
-  content: { img, images = [], title, text, button }
+  content: { img, images = [], title, text, button, href }
 }) => {
   return (
     <Section bg="greyLighter">
@@ -59,10 +60,18 @@ const HiringEasy = ({
             {text}
           </Text>
           <Flex m="-5px" flexWrap="wrap" alignItems="center">
-            <Button secondary={secondary} m="7px">
-              {button}
-            </Button>
-            <TextButton secondary={secondary} m="7px">
+            <Link passHref href={href || '/about'}>
+              <Button as="a" secondary={secondary} m="7px">
+                {button}
+              </Button>
+            </Link>
+            <TextButton
+              as="a"
+              target="blank"
+              href="https://docsend.com/view/tfewsuf"
+              secondary={secondary}
+              m="7px"
+            >
               Download our pitch
             </TextButton>
           </Flex>
