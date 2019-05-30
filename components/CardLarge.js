@@ -8,7 +8,7 @@ import TextButton from './TextButton';
 
 const Img = styled.div`
   min-width: 50%;
-  min-height: 600px;
+  /* min-height: 600px; */
   background: url(${p => p.img}) no-repeat center;
   background-size: cover;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
