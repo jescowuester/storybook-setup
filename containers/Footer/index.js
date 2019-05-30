@@ -10,22 +10,22 @@ const leftNav = [
   {
     title: 'Candidates',
     links: [
-      { to: '', name: 'Overview', isExternal: false },
-      { to: '', name: 'About', isExternal: false }
+      { to: '/cases', name: 'Overview', isExternal: false },
+      { to: '/about', name: 'About', isExternal: false }
     ]
   },
   {
     title: 'Clients',
     links: [
-      { to: '', name: 'Overview', isExternal: false },
-      { to: '', name: 'About', isExternal: false }
+      { to: '/cases', name: 'Overview', isExternal: false },
+      { to: '/about', name: 'About', isExternal: false }
     ]
   },
   {
     title: '',
     links: [
-      { to: 'Press', name: '', isExternal: false },
-      { to: 'Blog', name: '', isExternal: false }
+      { to: '/Press', name: '', isExternal: false },
+      { to: '/Blog', name: '', isExternal: false }
     ]
   }
 ];
@@ -34,9 +34,9 @@ const centerNav = [
   {
     title: 'Quick Links',
     links: [
-      { to: '', name: 'Home', isExternal: false },
-      { to: '', name: 'News', isExternal: false },
-      { to: '', name: 'Contact', isExternal: false }
+      { to: '/home', name: 'Home', isExternal: false },
+      { to: '/news', name: 'News', isExternal: false },
+      { to: '/meet-us', name: 'Contact', isExternal: false }
     ]
   },
   {
@@ -54,10 +54,22 @@ const rightNav = [
   {
     title: 'Find Us',
     links: [
-      { to: '', name: 'LinkedIn', isExternal: true },
+      {
+        to: 'https://www.linkedin.com/company/fixingtherecruitmentgame',
+        name: 'LinkedIn',
+        isExternal: true
+      },
       { to: '', name: 'Twitter', isExternal: true },
-      { to: '', name: 'Instagram', isExternal: true },
-      { to: '', name: 'Facebook', isExternal: true }
+      {
+        to: 'https://www.instagram.com/oneworks.ams/',
+        name: 'Instagram',
+        isExternal: true
+      },
+      {
+        to: 'https://www.facebook.com/Oneteam-2476326322397423',
+        name: 'Facebook',
+        isExternal: true
+      }
     ]
   }
 ];
