@@ -1,6 +1,10 @@
 const path = require('path');
 // const CircularDependencyPlugin = require('circular-dependency-plugin');
 
+const withCSS = require('@zeit/next-css');
+
+module.exports = withCSS();
+
 module.exports = {
   webpack(config) {
     config.resolve.alias.components = path.join(__dirname, 'components');

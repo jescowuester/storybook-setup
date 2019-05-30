@@ -53,26 +53,26 @@ const HiringEasy = ({
         <Box
           p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
         >
-          <Text mb="30px" fontSize="56px" as="h1">
+          <Text mb="30px" as="h1">
             {title}
           </Text>
           <Text mb="50px" as="p">
             {text}
           </Text>
-          <Flex m="-5px" flexWrap="wrap" alignItems="center">
+          <Flex m="-10px" flexWrap="wrap" alignItems="center">
             {externalHref ? (
               <Button
                 as="a"
                 target="blank"
                 href={externalHref}
                 secondary={secondary}
-                m="7px"
+                m="10px"
               >
                 {button}
               </Button>
             ) : (
               <Link passHref href={href || '/about'}>
-                <Button as="a" secondary={secondary} m="7px">
+                <Button as="a" secondary={secondary} m="10px">
                   {button}
                 </Button>
               </Link>
