@@ -21,6 +21,16 @@ module.exports = withCSS({
     //     cwd: process.cwd()
     //   })
     // ];
+
+    const originalEntry = config.entry;
+    config.entry = async () => {
+      const entries = await originalEntry();
+      if (entries['main.js']) {
+        entries['main.js'].unshift('./polyfills.js');
+      }
+      return entries;
+    };
+
     return config;
   }
 });
