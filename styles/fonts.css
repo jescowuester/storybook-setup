@@ -4,8 +4,7 @@
   src: url('/static/fonts/IBMPlexSans.eot?#iefix') format('embedded-opentype'),
     url('/static/fonts/IBMPlexSans.woff2') format('woff2'),
     url('/static/fonts/IBMPlexSans.woff') format('woff'),
-    url('/static/fonts/IBMPlexSans.ttf') format('truetype'),
-    url('/static/fonts/IBMPlexSans.svg#IBMPlexSans') format('svg');
+    url('/static/fonts/IBMPlexSans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,8 +16,7 @@
       format('embedded-opentype'),
     url('/static/fonts/Roboto-Regular.woff2') format('woff2'),
     url('/static/fonts/Roboto-Regular.woff') format('woff'),
-    url('/static/fonts/Roboto-Regular.ttf') format('truetype'),
-    url('/static/fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    url('/static/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,8 +29,7 @@
     url('/static/fonts/IBMPlexSans-SemiBold.woff2') format('woff2'),
     url('/static/fonts/IBMPlexSans-SemiBold.woff') format('woff'),
     url('/static/fonts/IBMPlexSans-SemiBold.ttf') format('truetype'),
-    url('/static/fonts/IBMPlexSans-SemiBold.svg#IBMPlexSans-SemiBold')
-      format('svg');
+    url('/static/fonts/IBMPlexSans-SemiBold.svg#IBMPlexSans-SemiBold');
   font-weight: 600;
   font-style: normal;
 }
@@ -44,8 +41,7 @@
       format('embedded-opentype'),
     url('/static/fonts/IBMPlexSans-Bold.woff2') format('woff2'),
     url('/static/fonts/IBMPlexSans-Bold.woff') format('woff'),
-    url('/static/fonts/IBMPlexSans-Bold.ttf') format('truetype'),
-    url('/static/fonts/IBMPlexSans-Bold.svg#IBMPlexSans-Bold') format('svg');
+    url('/static/fonts/IBMPlexSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -57,8 +53,7 @@
       format('embedded-opentype'),
     url('/static/fonts/Roboto-BoldItalic.woff2') format('woff2'),
     url('/static/fonts/Roboto-BoldItalic.woff') format('woff'),
-    url('/static/fonts/Roboto-BoldItalic.ttf') format('truetype'),
-    url('/static/fonts/Roboto-BoldItalic.svg#Roboto-BoldItalic') format('svg');
+    url('/static/fonts/Roboto-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }

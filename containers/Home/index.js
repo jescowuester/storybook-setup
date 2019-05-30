@@ -12,9 +12,11 @@ const Outer = styled.section`
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     flex-direction: column;
     /* min-height: 100%; */
+    min-height: calc(100vh - 60px);
 
     & > div {
       min-height: 420px;
+      flex-basis: calc(50vh - 30px);
     }
   }
 `;

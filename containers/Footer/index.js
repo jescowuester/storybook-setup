@@ -10,35 +10,28 @@ const leftNav = [
   {
     title: 'Candidates',
     links: [
-      { to: '/cases', name: 'Overview', isExternal: true },
-      { to: '/about', name: 'About', isExternal: true }
+      { to: 'https://careers.oneworks.co/', name: 'Home', isExternal: true },
+      {
+        to: 'https://careers.oneworks.co/register',
+        name: 'Sign up',
+        isExternal: true
+      }
     ]
   },
   {
-    title: 'Clients',
+    title: 'Scale Ups',
     links: [
-      { to: '/cases', name: 'Overview', isExternal: false },
-      { to: '/about', name: 'About', isExternal: false }
+      { to: '/home', name: 'Home', isExternal: false },
+      { to: '/about', name: 'About', isExternal: false },
+      { to: '/cases', name: 'Cases', isExternal: false },
+      { to: '/meet-us', name: 'Meet us', isExternal: false },
+      { to: '/contact', name: 'Contact', isExternal: false },
+      { to: '/blog', name: 'Blog', isExternal: false }
     ]
   }
-  // {
-  //   title: '',
-  //   links: [
-  //     { to: '/Press', name: '', isExternal: false },
-  //     { to: '/Blog', name: '', isExternal: false }
-  //   ]
-  // }
 ];
 
 const centerNav = [
-  {
-    title: 'Quick Links',
-    links: [
-      { to: '/home', name: 'Home', isExternal: false },
-      { to: '/news', name: 'News', isExternal: false },
-      { to: '/meet-us', name: 'Contact', isExternal: false }
-    ]
-  },
   {
     title: 'Legal',
     links: [
@@ -71,7 +64,6 @@ const rightNav = [
         name: 'LinkedIn',
         isExternal: true
       },
-      { to: '', name: 'Twitter', isExternal: true },
       {
         to: 'https://www.instagram.com/oneworks.ams/',
         name: 'Instagram',
@@ -136,7 +128,7 @@ const Footer = () => (
       justifyContent="space-between"
       flexWrap={['wrap', 'no-wrap']}
       flexDirection={['column', 'row']}
-      mb="70px"
+      mb="30px"
     >
       <Col
         flexDirection={['row', 'column']}
@@ -156,12 +148,18 @@ const Footer = () => (
             alt="logo-small"
           />
           <Col flexDirection="column">
-            <Text fontSize="16px" mt="30px" mb="8px">
-              Keizersgracht 555
-            </Text>
-            <Text fontSize="16px" mb="30px">
-              1017 DR Amsterdam
-            </Text>
+            <a
+              target="blank"
+              style={{ display: 'block' }}
+              href="https://goo.gl/maps/eAHajBr4QELeBxj2A"
+            >
+              <Text as="p" fontSize="16px" mt="30px" mb="8px">
+                Keizersgracht 620
+              </Text>
+              <Text as="p" fontSize="16px" mb="30px">
+                1017 ER Amsterdam
+              </Text>
+            </a>
           </Col>
         </Col>
         <Col mx={0} alignSelf={['flex-end', 'flex-start']}>
@@ -171,7 +169,7 @@ const Footer = () => (
             alignSelf={['flex-end', 'flex-start']}
             external
             target="blank"
-            href="mailto:tim@oneworks.co"
+            href="/contact"
           >
             Get in touch
           </TextButton>
