@@ -42,8 +42,8 @@ const MobileMenu = ({ navItems, close, isOpen }) => {
         />
       </IconPosition>
       {navItems.map(({ href, text, key }) => (
-        <Link onClick={close} passHref href={href} key={key}>
-          <Text color="white" my="20px" fontSize="30px" as="a">
+        <Link passHref href={href} key={key}>
+          <Text onClick={close} color="white" my="20px" fontSize="30px" as="a">
             {text}
           </Text>
         </Link>
