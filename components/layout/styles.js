@@ -12,8 +12,10 @@ const Nav = styled.nav`
   background: ${p => p.theme.colors.white};
   display: flex;
   align-items: center;
+
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     padding: 0 20px;
+    height: 60px;
   }
 `;
 

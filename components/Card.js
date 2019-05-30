@@ -15,10 +15,15 @@ const Img = styled.div`
   background-position: center;
 `;
 
+const StyledBox = styled(Box)`
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
 const Card = ({ img, title, text, redirect, secondary, href }) => (
-  <Box
+  <StyledBox
     minHeight="100%"
-    mb={['60px', '100px', '160px']}
+    mb={['60px', '80px', '80px']}
     mx={['10px', '10px', '30px']}
   >
     <Img img={img} />
@@ -35,7 +40,7 @@ const Card = ({ img, title, text, redirect, secondary, href }) => (
         </TextButton>
       </Link>
     </Box>
-  </Box>
+  </StyledBox>
 );
 
 Card.defaultProps = {

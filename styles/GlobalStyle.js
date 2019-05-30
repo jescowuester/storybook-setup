@@ -28,14 +28,14 @@ html, body {
 
 p {
   font-size: ${p => p.theme.font.sizes.large.p};
-  line-height: 31px;
+  line-height: 1.6;
 }
 
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: ${p => p.theme.font.sizes.large.h1};
   font-weight: bold;
-  line-height: 73px;
+  line-height: 1.2;
 }
 
 h2 {

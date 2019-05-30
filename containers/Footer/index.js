@@ -20,14 +20,14 @@ const leftNav = [
       { to: '/cases', name: 'Overview', isExternal: false },
       { to: '/about', name: 'About', isExternal: false }
     ]
-  },
-  {
-    title: '',
-    links: [
-      { to: '/Press', name: '', isExternal: false },
-      { to: '/Blog', name: '', isExternal: false }
-    ]
   }
+  // {
+  //   title: '',
+  //   links: [
+  //     { to: '/Press', name: '', isExternal: false },
+  //     { to: '/Blog', name: '', isExternal: false }
+  //   ]
+  // }
 ];
 
 const centerNav = [
@@ -77,23 +77,12 @@ const rightNav = [
 const TradeMarkContainer = styled(props => <Flex {...props} />)``;
 const Content = styled(props => <Flex {...props} />)``;
 const Col = styled(props => <Flex {...props} />)``;
-const RatingContainer = styled(props => <Flex {...props} />)``;
 const NavItemContainer = styled(props => <Flex {...props} />)``;
-
-const rating = [1, 1, 1, 1, 1, 1, 1, 1, 0.5];
-
-const renderRating = () =>
-  _.map(rating, r =>
-    r === 1 ? (
-      <img css="cursor: pointer" src="/static/star.svg" alt="one-star-rating" />
-    ) : (
-      <img
-        css="cursor: pointer"
-        src="/static/half-star.svg"
-        alt="half-star-rating"
-      />
-    )
-  );
+const Image = styled.img`
+  @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    display: none;
+  }
+`;
 
 const renderNav = nav => {
   const navTitle = nav.title;
@@ -101,7 +90,7 @@ const renderNav = nav => {
     item.isExternal ? (
       <Text
         as="a"
-        mb="10"
+        mb="8px"
         href={item.to}
         target="_blank"
         rel="noopener noreferrer"
@@ -109,8 +98,8 @@ const renderNav = nav => {
         {item.name}
       </Text>
     ) : (
-      <Link passHref to={item.to} mb="10">
-        <Text as="a">{item.name}</Text>
+      <Link passHref to={item.to}>
+        <Text as="a" mb="8px">{item.name}</Text>
       </Link>
     )
   );
@@ -128,10 +117,11 @@ const renderNav = nav => {
 };
 
 const Footer = () => (
-  <StyledFooter p={['45px 34px', '45px 110px', '90px 220px']}>
+  <StyledFooter p={['45px 34px', '45px 110px', '90px 160px']}>
     <Content
       justifyContent="space-between"
       flexWrap={['wrap', 'no-wrap']}
+      flexDirection={['column', 'row']}
       mb="70px"
     >
       <Col
@@ -139,15 +129,16 @@ const Footer = () => (
         width={['100%', 'auto']}
         justifyContent={['space-between', 'flex-start']}
         alignItems={['center', 'flex-start']}
+        flexWrap="wrap"
       >
-        <Col flexDirection="column" alignItems="flex-start">
+        <Col width={['100%', 'auto']} flexDirection="column" alignItems="flex-start">
           <img
             css="cursor: pointer"
             src="/static/logo-small.svg"
             alt="logo-small"
           />
           <Col flexDirection="column">
-            <Text fontSize="16px" mt="30px">
+            <Text fontSize="16px" mt="30px" mb="8px">
               Keizersgracht 555
             </Text>
             <Text fontSize="16px" mb="30px">
@@ -155,10 +146,10 @@ const Footer = () => (
             </Text>
           </Col>
         </Col>
-        <Col mx={['30px', 0]} alignSelf={['flex-end', 'flex-start']}>
+        <Col mx={0} alignSelf={['flex-end', 'flex-start']}>
           <TextButton
             mb={['40px', '80px']}
-            color="#94BDF0"
+            color="blueLight"
             alignSelf={['flex-end', 'flex-start']}
             as="a"
             target="blank"
@@ -167,7 +158,7 @@ const Footer = () => (
             Get in touch
           </TextButton>
         </Col>
-        <img
+        <Image
           css="cursor: pointer"
           src="/static/xxx.svg"
           alt="three crosses (amsterdam)"
@@ -181,13 +172,6 @@ const Footer = () => (
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
         {_.map(rightNav, nav => renderNav(nav))}
-        <Text mt="40px"> 8.6 / 10 </Text>
-        <RatingContainer mb="30px">{renderRating()}</RatingContainer>
-        <img
-          css="cursor: pointer"
-          src="/static/google-icon.svg"
-          alt="google-logo"
-        />
       </Col>
     </Content>
     <TradeMarkContainer justifyContent="center">
