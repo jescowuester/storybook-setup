@@ -36,7 +36,7 @@ const FormatedText = styled.div`
   }
   img {
     margin: 30px 0 40px;
-    max-width: 100%;
+    width: 100%;
   }
 `;
 

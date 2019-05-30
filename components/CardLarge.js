@@ -51,10 +51,7 @@ const CardLarge = ({
       mx={[0, 0, '30px']}
     >
       <Img img={img} />
-      <Box
-        bg={secondary ? 'greyLighter' : 'white'}
-        p={['50px 40px', '50px 40px', '100px 80px']}
-      >
+      <Box bg="white" p={['50px 40px', '50px 40px', '100px 80px']}>
         <Text mb="40px" as="h4">
           {title}
         </Text>

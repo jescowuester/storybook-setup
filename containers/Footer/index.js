@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import _ from 'lodash';
+import { map } from 'lodash';
 import Link from 'next/link';
 
 import { Text, Flex, TextButton } from 'components';
@@ -98,7 +98,7 @@ const Image = styled.img`
 
 const renderNav = nav => {
   const navTitle = nav.title;
-  const navItems = _.map(nav.links, item =>
+  const navItems = map(nav.links, item =>
     item.isExternal ? (
       <Text
         as="a"
@@ -110,8 +110,10 @@ const renderNav = nav => {
         {item.name}
       </Text>
     ) : (
-      <Link passHref to={item.to}>
-        <Text as="a" mb="8px">{item.name}</Text>
+      <Link passHref href={item.to}>
+        <Text as="a" mb="8px">
+          {item.name}
+        </Text>
       </Link>
     )
   );
@@ -143,7 +145,11 @@ const Footer = () => (
         alignItems={['center', 'flex-start']}
         flexWrap="wrap"
       >
-        <Col width={['100%', 'auto']} flexDirection="column" alignItems="flex-start">
+        <Col
+          width={['100%', 'auto']}
+          flexDirection="column"
+          alignItems="flex-start"
+        >
           <img
             css="cursor: pointer"
             src="/static/logo-small.svg"
@@ -177,13 +183,13 @@ const Footer = () => (
         />
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(leftNav, nav => renderNav(nav))}
+        {map(leftNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(centerNav, nav => renderNav(nav))}
+        {map(centerNav, nav => renderNav(nav))}
       </Col>
       <Col flexDirection="column" alignItems="flex-start">
-        {_.map(rightNav, nav => renderNav(nav))}
+        {map(rightNav, nav => renderNav(nav))}
       </Col>
     </Content>
     <TradeMarkContainer justifyContent="center">
