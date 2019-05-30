@@ -11,7 +11,7 @@
               "IE >= 11"
             ]
           },
-          "useBuiltIns": "usage"
+          "useBuiltIns": "entry"
         }
       }
     ]
