@@ -78,7 +78,7 @@ const HiringEasy = ({
               </Link>
             )}
             <TextButton
-              as="a"
+              external
               target="blank"
               href="https://docsend.com/view/tfewsuf"
               secondary={secondary}

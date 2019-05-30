@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Link from 'next/link';
 import Box from './Box';
 import Text from './Text';
 import TextButton from './TextButton';
@@ -41,11 +40,9 @@ const Card = ({ img, title, text, redirect, secondary, href }) => (
       <Text color="blackLight" mb="40px" fontSize="18px" as="p">
         {text}
       </Text>
-      <Link passHref href={href}>
-        <TextButton as="a" secondary={secondary}>
-          {redirect}
-        </TextButton>
-      </Link>
+      <TextButton noLink secondary={secondary}>
+        {redirect}
+      </TextButton>
     </Box>
   </StyledBox>
 );
