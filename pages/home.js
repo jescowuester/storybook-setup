@@ -12,7 +12,7 @@ import {
 const content = {
   hiringEasy: {
     img: '/static/home-hero.png',
-    title: 'We are on a mission to match future leaders',
+    title: ' Connecting leaders and scale-ups.',
     text:
       'Over the past 20 years, we have gotten to know the right people, in the right places, at the right time. Whether you are looking for a CTO, a VP Marketing, a Head of Product or even for an entirely new team of experts - we handpicked the ‘Who is Who’.',
     button: 'Read more',
@@ -152,17 +152,38 @@ function HomePage() {
     <>
       <Head>
         <title>ONE. making hiring easy for scale-ups.</title>
-        <meta name="description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."/>
+        <meta
+          name="description"
+          content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="ONE. making hiring easy for scale-ups." />
-        <meta property="og:description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed." />
-        <meta property="og:url" content="https://oneworks.co/making-hiring-easy-for-scale-ups/" />
+        <meta
+          property="og:title"
+          content="ONE. making hiring easy for scale-ups."
+        />
+        <meta
+          property="og:description"
+          content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."
+        />
+        <meta
+          property="og:url"
+          content="https://oneworks.co/making-hiring-easy-for-scale-ups/"
+        />
         <meta property="og:site_name" content="ONE." />
-        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/WeAreOne.Works/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed." />
-        <meta name="twitter:title" content="ONE. making hiring easy for scale-ups." />
+        <meta
+          name="twitter:description"
+          content="We help scale-ups build world class teams. Our simple goal is to make hiring easy. To help businesses get the talent they need to succeed."
+        />
+        <meta
+          name="twitter:title"
+          content="ONE. making hiring easy for scale-ups."
+        />
       </Head>
       <HiringEasy content={content.hiringEasy} />
       <WhatWeDo content={content.whatWeDo} />
