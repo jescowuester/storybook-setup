@@ -15,7 +15,7 @@ const Outer = styled.button`
   &:hover {
     background: ${p => p.theme.colors.greyLight};
   }
-  transition: background 0.1s;
+  transition: background 0.15s ease-in-out;
   ${space}
 `;
 

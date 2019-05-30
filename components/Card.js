@@ -18,6 +18,10 @@ const Img = styled.div`
 const StyledBox = styled(Box)`
   border-radius: 5px;
   overflow: hidden;
+
+  // :last-child {
+  //   margin-bottom: 0;
+  // }
 `;
 
 const Card = ({ img, title, text, redirect, secondary, href }) => (
