@@ -14,11 +14,20 @@ const index = ({ content: { title, card1, card2, card3, card4 } }) => (
       mx={['-10px', '-10px', '-30px']}
     >
       <Flex width={colWidth} flexDirection="column">
-        {[card1, card2, card3, card4].map(onCard => (
-          <Box mb={['16px', '80px', '80px']} mx={['10px', '10px', '30px']}>
-            <Card {...onCard} noFlex />
-          </Box>
-        ))}
+        <Box mb={['16px', '80px', '80px']} mx={['10px', '10px', '30px']}>
+          <Card {...card1} noFlex />
+        </Box>
+        <Box mb={['16px', '80px', '80px']} mx={['10px', '10px', '30px']}>
+          <Card {...card3} noFlex />
+        </Box>
+      </Flex>
+      <Flex pt={['0', '0', '150px']} flexDirection="column" width={colWidth}>
+        <Box mb={['16px', '80px', '80px']} mx={['10px', '10px', '30px']}>
+          <Card {...card2} noFlex />
+        </Box>
+        <Box mb={['16px', '80px', '80px']} mx={['10px', '10px', '30px']}>
+          <Card {...card4} noFlex />
+        </Box>
       </Flex>
     </Flex>
   </Section>
