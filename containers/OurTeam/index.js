@@ -9,11 +9,12 @@ const Img = styled.div`
   background-image: url(${p => p.img});
   background-size: cover;
   background-position: center;
+  border-radius: 5px;
 `;
 
 const TeamMember = ({ img, name, text, buttonText, href }) => (
   <Box flexBasis={['100%', '50%', '50%']}>
-    <Flex m="30px" flexDirection="column">
+    <Flex m="40px" flexDirection="column">
       <Img img={img} />
       <Text fontSize="24px" mt="20px" mb="20px" as="h4">
         {name}
@@ -31,7 +32,7 @@ const TeamMember = ({ img, name, text, buttonText, href }) => (
 const OurTeam = ({ content: { title, text, teamMembers } }) => {
   return (
     <Section>
-      <Box mb="80px" width={['100%', '100%', '55%']}>
+      <Box mb={['0px', '40px', '40px']} width={['100%', '100%', '55%']}>
         <Text mb="40px" as="h3">
           {title}
         </Text>
@@ -39,7 +40,7 @@ const OurTeam = ({ content: { title, text, teamMembers } }) => {
           {text}
         </Text>
       </Box>
-      <Flex mx="-30px" justifyContent="space-between" flexWrap="wrap">
+      <Flex mx="-40px" justifyContent="space-between" flexWrap="wrap">
         {teamMembers.map(member => (
           <TeamMember key={member.name} {...member} />
         ))}

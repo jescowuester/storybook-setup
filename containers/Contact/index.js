@@ -154,7 +154,9 @@ const Contact = ({ content: { location, text, form, address } }) => {
       </ContactContainer>
       <AddressContainer>
         <Box p={['80px 40px', '100px 86px 160px 100px']}>
-          <Text as="h1">{addressTitle}</Text>
+          <Text fontSize={['34px', '42px']} as="h1">
+            {addressTitle}
+          </Text>
           <Flex
             mt="40px"
             flexDirection={['column', 'row', 'row']}

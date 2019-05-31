@@ -61,6 +61,7 @@ hr {
 @media (max-width: ${p => p.theme.breakpoints[1]}){
   p {
     font-size: ${p => p.theme.font.sizes.small.p};
+    line-height: 1.4;
   }
 
   h1 {

@@ -33,7 +33,12 @@ const Container = styled(props => <Flex {...props} />)`
 const ClientCases = ({
   content: { card1, card2, card3, card4, button, href }
 }) => (
-  <Section textAlign="center" fullWidth bg="greyLighter">
+  <Section
+    p={['16px', '40px', '160px 160px 100px']}
+    textAlign="center"
+    fullWidth
+    bg="greyLighter"
+  >
     <Text mb={['20px', '40px', '80px']} as="h3">
       Client Cases.
     </Text>
@@ -56,9 +61,11 @@ const ClientCases = ({
         </Link>
       ))}
     </Container>
-    <Box mt="40px">
+    <Box mt={['30px', '40px', '40px']}>
       <Link passHref href={href}>
-        <Button as="a">{button}</Button>
+        <Button mb={['30px', 0, 0]} as="a">
+          {button}
+        </Button>
       </Link>
     </Box>
   </Section>

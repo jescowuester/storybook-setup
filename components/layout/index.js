@@ -65,7 +65,7 @@ const Layout = ({ children, router }) => {
           height="100%"
           width="100%"
           maxWidth="1400px"
-          px={['16px', '50px', '160px']}
+          px={['16px', '40px', '160px']}
         >
           <Link href="/">
             <a>

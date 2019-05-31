@@ -41,7 +41,7 @@ const Card = ({ img, title, text, redirect, secondary, href, noFlex }) => (
       <Text
         color="blackLight"
         mb={['20px', '30px', '40px']}
-        fontSize="18px"
+        fontSize={['16px', '18px']}
         as="p"
       >
         {text}
