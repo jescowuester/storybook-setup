@@ -55,6 +55,7 @@ const BackButton = styled.button`
   color: ${p => p.theme.colors.redLight};
   margin-bottom: 60px;
   font-size: 18px;
+  outline: none;
 
   svg {
     transition: transform 0.15s;

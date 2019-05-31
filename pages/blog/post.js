@@ -1,12 +1,18 @@
 import React from 'react';
+import Error from 'next/error';
+import { withRouter } from 'next/router';
 import { Article, OtherBlogPosts } from 'containers';
 import Head from 'next/head';
 import { blogPosts } from '../../data';
 
-const Case = () => {
-  const { title, text, backButton } = blogPosts[
-    '4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
-  ];
+const Case = ({ router }) => {
+  console.log(router);
+
+  if (!blogPosts[router.query.title]) {
+    return <Error statusCode={404} />;
+  }
+
+  const { title, text, backButton } = blogPosts[router.query.title];
 
   const content = {
     title,
@@ -24,14 +30,12 @@ const Case = () => {
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
-        <title>
-          4 Reasons for leaving the Corporate Rat Race to join a Scaleup
-        </title>
+        <title>Vying for Vinted – Clothing Scale Up on the way up.</title>
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="4 Reasons for leaving the Corporate Rat Race to join a Scaleup"
+          content="Vying for Vinted – Clothing Scale Up on the way up."
         />
         <meta
           property="og:url"
@@ -45,7 +49,7 @@ const Case = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="4 Reasons for leaving the Corporate Rat Race to join a Scaleup"
+          content="Vying for Vinted – Clothing Scale Up on the way up."
         />
       </Head>
       <Article content={content} />
@@ -54,4 +58,4 @@ const Case = () => {
   );
 };
 
-export default Case;
+export default withRouter(Case);
