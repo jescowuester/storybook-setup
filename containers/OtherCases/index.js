@@ -24,10 +24,19 @@ const content = {
 
 const OtherCases = () => {
   return (
-    <Section bg="greyLighter" p={['80px 40px 0', '80px 40px 0', '80px 160px 0']} mx={['-10px', '-10px', '-30px']}>
-      <Flex flexWrap="wrap">
+    <Section bg="greyLighter">
+      <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
         {content.cards.map(props => (
-          <Box key={props.title} flexBasis={['100%', '50%', '50%']}>
+          <Box
+            key={props.title}
+            mb={['20px', '0', '80px']}
+            mx={['10px', '10px', '30px']}
+            flexBasis={[
+              'calc(100% - 20px)',
+              'calc(50% - 20px)',
+              'calc(50% - 60px)'
+            ]}
+          >
             <Card {...props} />
           </Box>
         ))}

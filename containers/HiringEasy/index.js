@@ -48,31 +48,37 @@ const HiringEasy = ({
   content: { img, images = [], title, text, button, href, externalHref }
 }) => {
   return (
-    <Section bg="greyLighter">
-      <Flex alignItems="stretch">
+    <Section fullWidth hero p="0" bg="greyLighter">
+      <Flex alignItems="stretch" justifyContent="flex-end">
         <Box
-          p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
+          maxWidth={['100%', '100%', '775px']}
+          p={[
+            '40px 16px',
+            '60px 40px',
+            '100px 100px 100px 160px',
+            '100px 160px 100px 160px'
+          ]}
         >
-          <Text mb="30px" fontSize="56px" as="h1">
+          <Text mb="30px" as="h1">
             {title}
           </Text>
           <Text mb="50px" as="p">
             {text}
           </Text>
-          <Flex m="-5px" flexWrap="wrap" alignItems="center">
+          <Flex m="-15px" flexWrap="wrap" alignItems="center">
             {externalHref ? (
               <Button
                 as="a"
                 target="blank"
                 href={externalHref}
                 secondary={secondary}
-                m="7px"
+                m="15px"
               >
                 {button}
               </Button>
             ) : (
               <Link passHref href={href || '/about'}>
-                <Button as="a" secondary={secondary} m="7px">
+                <Button as="a" secondary={secondary} m="15px">
                   {button}
                 </Button>
               </Link>
@@ -82,7 +88,7 @@ const HiringEasy = ({
               target="blank"
               href="https://docsend.com/view/tfewsuf"
               secondary={secondary}
-              m="7px"
+              m="15px"
             >
               Download our pitch
             </TextButton>

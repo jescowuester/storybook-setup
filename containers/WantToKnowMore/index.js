@@ -25,7 +25,7 @@ const Overlay = styled.div`
   left: 0;
   top: 0;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${p => p.theme.colors.greyLight};
 `;
 
 const WantToKnowMore = ({
@@ -34,10 +34,11 @@ const WantToKnowMore = ({
 }) => {
   return (
     <SectionWithBackground
+      fullWidth
       white={white}
       src={img}
       textAlign="center"
-      p={['80px 10px', '80px 40px', '160px']}
+      p={['60px 10px', '80px 40px', '160px']}
       bg="greyLighter"
     >
       {white && <Overlay />}

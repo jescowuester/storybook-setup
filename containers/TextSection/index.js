@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const formatNewLine = text =>
   text.split('\n').map((item, key) => (
-    <Text lineHeight="40px" color="blackLight" as="p" key={key}>
+    <Text lineHeight={['34px', '40px']} color="blackLight" as="p" key={key}>
       {item}
     </Text>
   ));
@@ -17,27 +17,33 @@ const TextSection = ({
 }) => (
   <Section
     bg={secondary ? 'greyLighter' : 'white'}
-    p={['40px', '100 150px', '160px 255px']}
+    p={['80px 16px', '100px 50px', '160px']}
+    textAlign={['center', 'start']}
   >
     <Text mb="40px" as="h3">
       {title}
     </Text>
     <Flex
       justifyContent="space-between"
-      alignItems={col2 ? 'flex-start' : 'center'}
+      alignItems={col2 ? 'flex-start' : ['center', 'start']}
       flexDirection={['column', 'column', 'row']}
     >
       <Box flexBasis="50%">{formatNewLine(col1)}</Box>
-      <Box flexBasis="40%" alignItems="center">
+      <Box flexBasis="40%" alignItems="center" textAlign="start">
         {!!col2 && (
-          <Text lineHeight="40px" color="blackLight" as="p" mb="20px">
+          <Text
+            lineHeight={['30px', '40px']}
+            color="blackLight"
+            as="p"
+            mb="20px"
+          >
             {col2}
           </Text>
         )}
         <Text
           mt={['20px', '20px', '0']}
           lineHeight="46px"
-          fontSize="36px"
+          fontSize={['28px', '30px', '36px']}
           color={secondary ? 'redLight' : 'blue'}
           as="p"
         >

@@ -4,30 +4,39 @@ import React from 'react';
 const content = {
   cards: [
     {
-      img: '/static/client-cases1.jpg',
-      title: 'Kudos from Impraise! Growing their people.',
+      img: '/static/blog2.jpg',
+      title: 'Building up the Ageras team in the Netherlands',
       text:
-        'Impraise were one of our early adopters, they’re a scale up working in the HR tech space and are making some productive and innovative changes. As a fun team of dedicated innovators ...',
+        'Al 6 jaar verbindt Ageras klanten met accountants en boekhouders in Denemarken, Zweden, Noorwegen, Nederland, Duitsland en het Verenigd Koninkrijk. Het succesverhaal begon ...',
       secondary: true,
-      href: '/cases/impraise'
+      href: '/blog/building-up-the-ageras-team-in-the-netherlands'
     },
     {
-      img: '/static/client-cases3.jpg',
-      title: 'Adding some key-hires to a company in transition.',
+      img: '/static/blog3.jpg',
+      title: 'One. and Genius become technology partners.',
       text:
-        'Talmundo is a European HR Tech company founded in 2012 out of a growing frustration around HR information systems. Stijn, the CEO, was tired of the tools he tried to implement ...',
+        'Cutting edge technologies like AI, machine learning, blockchain and the internet of things can change the world for the better. But they only do so when effectively trained, trusted and ...',
       secondary: true,
-      href: '/cases/talmundo'
+      href: '/blog/one-and-genius-become-technology-partners'
     }
   ]
 };
 
-const OtherCases = () => {
+const OtherBlogPosts = () => {
   return (
-    <Section bg="greyLighter" p={['80px 40px 0', '80px 40px 0', '80px 160px 0']} mx={['-10px', '-10px', '-30px']}>
-      <Flex flexWrap="wrap">
+    <Section bg="greyLighter">
+      <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
         {content.cards.map(props => (
-          <Box key={props.title} flexBasis={['100%', '50%', '50%']}>
+          <Box
+            key={props.title}
+            mb={['20px', '0', '80px']}
+            mx={['10px', '10px', '30px']}
+            flexBasis={[
+              'calc(100% - 20px)',
+              'calc(50% - 20px)',
+              'calc(50% - 60px)'
+            ]}
+          >
             <Card {...props} />
           </Box>
         ))}
@@ -36,4 +45,4 @@ const OtherCases = () => {
   );
 };
 
-export default OtherCases;
+export default OtherBlogPosts;

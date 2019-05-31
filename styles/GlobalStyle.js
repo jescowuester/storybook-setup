@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700|Roboto:400,500,700&display=swap');
 
 /* defaults */
 
@@ -34,7 +33,7 @@ p {
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: ${p => p.theme.font.sizes.large.h1};
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -49,6 +48,7 @@ h3 {
 }
 
 h4 {
+  font-weight: 700;
   font-size: ${p => p.theme.font.sizes.large.h4};
 }
 
@@ -61,11 +61,12 @@ hr {
 @media (max-width: ${p => p.theme.breakpoints[1]}){
   p {
     font-size: ${p => p.theme.font.sizes.small.p};
+    line-height: 1.4;
   }
 
   h1 {
     font-size: ${p => p.theme.font.sizes.small.h1};
-    line-height: 63px;
+    line-height: 1.2;
   }
 
   h2 {

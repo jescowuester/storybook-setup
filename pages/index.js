@@ -210,8 +210,8 @@ const content = {
       location: {
         title: 'Address ',
         street: 'Keizersgracht',
-        number: '555',
-        zipcode: '1017 DR',
+        number: '620',
+        zipcode: '1017 ER',
         city: 'Amsterdam'
       },
       hours: {
@@ -317,19 +317,39 @@ function Index() {
   return (
     <>
       <Head>
-        <meta charset='UTF-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <title>ONE. - We are one, your solution to talent, growth and recruitment.</title>
-        <meta name="description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent."/>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <title>
+          ONE. - We are one, your solution to talent, growth and recruitment.
+        </title>
+        <meta
+          name="description"
+          content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent."
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="ONE. - We are one, your solution to talent, growth and recruitment." />
-        <meta property="og:description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent." />
+        <meta
+          property="og:title"
+          content="ONE. - We are one, your solution to talent, growth and recruitment."
+        />
+        <meta
+          property="og:description"
+          content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent."
+        />
         <meta property="og:url" content="https://oneworks.co/" />
         <meta property="og:site_name" content="ONE." />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent." />
-        <meta name="twitter:title" content="ONE. - We are one, your solution to talent, growth and recruitment." />
+        <meta
+          name="twitter:description"
+          content="Welcome to One. Whether you&#039;re a candidate for a Scale Up we can help you with finding the right job, or finding the right talent."
+        />
+        <meta
+          name="twitter:title"
+          content="ONE. - We are one, your solution to talent, growth and recruitment."
+        />
       </Head>
       <Home content={content.home} />
     </>

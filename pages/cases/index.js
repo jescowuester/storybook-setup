@@ -1,7 +1,7 @@
 import { Card, CardLarge, Flex, Box, Section } from 'components';
-import Head from 'next/head';
 import { WantToKnowMore } from 'containers';
 import React from 'react';
+import Head from 'next/head';
 
 const content = {
   largeCard: {
@@ -11,7 +11,7 @@ const content = {
       'October was founded in 2014 in Paris, under the name Lendix, due to new regulations for lending to the SME market. The mission of this amazing scale-up is to allow entrepreneurs ...',
     buttonText: 'Read more',
     secondary: true,
-    href: '/cases/october'
+    slug: 'october'
   },
   cards: [
     {
@@ -20,7 +20,7 @@ const content = {
       text:
         'Talmundo is a European HR Tech company founded in 2012 out of a growing frustration around HR information systems. Stijn, the CEO, was tired of the tools he tried to implement ...',
       secondary: true,
-      href: '/cases/talmundo'
+      slug: 'talmundo'
     },
     {
       img: '/static/client-cases1.jpg',
@@ -28,14 +28,14 @@ const content = {
       text:
         'Impraise were one of our early adopters, they’re a scale up working in the HR tech space and are making some productive and innovative changes. As a fun team of dedicated innovators ...',
       secondary: true,
-      href: '/cases/impraise'
+      slug: 'impraise'
     },
     {
       img: '/static/client-cases2.jpg',
       title: '50Five',
       text: 'Expanding the team for 50Five.',
       secondary: true,
-      href: '/cases/fiftyfive'
+      slug: 'fiftyfive'
     }
   ],
   wantToKnowMore: {
@@ -46,39 +46,52 @@ const content = {
   }
 };
 
-const Cases = () => {
+const BlogPosts = () => {
   return (
     <>
       <Head>
         <title>Cases - ONE.</title>
-        <meta charset='UTF-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="Our cases."/>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta name="description" content="Our cases." />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Cases - ONE." />
         <meta property="og:description" content="Our cases." />
         <meta property="og:url" content="https://oneworks.co/cases/" />
         <meta property="og:site_name" content="ONE." />
-        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/WeAreOne.Works/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content="Our cases." />
         <meta name="twitter:title" content="Cases - ONE." />
       </Head>
-      <Section bg="greyLighter" p={['50px 40px', '50px 80px', '100px 160px']}>
-        <CardLarge {...content.largeCard} />
-        <Flex margin="-20px" flexWrap="wrap">
+      <Section
+        bg="greyLighter"
+        p={['40px 16px 20px', '40px 80px 20px', '100px 160px 20px']}
+      >
+        <CardLarge
+          href={`/cases/post?title=${content.largeCard.slug}`}
+          {...content.largeCard}
+        />
+        <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
           {content.cards.map(props => (
             <Box
               key={props.title}
-              margin="20px"
+              mb={['60px', '80px', '80px']}
+              mx={['10px', '10px', '30px']}
               flexBasis={[
-                'calc(100% - 40px)',
-                'calc(50% - 40px)',
-                'calc(50% - 40px)'
+                'calc(100% - 20px)',
+                'calc(50% - 20px)',
+                'calc(50% - 60px)'
               ]}
             >
-              <Card {...props} />
+              <Card href={`/cases/post?title=${props.slug}`} {...props} />
             </Box>
           ))}
         </Flex>
@@ -88,4 +101,4 @@ const Cases = () => {
   );
 };
 
-export default Cases;
+export default BlogPosts;

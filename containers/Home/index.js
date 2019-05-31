@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Text, Button } from 'components';
+import { Flex, Text, Button } from 'components';
 import Link from 'next/link';
 
 const Outer = styled.section`
@@ -12,20 +12,25 @@ const Outer = styled.section`
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     flex-direction: column;
     /* min-height: 100%; */
+    min-height: calc(100vh - 60px);
 
     & > div {
       min-height: 420px;
+      flex-basis: calc(50vh - 30px);
     }
   }
 `;
 
 const Home = ({ content: { leftCol, rightCol } }) => (
   <Outer>
-    <Box
+    <Flex
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="flex-start"
       minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="greyLighter"
-      p={['40px', '40px', '180px 160px']}
+      p={['16px', '40px', '180px 160px']}
     >
       <Text mb="10px" as="h2">
         {leftCol.tagLine}
@@ -33,19 +38,22 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb="20px" as="h1">
         {leftCol.title}
       </Text>
-      <Text mb={['20px', '20px', '50px']} as="p">
+      <Text maxWidth="500px" mb={['20px', '20px', '50px']} as="p">
         {leftCol.text}
       </Text>
       <Button as="a" href="https://careers.oneworks.co" secondary>
         {leftCol.button}
       </Button>
-    </Box>
-    <Box
+    </Flex>
+    <Flex
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="flex-start"
       minHeight={['50%', '50%', 'calc(100vh - 100px)']}
       width={['100%', '100%', '50%']}
       bg="blackDark"
       color="white"
-      p={['40px', '40px', '180px 160px']}
+      p={['16px', '40px', '180px 160px']}
     >
       <Text mb="10px" as="h2">
         {rightCol.tagLine}
@@ -53,13 +61,13 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb="20px" as="h1">
         {rightCol.title}
       </Text>
-      <Text mb={['20px', '20px', '50px']} as="p">
+      <Text maxWidth="500px" mb={['20px', '20px', '50px']} as="p">
         {rightCol.text}
       </Text>
       <Link passHref href="/home">
         <Button as="a">{rightCol.button}</Button>
       </Link>
-    </Box>
+    </Flex>
   </Outer>
 );
 

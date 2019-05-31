@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 
 import { Text, Flex, Section } from 'components';
 
@@ -15,19 +14,23 @@ const LogoContainer = styled.div`
   }
 
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
+    img {
+      width: 180px;
+    }
     margin-bottom: 60px;
   }
 
   @media (max-width: ${p => p.theme.breakpoints[0]}) {
+    img {
+      width: 120px;
+    }
+    padding: 10px;
     margin-bottom: 40px;
   }
 `;
 
 const InGreatCompany = ({ content: { title, text, companies } }) => (
-  <Section
-    p={['80px 40px 40px', '80px 60px 20px', '130px 160px 30px']}
-    textAlign="center"
-  >
+  <Section textAlign="center">
     <Text mb="30px" as="h3">
       {title}
     </Text>
@@ -35,13 +38,9 @@ const InGreatCompany = ({ content: { title, text, companies } }) => (
       {text}
     </Text>
     <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-      {companies.map(({ name, href, img, _id }) => (
+      {companies.map(({ name, img, _id }) => (
         <LogoContainer key={_id}>
-          {/* <Link href={href}> */}
-          {/* <a target="blank"> */}
           <img src={img} alt={name} />
-          {/* </a> */}
-          {/* </Link> */}
         </LogoContainer>
       ))}
     </Flex>

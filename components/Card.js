@@ -18,26 +18,32 @@ const StyledBox = styled(Box)`
   border-radius: 5px;
   overflow: hidden;
   display: block;
+  height: ${p => (p.noFlex ? 'auto' : '100%')};
+  display: flex;
+  flex-flow: column nowrap;
 
   // :last-child {
   //   margin-bottom: 0;
   // }
 `;
 
-const Card = ({ img, title, text, redirect, secondary, href }) => (
-  <StyledBox
-    as="a"
-    href={href}
-    minHeight="100%"
-    mb={['60px', '80px', '80px']}
-    mx={['10px', '10px', '30px']}
-  >
+const Card = ({ img, title, text, redirect, secondary, href, noFlex }) => (
+  <StyledBox as="a" href={href} minHeight="100%" noFlex={noFlex}>
     <Img img={img} />
-    <Box bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
-      <Text mb="30px" as="h4">
+    <Box
+      flex={noFlex ? false : '1 1 auto'}
+      bg={secondary ? 'white' : 'greyLighter'}
+      p={['20px', '30px', '50px']}
+    >
+      <Text mb={['20px', '30px']} as="h4">
         {title}
       </Text>
-      <Text color="blackLight" mb="40px" fontSize="18px" as="p">
+      <Text
+        color="blackLight"
+        mb={['20px', '30px', '40px']}
+        fontSize={['16px', '18px']}
+        as="p"
+      >
         {text}
       </Text>
       <TextButton noLink secondary={secondary}>
@@ -50,7 +56,8 @@ const Card = ({ img, title, text, redirect, secondary, href }) => (
 Card.defaultProps = {
   redirect: 'Learn more',
   secondary: false,
-  href: '/'
+  href: '/',
+  noFlex: false
 };
 
 Card.propTypes = {
@@ -59,7 +66,8 @@ Card.propTypes = {
   text: PropTypes.string.isRequired,
   redirect: PropTypes.string,
   secondary: PropTypes.bool,
-  href: PropTypes.string
+  href: PropTypes.string,
+  noFlex: PropTypes.bool
 };
 
 export default Card;

@@ -13,7 +13,7 @@ const Button = styled.button`
   display: inline-block;
   &:hover{
     background: ${({ secondary, theme: { colors } }) =>
-      secondary ? colors.redLighter : colors.blue};
+      secondary ? colors.red : '#0567c8'};
     opacity: 1;
   };
 

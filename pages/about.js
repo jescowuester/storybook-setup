@@ -20,7 +20,7 @@ const content = {
   largeCards: [
     {
       img: '/static/about-card1.jpg',
-      title: 'We do recruitment',
+      title: 'Our Blackbook',
       text:
         '<p>As One. we have our finger on the pulse of our Blackbook. We know who is on the move or ready to grow. We know their ambitions, expectations and what gets them excited. We understand the heights their potential can take them to. </p> <p>We combine this market knowledge, with the power of well-curated matchmaking and a finely tuned set of best practices for a more impactful and fast-tracked approach to creating winning teams for scale-ups.</p>',
       buttonText: 'Let’s partner up',
@@ -50,18 +50,36 @@ function AboutPage() {
     <>
       <Head>
         <title>About - ONE.</title>
-        <meta charset='UTF-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries."/>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta
+          name="description"
+          content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries."
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="About - ONE." />
-        <meta property="og:description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries." />
-        <meta property="og:url" content="https://oneworks.co/making-hiring-easy-for-scale-ups/about-one/" />
+        <meta
+          property="og:description"
+          content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries."
+        />
+        <meta
+          property="og:url"
+          content="https://oneworks.co/making-hiring-easy-for-scale-ups/about-one/"
+        />
         <meta property="og:site_name" content="ONE." />
-        <meta property="article:publisher" content="https://www.facebook.com/WeAreOne.Works/" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/WeAreOne.Works/"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries." />
+        <meta
+          name="twitter:description"
+          content="Your remote recruitment specialists. We are specialized in helping scale-ups build stronger and bigger teams across a range of tech industries."
+        />
         <meta name="twitter:title" content="About - ONE." />
       </Head>
       <WeAreSpecialists content={content.weAreSpecialists} />
