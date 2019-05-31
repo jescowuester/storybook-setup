@@ -1,25 +1,23 @@
 import React from 'react';
 import Error from 'next/error';
 import { withRouter } from 'next/router';
-import { Article, OtherBlogPosts } from 'containers';
+import { Article, OtherCases } from 'containers';
 import Head from 'next/head';
-import { blogPosts } from '../../data';
+import { cases } from '../../data';
 
 const Case = ({ router }) => {
-  console.log(router);
-
-  if (!blogPosts[router.query.title]) {
+  if (!cases[router.query.title]) {
     return <Error statusCode={404} />;
   }
 
-  const { title, text, backButton } = blogPosts[router.query.title];
+  const { title, text, backButton } = cases[router.query.title];
 
   const content = {
     title,
     text,
     shareText: 'Share this story',
     backButton,
-    backHref: '/blog'
+    backHref: '/cases'
   };
 
   return (
@@ -53,7 +51,7 @@ const Case = ({ router }) => {
         />
       </Head>
       <Article content={content} />
-      <OtherBlogPosts />
+      <OtherCases />
     </>
   );
 };

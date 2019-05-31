@@ -11,7 +11,7 @@ const content = {
       'October was founded in 2014 in Paris, under the name Lendix, due to new regulations for lending to the SME market. The mission of this amazing scale-up is to allow entrepreneurs ...',
     buttonText: 'Read more',
     secondary: true,
-    slug: '/cases/october'
+    slug: 'october'
   },
   cards: [
     {
@@ -20,7 +20,7 @@ const content = {
       text:
         'Talmundo is a European HR Tech company founded in 2012 out of a growing frustration around HR information systems. Stijn, the CEO, was tired of the tools he tried to implement ...',
       secondary: true,
-      slug: '/cases/talmundo'
+      slug: 'talmundo'
     },
     {
       img: '/static/client-cases1.jpg',
@@ -28,14 +28,14 @@ const content = {
       text:
         'Impraise were one of our early adopters, they’re a scale up working in the HR tech space and are making some productive and innovative changes. As a fun team of dedicated innovators ...',
       secondary: true,
-      slug: '/cases/impraise'
+      slug: 'impraise'
     },
     {
       img: '/static/client-cases2.jpg',
       title: '50Five',
       text: 'Expanding the team for 50Five.',
       secondary: true,
-      slug: '/cases/fiftyfive'
+      slug: 'fiftyfive'
     }
   ],
   wantToKnowMore: {
@@ -76,7 +76,7 @@ const BlogPosts = () => {
         p={['40px 16px 20px', '40px 80px 20px', '100px 160px 20px']}
       >
         <CardLarge
-          href={`/blog/post?title=${content.largeCard.slug}`}
+          href={`/cases/post?title=${content.largeCard.slug}`}
           {...content.largeCard}
         />
         <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
@@ -91,7 +91,7 @@ const BlogPosts = () => {
                 'calc(50% - 60px)'
               ]}
             >
-              <Card href={`/blog/post?title=${props.slug}`} {...props} />
+              <Card href={`/cases/post?title=${props.slug}`} {...props} />
             </Box>
           ))}
         </Flex>
