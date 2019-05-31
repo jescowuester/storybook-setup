@@ -36,7 +36,6 @@ const ClientCases = ({
   <Section
     p={['16px', '40px', '160px 160px 100px']}
     textAlign="center"
-    fullWidth
     bg="greyLighter"
   >
     <Text mb={['20px', '40px', '80px']} as="h3">

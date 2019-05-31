@@ -1,14 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   fontFamily,
   textAlign,
   lineHeight,
   fontWeight,
   letterSpacing,
+  maxWidth,
   color,
   fontSize,
   space
-} from "styled-system";
+} from 'styled-system';
 
 const Text = styled.span(
   fontFamily,
@@ -16,13 +17,14 @@ const Text = styled.span(
   lineHeight,
   fontWeight,
   letterSpacing,
+  maxWidth,
   color,
   fontSize,
   space
 );
 
 Text.defaultProps = {
-  color: "inherit"
+  color: 'inherit'
 };
 
 export default Text;
