@@ -3,6 +3,8 @@ const path = require('path');
 
 const withCSS = require('@zeit/next-css');
 
+require('es6-promise').polyfill();
+
 module.exports = withCSS({
   webpack(config) {
     config.resolve.alias.components = path.join(__dirname, 'components');
