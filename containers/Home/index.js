@@ -38,7 +38,7 @@ const Home = ({ content: { leftCol, rightCol } }) => (
       <Text mb={['20px', '20px', '50px']} as="p">
         {leftCol.text}
       </Text>
-      <Button as="a" href="https://joinone.recruitee.com" secondary>
+      <Button as="a" href="https://careers.oneworks.co" secondary>
         {leftCol.button}
       </Button>
     </Box>

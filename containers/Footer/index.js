@@ -10,9 +10,9 @@ const leftNav = [
   {
     title: 'Candidates',
     links: [
-      { to: 'https://joinone.recruitee.com/', name: 'Home', isExternal: true },
+      { to: 'https://careers.oneworks.co/', name: 'Home', isExternal: true },
       {
-        to: 'https://joinone.recruitee.com/',
+        to: 'https://careers.oneworks.co/register',
         name: 'Sign up',
         isExternal: true
       }
