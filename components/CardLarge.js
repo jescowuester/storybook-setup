@@ -13,7 +13,7 @@ const Img = styled.div`
   background-size: cover;
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     width: 100%;
-    height: 0;
+    /* height: 0; */
     padding-top: 56%;
   }
 `;
