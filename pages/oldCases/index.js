@@ -1,7 +1,7 @@
 import { Card, CardLarge, Flex, Box, Section } from 'components';
+import Head from 'next/head';
 import { WantToKnowMore } from 'containers';
 import React from 'react';
-import Head from 'next/head';
 
 const content = {
   largeCard: {
@@ -11,7 +11,7 @@ const content = {
       'October was founded in 2014 in Paris, under the name Lendix, due to new regulations for lending to the SME market. The mission of this amazing scale-up is to allow entrepreneurs ...',
     buttonText: 'Read more',
     secondary: true,
-    slug: '/cases/october'
+    href: '/cases/october'
   },
   cards: [
     {
@@ -20,7 +20,7 @@ const content = {
       text:
         'Talmundo is a European HR Tech company founded in 2012 out of a growing frustration around HR information systems. Stijn, the CEO, was tired of the tools he tried to implement ...',
       secondary: true,
-      slug: '/cases/talmundo'
+      href: '/cases/talmundo'
     },
     {
       img: '/static/client-cases1.jpg',
@@ -28,14 +28,14 @@ const content = {
       text:
         'Impraise were one of our early adopters, they’re a scale up working in the HR tech space and are making some productive and innovative changes. As a fun team of dedicated innovators ...',
       secondary: true,
-      slug: '/cases/impraise'
+      href: '/cases/impraise'
     },
     {
       img: '/static/client-cases2.jpg',
       title: '50Five',
       text: 'Expanding the team for 50Five.',
       secondary: true,
-      slug: '/cases/fiftyfive'
+      href: '/cases/fiftyfive'
     }
   ],
   wantToKnowMore: {
@@ -46,7 +46,7 @@ const content = {
   }
 };
 
-const BlogPosts = () => {
+const Cases = () => {
   return (
     <>
       <Head>
@@ -75,11 +75,8 @@ const BlogPosts = () => {
         bg="greyLighter"
         p={['40px 16px 20px', '40px 80px 20px', '100px 160px 20px']}
       >
-        <CardLarge
-          href={`/blog/post?title=${content.largeCard.slug}`}
-          {...content.largeCard}
-        />
-        <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
+        <CardLarge {...content.largeCard} />
+        <Flex flexWrap="wrap" mx={['-10px', '-10px', '0']}>
           {content.cards.map(props => (
             <Box
               key={props.title}
@@ -91,7 +88,7 @@ const BlogPosts = () => {
                 'calc(50% - 60px)'
               ]}
             >
-              <Card href={`/blog/post?title=${props.slug}`} {...props} />
+              <Card {...props} />
             </Box>
           ))}
         </Flex>
@@ -101,4 +98,4 @@ const BlogPosts = () => {
   );
 };
 
-export default BlogPosts;
+export default Cases;

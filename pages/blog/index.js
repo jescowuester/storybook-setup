@@ -11,7 +11,7 @@ const content = {
       'Remember when leaving a cushy corporate gig to take a job at a high-growth tech company was considered risky, or even foolish? Much was talked about jeopardising secure career trajectories or risking unexplainable, even downright embarrassing gaps in one’s CV should the startup ...',
     buttonText: 'Read more',
     secondary: true,
-    href: '/blog/4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
+    slug: '4-reasons-to-leave-the-corporate-rat-race-and-join-a-scale-up'
   },
   cards: [
     {
@@ -20,7 +20,7 @@ const content = {
       text:
         'Al 6 jaar verbindt Ageras klanten met accountants en boekhouders in Denemarken, Zweden, Noorwegen, Nederland, Duitsland en het Verenigd Koninkrijk. Het succesverhaal begon ...',
       secondary: true,
-      href: '/blog/building-up-the-ageras-team-in-the-netherlands'
+      slug: 'building-up-the-ageras-team-in-the-netherlands'
     },
     {
       img: '/static/blog3.jpg',
@@ -28,7 +28,7 @@ const content = {
       text:
         'Cutting edge technologies like AI, machine learning, blockchain and the internet of things can change the world for the better. But they only do so when effectively trained, trusted and ...',
       secondary: true,
-      href: '/blog/one-and-genius-become-technology-partners'
+      slug: 'one-and-genius-become-technology-partners'
     },
     {
       img: '/static/blog4.jpg',
@@ -36,15 +36,15 @@ const content = {
       text:
         'We’re pretty excited to be working with Vinted – a Scale Up that’s on its way to even greater things. Hailing originally from Lithuania, vinted was born in 2008 when Milda – the founder – was ...',
       secondary: true,
-      href: '/blog/vying-for-vinted-clothing-scale-up-on-the-way-up'
+      slug: 'vying-for-vinted-clothing-scale-up-on-the-way-up'
     },
     {
       img: '/static/blog5.png',
-      title: 'Living the chocolate dream with Tony’s ...',
+      title: 'Living the chocolate dream with Tonys chocolonely',
       text:
         'A generation who grew up reading and watching the various variations of Charlie and the Chocolate factory. With edible chocolate rivers and trees made of lollipops, it’s any child’s ...',
       secondary: true,
-      href: '/blog/living-the-chocolate-dream-with-tonys-chocolonely'
+      slug: 'living-the-chocolate-dream-with-tonys-chocolonely'
     }
   ],
   wantToKnowMore: {
@@ -81,8 +81,11 @@ const BlogPosts = () => {
         bg="greyLighter"
         p={['40px 16px 20px', '40px 80px 20px', '100px 160px 20px']}
       >
-        <CardLarge {...content.largeCard} />
-        <Flex flexWrap="wrap" mx={['-10px', '-10px', '0']}>
+        <CardLarge
+          href={`/blog/post?title=${content.largeCard.slug}`}
+          {...content.largeCard}
+        />
+        <Flex flexWrap="wrap" mx={['-10px', '-10px', '-30px']}>
           {content.cards.map(props => (
             <Box
               key={props.title}
@@ -94,7 +97,7 @@ const BlogPosts = () => {
                 'calc(50% - 60px)'
               ]}
             >
-              <Card {...props} />
+              <Card href={`/blog/post?title=${props.slug}`} {...props} />
             </Box>
           ))}
         </Flex>

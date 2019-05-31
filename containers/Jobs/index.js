@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { slugify } from 'utils/helpers';
 import PropTypes from 'prop-types';
 import { Button, Text, Icon, Section, Flex, Box } from 'components';
 import countryCodes from '../../countryCodes';
-
-const slugify = (text = '') =>
-  text
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/[^\w-]+/g, '') // Remove all non-word chars
-    .replace(/--+/g, '-') // Replace multiple - with single -
-    .replace(/^-+/, '') // Trim - from start of text
-    .replace(/-+$/, ''); // Trim - from end of text
 
 const Job = ({ title, address, clientCorporation, liked, id }) => {
   const splitTitle = title.split(' ');

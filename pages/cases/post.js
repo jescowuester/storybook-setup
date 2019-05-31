@@ -1,12 +1,18 @@
 import React from 'react';
+import Error from 'next/error';
+import { withRouter } from 'next/router';
 import { Article, OtherBlogPosts } from 'containers';
 import Head from 'next/head';
 import { blogPosts } from '../../data';
 
-const Case = () => {
-  const { title, text, backButton } = blogPosts[
-    'vying-for-vinted-clothing-scale-up-on-the-way-up'
-  ];
+const Case = ({ router }) => {
+  console.log(router);
+
+  if (!blogPosts[router.query.title]) {
+    return <Error statusCode={404} />;
+  }
+
+  const { title, text, backButton } = blogPosts[router.query.title];
 
   const content = {
     title,
@@ -52,4 +58,4 @@ const Case = () => {
   );
 };
 
-export default Case;
+export default withRouter(Case);
