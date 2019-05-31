@@ -3,8 +3,6 @@ const path = require('path');
 
 const withCSS = require('@zeit/next-css');
 
-require('es6-promise').polyfill();
-
 module.exports = withCSS({
   webpack(config) {
     config.resolve.alias.components = path.join(__dirname, 'components');
@@ -27,8 +25,11 @@ module.exports = withCSS({
     const originalEntry = config.entry;
     config.entry = async () => {
       const entries = await originalEntry();
-      if (entries['main.js']) {
-        entries['main.js'].unshift('./polyfills.js');
+      if (
+        entries['main.js'] &&
+        !entries['main.js'].includes('./client/polyfills.js')
+      ) {
+        entries['main.js'].unshift('./client/polyfills.js');
       }
       return entries;
     };
