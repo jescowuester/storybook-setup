@@ -34,6 +34,7 @@ const WantToKnowMore = ({
 }) => {
   return (
     <SectionWithBackground
+      fullWidth
       white={white}
       src={img}
       textAlign="center"

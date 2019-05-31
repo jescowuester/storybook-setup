@@ -33,11 +33,11 @@ const Container = styled(props => <Flex {...props} />)`
 const ClientCases = ({
   content: { card1, card2, card3, card4, button, href }
 }) => (
-  <Section textAlign="center" bg="greyLighter">
+  <Section textAlign="center" fullWidth bg="greyLighter">
     <Text mb={['20px', '40px', '80px']} as="h3">
       Client Cases.
     </Text>
-    <Container m="-20px" justifyContent="space-between" width="100%">
+    <Container m="-20px" justifyContent="space-between">
       {[card1, card2, card3, card4].map(({ img, title, text, href }) => (
         <Link passHref href={href}>
           <Box
