@@ -5,16 +5,16 @@
       {
         "preset-env": {
           "targets": {
-            "browsers": [
-              "> 1%",
-              "last 2 versions",
-              "IE >= 11"
-            ]
+            "browsers": ["> 1%", "last 2 versions", "IE >= 11"]
           },
           "useBuiltIns": "entry"
         }
       }
     ]
   ],
-  "plugins": ["lodash", "@babel/plugin-proposal-class-properties"]
+  "plugins": [
+    "lodash",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-classes"
+  ]
 }
