@@ -102,49 +102,51 @@ const Contact = ({ content: { location, text, form, address } }) => {
   };
 
   return (
-    <Section>
+    <Section fullWidth p="0">
       <ContactContainer
         justifyContent={['center', 'space-between']}
         flexDirection={['column', 'row']}
       >
-        <Box p={['40px', '100px 86px 160px 100px']}>
-          <Text mb="30px" as="h1">
-            {title}
-          </Text>
-          <Text mb="40px" as="h3" fontSize="20px" fontWeight="normal">
-            {subTitle}
-          </Text>
+        <Flex justifyContent={['flex-start', 'center']} width="100%">
+          <Box p={['40px', '100px 86px 160px 100px']}>
+            <Text mb="30px" as="h1">
+              {title}
+            </Text>
+            <Text mb="40px" as="h3" fontSize="20px" fontWeight="normal">
+              {subTitle}
+            </Text>
 
-          <form onSubmit={onSubmit}>
-            <Form alignItems="flex-start">
-              {renderInputs()}
-              <Text mb="40px" fontSize="14px" as="p">
-                {disclaimer.txtStart}
-                {DisclaimerLink(disclaimer.to, disclaimer.link)}
-                {disclaimer.txtEnd}
-              </Text>
-              <Flex flexWrap="wrap" alignItems="center" m="-15px">
-                <Button m="15px" secondary disabled={formSent} type="submit">
-                  {formSent ? 'thank you for your submission' : 'Submit'}
-                </Button>
-                <TextButton
-                  m="15px"
-                  external
-                  secondary
-                  target="blank"
-                  href="https://cal.mixmax.com/kaan-one./catch-up-call"
-                >
-                  Or schedule a call
-                </TextButton>
-              </Flex>
-            </Form>
-          </form>
-        </Box>
+            <form onSubmit={onSubmit}>
+              <Form alignItems="flex-start">
+                {renderInputs()}
+                <Text mb="40px" fontSize="14px" as="p">
+                  {disclaimer.txtStart}
+                  {DisclaimerLink(disclaimer.to, disclaimer.link)}
+                  {disclaimer.txtEnd}
+                </Text>
+                <Flex flexWrap="wrap" alignItems="center" m="-15px">
+                  <Button m="15px" secondary disabled={formSent} type="submit">
+                    {formSent ? 'thank you for your submission' : 'Submit'}
+                  </Button>
+                  <TextButton
+                    m="15px"
+                    external
+                    secondary
+                    target="blank"
+                    href="https://cal.mixmax.com/kaan-one./catch-up-call"
+                  >
+                    Or schedule a call
+                  </TextButton>
+                </Flex>
+              </Form>
+            </form>
+          </Box>
+        </Flex>
         <>
           <Maps location={location} />
           <MapsContainer
             id="map"
-            maxWidth={['100%', '635px']}
+            maxWidth="100%"
             height={['431px', '862px']}
             alignSelf="center;"
           />

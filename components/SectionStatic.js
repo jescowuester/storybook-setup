@@ -17,7 +17,7 @@ const SectionStatic = styled.section`
   ${textAlign}
 
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
-    max-width: 960px;
+    max-width: 1200px;
     padding-top: 80px;
     padding-bottom: 80px;
   }

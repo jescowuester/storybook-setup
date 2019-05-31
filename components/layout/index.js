@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu';
 import { Nav, Main, NavSwitcher, NavLink } from './styles';
 import Footer from '../../containers/Footer';
 import Flex from '../Flex';
+import Box from '../Box';
 import Text from '../Text';
 import Icon from '../Icon';
 
@@ -58,39 +59,48 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav>
-        <Link href="/">
-          <a>
-            <img style={{ height: '24px' }} src="/static/logo.png" />
-          </a>
-        </Link>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+          width="100%"
+          maxWidth="1400px"
+          px={['16px', '50px', '160px']}
+        >
+          <Link href="/">
+            <a>
+              <img style={{ height: '24px' }} src="/static/logo.png" />
+            </a>
+          </Link>
 
-        {isHome ? (
-          <StyledText fontSize="18px" color="blackDark" as="p">
-            Connecting awesome leaders to scale-ups.
-          </StyledText>
-        ) : (
-          <NavSwitcher>
-            <Flex className="text">
-              {navItems.map(({ href, text, key }) => (
-                <Link passHref href={href} key={key}>
-                  <NavLink
-                    className={router.pathname.match(href) ? 'active' : ''}
-                  >
-                    {text}
-                  </NavLink>
-                </Link>
-              ))}
-            </Flex>
-            <Icon
-              onClick={open}
-              as="button"
-              fontSize="25px"
-              className="bars"
-              mt="3px"
-              icon={['far', 'bars']}
-            />
-          </NavSwitcher>
-        )}
+          {isHome ? (
+            <StyledText fontSize="18px" color="blackDark" as="p">
+              Connecting awesome leaders to scale-ups.
+            </StyledText>
+          ) : (
+            <NavSwitcher>
+              <Flex className="text">
+                {navItems.map(({ href, text, key }) => (
+                  <Link passHref href={href} key={key}>
+                    <NavLink
+                      className={router.pathname.match(href) ? 'active' : ''}
+                    >
+                      {text}
+                    </NavLink>
+                  </Link>
+                ))}
+              </Flex>
+              <Icon
+                onClick={open}
+                as="button"
+                fontSize="25px"
+                className="bars"
+                mt="3px"
+                icon={['far', 'bars']}
+              />
+            </NavSwitcher>
+          )}
+        </Flex>
       </Nav>
       <MobileMenu isOpen={menuOpen} close={close} navItems={navItems} />
       <Main>

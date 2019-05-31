@@ -7,10 +7,9 @@ const Nav = styled.nav`
   width: 100vw;
   position: fixed;
   top: 0;
-  padding: 0 160px;
   background: ${p => p.theme.colors.white};
   display: flex;
-  align-items: center;
+  justify-content: center;
 
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     padding: 0 20px;
