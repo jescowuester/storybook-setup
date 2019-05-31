@@ -43,20 +43,18 @@ const CardLarge = ({
   reverse,
   href
 }) => {
-  const flexDirection = ['column', 'column', reverse ? 'row-reverse' : 'row'];
-
   return (
     <StyledFlex
       as="a"
       href={href}
       width={['100%', '100%', 'auto']}
-      flexDirection={flexDirection}
-      mb={['40px', '40px', '80px']}
-      mx={[0, 0, '30px']}
+      flexDirection={['column', 'column', reverse ? 'row-reverse' : 'row']}
+      mb={['16px', '40px', '80px']}
+      // mx={[0, 0, '30px']}
     >
       <Img img={img} />
-      <Box bg="white" p={['50px 40px', '50px 40px', '100px 80px']}>
-        <Text mb="40px" as="h4">
+      <Box bg="white" p={['24px 16px', '50px 40px', '100px 80px']}>
+        <Text mb={['20px', '40px']} as="h4">
           {title}
         </Text>
         <TextSection dangerouslySetInnerHTML={{ __html: text }} />

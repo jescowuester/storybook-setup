@@ -30,7 +30,7 @@ const TeamMember = ({ img, name, text, buttonText, href }) => (
 
 const OurTeam = ({ content: { title, text, teamMembers } }) => {
   return (
-    <Section p={['80px 40px', '80px 40px', '160px']}>
+    <Section>
       <Box mb="80px" width={['100%', '100%', '55%']}>
         <Text mb="40px" as="h3">
           {title}

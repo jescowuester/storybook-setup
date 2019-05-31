@@ -27,7 +27,7 @@ const theme = {
   font: {
     sizes: {
       small: {
-        h1: '46px',
+        h1: '36px',
         h2: '14px',
         h3: '40px',
         h4: '30px',

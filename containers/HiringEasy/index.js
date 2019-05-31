@@ -48,10 +48,10 @@ const HiringEasy = ({
   content: { img, images = [], title, text, button, href, externalHref }
 }) => {
   return (
-    <Section bg="greyLighter">
+    <Section p="0" bg="greyLighter">
       <Flex alignItems="stretch">
         <Box
-          p={['60px 40px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
+          p={['40px 16px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
         >
           <Text mb="30px" as="h1">
             {title}

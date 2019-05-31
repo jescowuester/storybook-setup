@@ -33,11 +33,7 @@ const Container = styled(props => <Flex {...props} />)`
 const ClientCases = ({
   content: { card1, card2, card3, card4, button, href }
 }) => (
-  <Section
-    textAlign="center"
-    p={['60px 40px', '60px 40px', '160px']}
-    bg="greyLighter"
-  >
+  <Section textAlign="center" bg="greyLighter">
     <Text mb={['20px', '40px', '80px']} as="h3">
       Client Cases.
     </Text>
@@ -49,7 +45,7 @@ const ClientCases = ({
             m="20px"
             flexBasis={[
               'calc(100% - 40px)',
-              'calc(100% - 40px)',
+              'calc(50% - 40px)',
               'calc(50% - 40px)'
             ]}
           >

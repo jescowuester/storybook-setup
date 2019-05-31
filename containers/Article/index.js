@@ -17,11 +17,22 @@ const FormatedText = styled.div`
   @media (max-width: ${p => p.theme.breakpoints[1]}) {
     width: 100%;
   }
-  h2 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    display: block;
     font-family: Roboto;
     text-transform: none;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  h2 {
     font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
   }
   .blog-post__quote {
     font-size: 22px;
@@ -72,11 +83,11 @@ const Article = ({
   content: { text, shareText, title, backButton, backHref }
 }) => {
   return (
-    <Section>
+    <Section fullWidth p="0">
       <Flex
         textAlign="center"
         flexDirection="column"
-        p={['40px 50px', '60px 350px 90px', '60px 350px 90px']}
+        p={['16px', '60px 40px 90px', '60px 20% 90px']}
         bg="greyLighter"
         width="100%"
       >
@@ -89,11 +100,11 @@ const Article = ({
         <Text as="h1">{title}</Text>
       </Flex>
       <Flex
-        p={['80px 40px', '80px 40px', '80px 160px']}
+        p={['20px 16px', '80px 40px', '80px 160px']}
         flexDirection={['column', 'column', 'row']}
       >
         <FormatedText dangerouslySetInnerHTML={{ __html: text }} />
-        <Box mt={['60px', '60px', 0]} ml={[0, 0, '100px']}>
+        <Box mt={['0px', '60px', 0]} ml={[0, 0, '100px']}>
           <Sticky>
             <Text mb="30px" as="h4" fontSize="24px">
               {shareText}
