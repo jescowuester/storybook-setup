@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'next/router';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Text from '../Text';
@@ -28,7 +29,25 @@ const IconPosition = styled.div`
   top: 20px;
 `;
 
-const MobileMenu = ({ navItems, close, isOpen }) => {
+const MobileNavLink = styled.a`
+  color: ${p => p.theme.colors.white};
+  font-size: 30px;
+  margin: 20px 0;
+  position: relative;
+  &.active {
+    &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      background: ${p => p.theme.colors.redLighter};
+    }
+  }
+`;
+
+const MobileMenu = ({ navItems, close, isOpen, router }) => {
   return (
     <Outer isOpen={isOpen}>
       <IconPosition>
@@ -43,13 +62,16 @@ const MobileMenu = ({ navItems, close, isOpen }) => {
       </IconPosition>
       {navItems.map(({ href, text, key }) => (
         <Link passHref href={href} key={key}>
-          <Text onClick={close} color="white" my="20px" fontSize="30px" as="a">
+          <MobileNavLink
+            className={router.pathname.match(href) ? 'active' : ''}
+            onClick={close}
+          >
             {text}
-          </Text>
+          </MobileNavLink>
         </Link>
       ))}
     </Outer>
   );
 };
 
-export default MobileMenu;
+export default withRouter(MobileMenu);

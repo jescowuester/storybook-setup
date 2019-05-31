@@ -48,10 +48,16 @@ const HiringEasy = ({
   content: { img, images = [], title, text, button, href, externalHref }
 }) => {
   return (
-    <Section p="0" bg="greyLighter">
-      <Flex alignItems="stretch">
+    <Section fullWidth hero p="0" bg="greyLighter">
+      <Flex alignItems="stretch" justifyContent="flex-end">
         <Box
-          p={['40px 16px', '60px 40px', '60px 40px', '100px 160px 100px 160px']}
+          maxWidth={['100%', '100%', '775px']}
+          p={[
+            '40px 16px',
+            '60px 40px',
+            '100px 100px 100px 160px',
+            '100px 160px 100px 160px'
+          ]}
         >
           <Text mb="30px" as="h1">
             {title}
