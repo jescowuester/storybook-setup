@@ -18,7 +18,7 @@ const StyledBox = styled(Box)`
   border-radius: 5px;
   overflow: hidden;
   display: block;
-  height: ${p => p.noFlex ? "auto" : "100%"};
+  height: ${p => (p.noFlex ? 'auto' : '100%')};
   display: flex;
   flex-flow: column nowrap;
 
@@ -28,18 +28,22 @@ const StyledBox = styled(Box)`
 `;
 
 const Card = ({ img, title, text, redirect, secondary, href, noFlex }) => (
-  <StyledBox
-    as="a"
-    href={href}
-    minHeight="100%"
-    noFlex={noFlex}
-  >
+  <StyledBox as="a" href={href} minHeight="100%" noFlex={noFlex}>
     <Img img={img} />
-    <Box flex={noFlex ? false : "1 1 auto"} bg={secondary ? 'white' : 'greyLighter'} p={['20px', '30px', '50px']}>
-      <Text mb="30px" as="h4">
+    <Box
+      flex={noFlex ? false : '1 1 auto'}
+      bg={secondary ? 'white' : 'greyLighter'}
+      p={['20px', '30px', '50px']}
+    >
+      <Text mb={['20px', '30px']} as="h4">
         {title}
       </Text>
-      <Text color="blackLight" mb="40px" fontSize="18px" as="p">
+      <Text
+        color="blackLight"
+        mb={['20px', '30px', '40px']}
+        fontSize={['16px', '18px']}
+        as="p"
+      >
         {text}
       </Text>
       <TextButton noLink secondary={secondary}>

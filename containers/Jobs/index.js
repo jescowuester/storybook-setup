@@ -43,6 +43,7 @@ const Job = ({ title, address, clientCorporation, liked, id }) => {
           <Icon
             as="button"
             fontSize="22px"
+            ml="20px"
             color={liked ? 'redLight' : 'black'}
             icon={[liked ? 'fas' : 'far', 'heart']}
           />
@@ -86,12 +87,12 @@ const Jobs = ({ content: { buttonText, title, jobs, href } }) => {
       .then(res => setJobsList(res.data.data.data));
   }, []);
   return (
-    <Section p={['40px', '40px', '160px']} textAlign="center">
+    <Section p={['60px 16px', '60px 50px', '160px']} textAlign="center">
       <Text mb={['20px', '40px', '80px']} as="h3">
         {title}
       </Text>
       <hr />
-      {jobsList.length &&
+      {jobsList &&
         jobsList.slice(0, 3).map(job => <Job {...job} key={job.id} />)}
       <Button as="a" href={href} target="blank" mt="60px" secondary>
         {buttonText}
