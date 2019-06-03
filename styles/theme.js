@@ -2,27 +2,14 @@
 
 const theme = {
   colors: {
-    blackDarker: '#283039',
-    blackDark: '#323F4B',
-    black: '#3E4C59',
-    blackLight: '#52606D',
-    blackLighter: '#616E7C',
-    greyDarker: '#7B8794',
-    greyDark: '#9AA5B1',
-    grey: '#CBD2D9',
-    greyLight: '#E4E7EB',
-    greyLighter: '#F5F7FA',
     white: '#fff',
-    redDark: '#E41408',
-    red: '#F5352A',
-    redLight: '#F65C53',
-    redLighter: '#ff7a72',
-    orangeDark: '#FC9900',
-    orange: '#ED9918',
-    orangeLight: '#D99E43',
-    blueDark: '#067AED',
-    blue: '#3A8CDD',
-    blueLight: '#94BDF0'
+    black: '#000',
+    red: '#d72b47',
+    redTransparent: 'rgba(215, 43, 71,0.1)',
+    grey: '#838997',
+    greyLight: '#f1f1f1',
+    greyLighter: '#f7f7f7',
+    greyBackground: '#f5f6fa'
   },
   font: {
     sizes: {
@@ -71,6 +58,9 @@ const theme = {
   shadows: {
     z1: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.15)',
     z2: '0px 1px 1px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.15)'
+  },
+  gradients: {
+    red: 'linear-gradient(-180deg, #570013 0%, #35000c 100%)'
   },
   breakpoints: ['900px', '1100px', '1400px']
 };
