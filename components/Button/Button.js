@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PT from 'prop-types';
 import { space } from 'styled-system';
 import { Icon } from 'components';
+import Link from 'next/link';
 
 const StyledButton = styled.button`
   &.primary {
@@ -28,6 +29,7 @@ const StyledButton = styled.button`
     }
   }
 
+  width: ${p => (p.isBlock ? '100%' : 'auto')};
   &.secondary {
     border: 2px ${p => p.theme.colors.red} solid;
     color: ${p => p.theme.colors.red};
@@ -70,6 +72,14 @@ const StyledButton = styled.button`
     }
   }
 
+  &:hover {
+    .arrow {
+      svg {
+        transform: translate3d(4px, 1px, 0);
+      }
+    }
+  }
+  display: inline-block;
   position: relative;
   padding: 14px 20px;
   font-weight: 700;
@@ -81,17 +91,73 @@ const StyledButton = styled.button`
   ${space}
 `;
 
-const Button = ({ children, secondary, tertiary, arrow, ...props }) => {
+const Arrow = styled(Icon).attrs({
+  className: 'arrow',
+  icon: ['far', 'long-arrow-right'],
+  ml: '5px'
+})`
+  svg {
+    transform: translate3d(0, 1px, 0);
+    transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+`;
+
+const Button = ({
+  children,
+  secondary,
+  tertiary,
+  arrow,
+  isLink,
+  isA,
+  href,
+  as,
+  ...props
+}) => {
+  if (isLink) {
+    return (
+      <Link prefetch passHref href={href} as={as || href}>
+        <StyledButton
+          as="a"
+          className={getClassName(secondary, tertiary)}
+          {...props}
+        >
+          {children}
+        </StyledButton>
+      </Link>
+    );
+  }
+
+  if (isA) {
+    return (
+      <StyledButton
+        as="a"
+        href={href}
+        className={getClassName(secondary, tertiary)}
+        {...props}
+      >
+        {children}
+      </StyledButton>
+    );
+  }
+
   if (arrow) {
     return (
-      <StyledButton className={getClassName(secondary, tertiary)} {...props}>
-        {children} <Icon icon={['fas', 'long-arrow-right']} />
+      <StyledButton
+        as={as}
+        className={getClassName(secondary, tertiary)}
+        {...props}
+      >
+        {children} <Arrow />
       </StyledButton>
     );
   }
 
   return (
-    <StyledButton className={getClassName(secondary, tertiary)} {...props}>
+    <StyledButton
+      as={as}
+      className={getClassName(secondary, tertiary)}
+      {...props}
+    >
       {children}
     </StyledButton>
   );

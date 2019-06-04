@@ -23,13 +23,32 @@ storiesOf('Button', module)
       cool 😎 Button
     </Button>
   ))
-  .add('with arrow', () => <Button arrow>Button</Button>)
-  .add('with icon', () => (
-    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
+  .add('with arrow', () => (
+    <>
+      <Button m="20px" arrow>
+        Button
+      </Button>
+      <Button m="20px" secondary arrow>
+        Button
+      </Button>
+      <Button m="20px" tertiary arrow>
+        Button
+      </Button>
+    </>
   ))
   .add('as Link', () => (
-    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
+    <Button /* isLink href="/" */>
+      {/* todo: link crashes storybook */}
+      Button isLink
+    </Button>
   ))
   .add('as a', () => (
-    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
+    <Button isA iconRight={['far', 'long-arrow-right']}>
+      Button isA
+    </Button>
+  ))
+  .add('isBlock (full width)', () => (
+    <Button isBlock iconRight={['far', 'long-arrow-right']}>
+      Button isBlock
+    </Button>
   ));
