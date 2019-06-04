@@ -4,7 +4,9 @@ const theme = {
   colors: {
     white: '#fff',
     black: '#000',
+    redLight: '#ff4967',
     red: '#d72b47',
+    redDark: '#c4112e',
     redDarker: '#a2152b',
     redTransparent: 'rgba(215, 43, 71,0.1)',
     grey: '#838997',

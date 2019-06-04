@@ -7,13 +7,23 @@ import { linkTo } from '@storybook/addon-links';
 import Button from './Button';
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
+  .add('default', () => <Button onClick={action('clicked')}>😎 Button</Button>)
+
+  .add('secondary', () => (
+    <Button secondary onClick={action('clicked')}>
+      cool
+      <span role="img" aria-label="cool emoji">
+        😎
+      </span>{' '}
+      Button
     </Button>
+  ))
+  .add('with icon', () => (
+    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
+  ))
+  .add('as Link', () => (
+    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
+  ))
+  .add('as a', () => (
+    <Button iconRight={['far', 'long-arrow-right']}>Button</Button>
   ));

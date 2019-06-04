@@ -26,29 +26,24 @@ html, body {
 }
 
 p {
-  font-size: ${p => p.theme.font.sizes.large.p};
-  line-height: 1.6;
+  font-size: ${p => p.theme.font.sizes.desktop.p};
 }
 
 h1 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: ${p => p.theme.font.sizes.large.h1};
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: ${p => p.theme.font.sizes.desktop.h1};
 }
 
 h2 {
-  font-size: ${p => p.theme.font.sizes.large.h2};
-  text-transform: uppercase;
+  font-size: ${p => p.theme.font.sizes.desktop.h2};
 }
 
 h3 {
-  font-size: ${p => p.theme.font.sizes.large.h3};
+  font-size: ${p => p.theme.font.sizes.desktop.h3};
 }
 
 h4 {
   font-weight: 700;
-  font-size: ${p => p.theme.font.sizes.large.h4};
+  font-size: ${p => p.theme.font.sizes.desktop.h4};
 }
 
 hr {
@@ -59,25 +54,23 @@ hr {
 
 @media (max-width: ${p => p.theme.breakpoints[1]}){
   p {
-    font-size: ${p => p.theme.font.sizes.small.p};
-    line-height: 1.4;
+    font-size: ${p => p.theme.font.sizes.mobile.p};
   }
 
   h1 {
-    font-size: ${p => p.theme.font.sizes.small.h1};
-    line-height: 1.2;
+    font-size: ${p => p.theme.font.sizes.mobile.h1};
   }
 
   h2 {
-    font-size: ${p => p.theme.font.sizes.small.h2};
+    font-size: ${p => p.theme.font.sizes.mobile.h2};
   }
 
   h3 {
-    font-size: ${p => p.theme.font.sizes.small.h3};
+    font-size: ${p => p.theme.font.sizes.mobile.h3};
   }
 
   h4 {
-    font-size: ${p => p.theme.font.sizes.small.h4};
+    font-size: ${p => p.theme.font.sizes.mobile.h4};
   }
 } 
 
@@ -133,7 +126,8 @@ pre,
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} 
+
 
 `;
 

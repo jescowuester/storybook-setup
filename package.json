@@ -32,9 +32,16 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-classes": "^7.4.4",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.16.0",
@@ -53,12 +60,6 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0",
-    "@storybook/react": "^5.0.11",
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-links": "^5.0.11",
-    "@storybook/addons": "^5.0.11",
-    "@babel/core": "^7.4.5",
-    "babel-loader": "^8.0.6"
+    "stylelint-processor-styled-components": "^1.8.0"
   }
 }

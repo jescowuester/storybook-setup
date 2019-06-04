@@ -1,5 +1,13 @@
 import { configure, addDecorator } from '@storybook/react';
 import React from 'react';
+import { addParameters } from '@storybook/react';
+import storybookOfAms from './storyOfAmsTheme';
+
+addParameters({
+  options: {
+    theme: storybookOfAms
+  }
+});
 
 //styles
 import GlobalStyle from '../styles/GlobalStyle';
