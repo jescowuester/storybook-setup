@@ -40,7 +40,6 @@ h1 {
 h2 {
   font-size: ${p => p.theme.font.sizes.large.h2};
   text-transform: uppercase;
-  ${'' /* letter-spacing: 0.2em; */}
 }
 
 h3 {
@@ -80,11 +79,7 @@ hr {
   h4 {
     font-size: ${p => p.theme.font.sizes.small.h4};
   }
-}
-
-.swiper-pagination-bullet-active{
-  background: #fff !important;
-}
+} 
 
 button {
   border: none;
