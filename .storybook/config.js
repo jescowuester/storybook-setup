@@ -2,7 +2,7 @@ import { configure, addDecorator } from '@storybook/react';
 import React from 'react';
 import { addParameters } from '@storybook/react';
 import storybookOfAms from './storyOfAmsTheme';
-
+import 'components/Icon/library';
 addParameters({
   options: {
     theme: storybookOfAms

@@ -15,6 +15,7 @@
   "plugins": [
     "lodash",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-transform-classes"
+    "@babel/plugin-transform-classes",
+    "babel-plugin-styled-components"
   ]
 }

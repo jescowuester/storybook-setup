@@ -106,10 +106,6 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  &:hover{
-    opacity: 0.7;
-  }
-  transition: opacity 0.2s ease-in-out;
 }
 
 ul,

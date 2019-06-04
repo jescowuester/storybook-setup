@@ -22,11 +22,7 @@ const Layout = ({ children, router }) => {
       <Main>
         {children}
 
-        {!isHome && (
-          <>
-            <Footer />
-          </>
-        )}
+        {!isHome && <></>}
       </Main>
     </>
   );
