@@ -1,18 +1,22 @@
 import { configure, addDecorator } from '@storybook/react';
-import React from 'react';
+import React, { useRef } from 'react';
 import { addParameters } from '@storybook/react';
 import storybookOfAms from './storyOfAmsTheme';
-import 'components/Icon/library';
+import { action } from '@storybook/addon-actions';
+
 addParameters({
   options: {
     theme: storybookOfAms
   }
 });
 
-//styles
+//styles & fonts
 import GlobalStyle from '../styles/GlobalStyle';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/fonts.css';
+
+//fontawesome
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'components/Icon/library';
 
 //theme provider
 import { ThemeProvider } from 'styled-components';
@@ -21,14 +25,31 @@ import theme from '../styles/theme';
 // automatically import all files ending in *.stories.js
 const req = require.context('../components', true, /\.stories\.js$/);
 
+//fake next router
+import Router from 'next/router';
+const mockedRouter = {
+  push: path => {
+    console.log(path);
+    action('navigated to')(path);
+    return new Promise((reject, resolve) => resolve());
+  },
+  prefetch: () => {}
+};
+Router.router = mockedRouter;
+
+// todo preventDefault for firefox
+// import Link from 'next/link';
+// console.log('link', Link);
+
+// load stories & add decorator
 function loadStories() {
   req.keys().forEach(filename => req(filename));
   addDecorator(story => (
     <ThemeProvider theme={theme}>
-      <div style={{ width: '100%', padding: '1rem' }}>
+      <>
         <GlobalStyle />
         {story()}
-      </div>
+      </>
     </ThemeProvider>
   ));
 }

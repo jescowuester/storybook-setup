@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'FaktPro';
+    src: url('FaktPro-Medium.eot');
+    src: url('FaktPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FaktPro-Medium.woff2') format('woff2'),
+        url('FaktPro-Medium.woff') format('woff'),
+        url('FaktPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FaktPro-Normal';
+    src: url('FaktPro-Normal.eot');
+    src: url('FaktPro-Normal.eot?#iefix') format('embedded-opentype'),
+        url('FaktPro-Normal.woff2') format('woff2'),
+        url('FaktPro-Normal.woff') format('woff'),
+        url('FaktPro-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FaktPro';
+    src: url('FaktPro-Bold.eot');
+    src: url('FaktPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('FaktPro-Bold.woff2') format('woff2'),
+        url('FaktPro-Bold.woff') format('woff'),
+        url('FaktPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

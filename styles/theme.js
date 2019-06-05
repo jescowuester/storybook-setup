@@ -12,7 +12,8 @@ const theme = {
     grey: '#838997',
     greyLight: '#f1f1f1',
     greyLighter: '#f7f7f7',
-    greyBackground: '#f5f6fa'
+    greyBackground: '#f5f6fa',
+    greyText: '#66798d'
   },
   font: {
     sizes: {
@@ -52,20 +53,27 @@ const theme = {
         md: '212px',
         lg: '316px'
       },
-      mobile: '16px'
+      mobile: {
+        sm: '16px',
+        md: '16px',
+        lg: '16px'
+      }
     }
   },
   shadows: {
     z1: 'box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);'
   },
   gradients: {
-    red: 'linear-gradient(-180deg, #570013 0%, #35000c 100%)'
+    nav: 'linear-gradient(-180deg, #570013 0%, #35000c 100%)'
   },
   breakpoints: {
-    xs: '750px',
-    sm: '900px',
-    md: '1000px',
-    lg: '1400px'
+    sm: '750px',
+    md: '900px',
+    lg: '1170px',
+    xl: '1400px'
+  },
+  maxWidths: {
+    default: '1100px'
   }
 };
 

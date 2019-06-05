@@ -3,6 +3,7 @@
   "plugins": ["import", "lodash", "react", "react-hooks"],
   "parser": "babel-eslint",
   "rules": {
+    "spaced-comment": "off",
     "jsx-a11y/anchor-has-content": "off",
     "jsx-a11y/aria-role": "off",
     "jsx-a11y/aria-props": "off",
@@ -71,7 +72,11 @@
   },
   "settings": {
     "import/resolver": {
-      "alias": [["components", "./components"], ["containers", "./containers"]]
+      "alias": [
+        ["components", "./components"],
+        ["containers", "./containers"],
+        ["utils", "./utils"]
+      ]
     }
   }
 }

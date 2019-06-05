@@ -14,6 +14,7 @@ import {
   alignItems,
   alignContent,
   justifyContent,
+  justifySelf,
   textAlign
 } from 'styled-system';
 
@@ -35,10 +36,16 @@ const Flex = styled.div(
   alignItems,
   alignContent,
   justifyContent,
+  justifySelf,
   textAlign
 );
 
 Flex.displayName = 'Flex';
+
+Flex.defaultProps = {
+  justifyContent: 'center',
+  alignItems: 'center'
+};
 
 export default Flex;
 

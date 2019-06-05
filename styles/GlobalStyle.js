@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 /* defaults */
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'FaktPro';
   font-weight: 400;
 
   box-sizing: border-box;

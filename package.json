@@ -28,7 +28,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "now-build": "next build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -36,8 +36,10 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-classes": "^7.4.4",
     "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-centered": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
+    "@storybook/addon-viewport": "^5.0.11",
     "@storybook/addons": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "babel-eslint": "^10.0.1",
