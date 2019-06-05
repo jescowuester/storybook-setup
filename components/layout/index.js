@@ -1,32 +1,64 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useReducer, useEffect } from 'react';
 import { withRouter } from 'next/router';
-import Link from 'next/link';
-import MobileMenu from './MobileMenu';
+import { Nav } from 'components';
 import { Main } from './styles';
-import { Flex, Box, Icon, Text, Nav } from 'components';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//reducer
+
+const initialState = {
+  menuIsOpen: true,
+  isHome: true,
+  path: ''
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'changePath':
+      return {
+        ...state,
+        isHome: action.path === '/',
+        path: action.path
+      };
+    case 'openMenu':
+      return {
+        ...state,
+        menuIsOpen: true
+      };
+    case 'closeMenu':
+      return {
+        ...state,
+        menuIsOpen: false
+      };
+    case 'toggleMenu':
+      return {
+        ...state,
+        menuIsOpen: !state.menuIsOpen
+      };
+    default:
+      throw new Error();
+  }
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const Layout = ({ children, router }) => {
-  const [menuIsOpen, setMenu] = useState(false);
-  const openMenu = () => setMenu(true);
-  const closeMenu = () => setMenu(false);
-  const toggleMenu = () => setMenu(!menuIsOpen);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const isHome = router.pathname === '/';
+  useEffect(() => {
+    dispatch({
+      type: 'changePath',
+      path: router.pathname
+    });
+  }, [router.pathname]);
 
   return (
     <>
-      <Nav
-        isHome={isHome}
-        openMenu={openMenu}
-        closeMenu={closeMenu}
-        toggleMenu={toggleMenu}
-        menuIsOpen={menuIsOpen}
-      />
-      <Main isHome={isHome}>
+      <Nav state={state} dispatch={dispatch} />
+      <Main isHome={state.isHome}>
         {children}
 
-        {!isHome && <></>}
+        {!state.isHome && <></>}
       </Main>
     </>
   );
