@@ -3,23 +3,27 @@ import styled from 'styled-components';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-import { Nav, Main, NavSwitcher, NavLink } from './styles';
-import { Flex, Box, Icon, Text } from 'components';
+import { Main } from './styles';
+import { Flex, Box, Icon, Text, Nav } from 'components';
 
 const Layout = ({ children, router }) => {
-  const [menuOpen, setMenu] = useState(false);
-  const close = () => setMenu(false);
-  const open = () => setMenu(true);
+  const [menuIsOpen, setMenu] = useState(false);
+  const openMenu = () => setMenu(true);
+  const closeMenu = () => setMenu(false);
+  const toggleMenu = () => setMenu(!menuIsOpen);
 
   const isHome = router.pathname === '/';
 
   return (
     <>
-      <Nav>
-        <Flex>a</Flex>
-      </Nav>
-      <MobileMenu isOpen={menuOpen} close={close} navItems={navItems} />
-      <Main>
+      <Nav
+        isHome={isHome}
+        openMenu={openMenu}
+        closeMenu={closeMenu}
+        toggleMenu={toggleMenu}
+        menuIsOpen={menuIsOpen}
+      />
+      <Main isHome={isHome}>
         {children}
 
         {!isHome && <></>}

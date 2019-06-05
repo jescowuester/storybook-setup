@@ -1,23 +1,65 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { Flex, Icon, Text } from 'components';
 import Link from 'next/link';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+const slideIn = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+const slideOut = keyframes`
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+`;
+
 const StyledNav = styled.nav`
+  z-index: 200;
   background: ${p => p.theme.gradients.nav};
   height: 110px;
+  width: 100vw;
   padding: 0 ${p => p.theme.layout.sideMargin.desktop.sm};
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
   overflow: hidden;
   @media (max-width: ${p => p.theme.breakpoints.lg}) {
     align-items: flex-start;
     height: ${p => (p.menuIsOpen ? '100vh' : '70px')};
   }
+  @media (min-width: ${p => p.theme.breakpoints.lg}) {
+    &.isLarge {
+      height: 500px;
+      position: absolute;
+    }
+    &.isFixed {
+      animation: ${slideIn} 0.8s cubic-bezier(0.18, 0.66, 0.19, 1);
+    }
+  }
+
   transition: height 0.2s;
 `;
 
@@ -26,7 +68,7 @@ const Logo = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 110px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -68,7 +110,7 @@ const MenuButtonOuter = styled.button`
     background-color: ${p => p.theme.colors.white};
     height: 2px;
     width: 28px;
-    transform: ${p => (p.menuIsOpen ? 'translateX(-16px)' : 'none')};
+    transform: ${p => (p.menuIsOpen ? 'translateX(16px)' : 'none')};
     opacity: ${p => (p.menuIsOpen ? 0 : 1)};
     transition: transform 0.2s, opacity 0.2s;
   }
@@ -106,7 +148,7 @@ const StyledLink = styled.a`
   letter-spacing: 0.25px;
   margin: 0 16px;
   text-align: center;
-  s &:hover {
+  &:hover {
     color: rgba(255, 255, 255, 1);
   }
 
@@ -118,9 +160,11 @@ const StyledLink = styled.a`
   transition: 0.2s color;
 `;
 
-const NavLink = ({ href, as, children, ...props }) => (
+const NavLink = ({ closeMenu, href, as, children, ...props }) => (
   <Link href={href} as={as} passHref prefetch>
-    <StyledLink {...props}>{children}</StyledLink>
+    <StyledLink onClick={closeMenu} {...props}>
+      {children}
+    </StyledLink>
   </Link>
 );
 
@@ -129,7 +173,7 @@ const NavLinkContainer = styled.div`
   flex-direction: row;
   max-width: ${p => p.theme.maxWidths.default};
   min-width: 100%;
-  height: 100%;
+  height: 110px;
   justify-content: space-between;
   align-items: center;
 
@@ -137,8 +181,8 @@ const NavLinkContainer = styled.div`
     padding-top: 70px;
     height: calc(100%-70px);
     flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
+    justify-content: center;
+    display: ${p => (p.menuIsOpen ? 'flex' : 'none')};
   }
 `;
 
@@ -168,27 +212,57 @@ const ShoppingBasket = props => (
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const Nav = () => {
-  const [menuIsOpen, setMenu] = useState(true);
-  const openMenu = () => setMenu(true);
-  const closeMenu = () => setMenu(false);
-  const toggleMenu = () => setMenu(!menuIsOpen);
+const Nav = ({ isHome, closeMenu, toggleMenu, menuIsOpen }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const onScroll = () => {
+    window.requestAnimationFrame(() => {
+      if (window.scrollY > 500) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (isHome) {
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }
+  }, [isHome]);
+
   return (
-    <StyledNav menuIsOpen={menuIsOpen}>
+    <StyledNav
+      className={isHome && !isScrolled ? 'isLarge' : 'isFixed'}
+      menuIsOpen={menuIsOpen}
+    >
       <Logo>
         <img src="/static/logo_header.png" alt="logo" />
       </Logo>
       <NavLinkContainer menuIsOpen={menuIsOpen}>
         <Flex flexDirection={{ lg: 'row', _: 'column' }} ml="-16px">
-          <NavLink href="/">home</NavLink>
-          <NavLink href="/">history</NavLink>
-          <NavLink href="/">liquor store</NavLink>
-          <NavLink href="/">shop</NavLink>
+          <NavLink closeMenu={closeMenu} href="/">
+            home
+          </NavLink>
+          <NavLink closeMenu={closeMenu} href="/history">
+            history
+          </NavLink>
+          <NavLink closeMenu={closeMenu} href="/liquor-store">
+            liquor store
+          </NavLink>
+          <NavLink closeMenu={closeMenu} href="/">
+            shop
+          </NavLink>
         </Flex>
 
         <Flex flexDirection={{ lg: 'row', _: 'column' }}>
-          <NavLink href="/">contact</NavLink>
-          <NavLink href="/">login</NavLink>
+          <NavLink closeMenu={closeMenu} href="/contact">
+            contact
+          </NavLink>
+          <NavLink closeMenu={closeMenu} href="/login">
+            login
+          </NavLink>
           <ShoppingBasket number="0" />
         </Flex>
       </NavLinkContainer>
