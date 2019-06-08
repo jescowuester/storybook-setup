@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import { space } from 'styled-system';
 
 const Main = styled.main`
-  padding-top: ${p => (p.isHome ? 0 : '110px')};
-
+  padding-top: 110px;
   height: 100%;
-
+  min-height: 100vh;
   @media (max-width: ${p => p.theme.breakpoints.lg}) {
-    padding-top: ${p => (p.isHome ? 0 : '70px')};
+    padding-top: ${p => (p.isLarge ? 0 : '70px')};
   }
 `;
 

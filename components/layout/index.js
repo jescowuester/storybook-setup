@@ -8,7 +8,7 @@ import { Main } from './styles';
 
 const initialState = {
   menuIsOpen: true,
-  isHome: true,
+  isLarge: true,
   path: ''
 };
 
@@ -17,7 +17,7 @@ const reducer = (state, action) => {
     case 'changePath':
       return {
         ...state,
-        isHome: action.path === '/',
+        isLarge: action.path === '/',
         path: action.path
       };
     case 'openMenu':
@@ -55,10 +55,10 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav state={state} dispatch={dispatch} />
-      <Main isHome={state.isHome}>
+      <Main isLarge={state.isLarge}>
         {children}
 
-        {!state.isHome && <></>}
+        {!state.isLarge && <></>}
       </Main>
     </>
   );

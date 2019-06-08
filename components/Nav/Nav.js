@@ -23,18 +23,6 @@ const slideIn = keyframes`
 `;
 
 //@todo slideout
-const slideOut = keyframes`
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-    
-  }
-
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-`;
 
 const StyledNav = styled.nav`
   z-index: 200;
@@ -60,7 +48,7 @@ const StyledNav = styled.nav`
     }
     &.isFixed {
       animation: ${p =>
-        p.isHome
+        p.isLarge
           ? css`
               ${slideIn} 0.8s cubic-bezier(0.18, 0.66, 0.19, 1)
             `
@@ -245,16 +233,16 @@ const Nav = ({ state, dispatch }) => {
   };
 
   useEffect(() => {
-    if (state.isHome) {
+    if (state.isLarge) {
       window.addEventListener('scroll', onScroll);
       return () => window.removeEventListener('scroll', onScroll);
     }
-  }, [state.isHome]);
+  }, [state.isLarge]);
 
   return (
     <StyledNav
-      className={state.isHome && !isScrolled ? 'isLarge' : 'isFixed'}
-      isHome={state.isHome}
+      className={state.isLarge && !isScrolled ? 'isLarge' : 'isFixed'}
+      isLarge={state.isLarge}
       menuIsOpen={state.menuIsOpen}
     >
       <Logo>

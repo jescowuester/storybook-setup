@@ -73,7 +73,7 @@ const theme = {
     xl: '1400px'
   },
   maxWidths: {
-    default: '1100px'
+    default: '1600px'
   }
 };
 
