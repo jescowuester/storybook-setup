@@ -169,4 +169,26 @@ const getClassName = (secondary, tertiary) => {
   return 'primary';
 };
 
+Button.defaultProps = {
+  children: null,
+  secondary: false,
+  tertiary: false,
+  arrow: false,
+  isLink: false,
+  isA: false,
+  href: undefined,
+  as: undefined
+};
+
+Button.propTypes = {
+  children: PT.node,
+  secondary: PT.bool,
+  tertiary: PT.bool,
+  arrow: PT.bool,
+  isLink: PT.bool,
+  isA: PT.bool,
+  href: PT.string,
+  as: PT.string
+};
+
 export default Button;

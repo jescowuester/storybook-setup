@@ -1,28 +1,71 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useReducer, useEffect } from 'react';
 import { withRouter } from 'next/router';
-import Link from 'next/link';
-import MobileMenu from './MobileMenu';
-import { Nav, Main, NavSwitcher, NavLink } from './styles';
-import { Flex, Box, Icon, Text } from 'components';
+import { Nav } from 'components';
+import { Main } from './styles';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//reducer
+
+const initialState = {
+  menuIsOpen: true,
+  navIsLarge: true,
+  path: ''
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'changePath':
+      return {
+        ...state,
+        navIsLarge: [
+          '/',
+          '/history',
+          '/liquor-store',
+          '/contact',
+          '/login'
+        ].includes(action.path),
+        path: action.path
+      };
+    case 'openMenu':
+      return {
+        ...state,
+        menuIsOpen: true
+      };
+    case 'closeMenu':
+      return {
+        ...state,
+        menuIsOpen: false
+      };
+    case 'toggleMenu':
+      return {
+        ...state,
+        menuIsOpen: !state.menuIsOpen
+      };
+    default:
+      throw new Error();
+  }
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const Layout = ({ children, router }) => {
-  const [menuOpen, setMenu] = useState(false);
-  const close = () => setMenu(false);
-  const open = () => setMenu(true);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const isHome = router.pathname === '/';
+  useEffect(() => {
+    console.log(router.pathname);
+    dispatch({
+      type: 'changePath',
+      path: router.pathname
+    });
+  }, [router.pathname]);
 
   return (
     <>
-      <Nav>
-        <Flex>a</Flex>
-      </Nav>
-      <MobileMenu isOpen={menuOpen} close={close} navItems={navItems} />
-      <Main>
+      <Nav state={state} dispatch={dispatch} />
+      <Main navIsLarge={state.navIsLarge}>
         {children}
 
-        {!isHome && <></>}
+        {!state.navIsLarge && <></>}
       </Main>
     </>
   );

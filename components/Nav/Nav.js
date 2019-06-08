@@ -1,23 +1,61 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes, css } from 'styled-components';
 import { Flex, Icon, Text } from 'components';
 import Link from 'next/link';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//nav styles
+
+const slideIn = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+//@todo slideout
 
 const StyledNav = styled.nav`
+  z-index: 200;
   background: ${p => p.theme.gradients.nav};
   height: 110px;
+  width: 100vw;
   padding: 0 ${p => p.theme.layout.sideMargin.desktop.sm};
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
   overflow: hidden;
   @media (max-width: ${p => p.theme.breakpoints.lg}) {
     align-items: flex-start;
     height: ${p => (p.menuIsOpen ? '100vh' : '70px')};
   }
+  @media (min-width: ${p => p.theme.breakpoints.lg}) {
+    &.navIsLarge {
+      height: 500px;
+      position: absolute;
+    }
+    &.isFixed {
+      animation: ${p =>
+        p.navIsLarge
+          ? css`
+              ${slideIn} 0.8s cubic-bezier(0.18, 0.66, 0.19, 1)
+            `
+          : 'none'};
+    }
+  }
+
   transition: height 0.2s;
 `;
 
@@ -26,7 +64,7 @@ const Logo = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 110px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -42,6 +80,27 @@ const Logo = styled.div`
     padding-top: 22px;
   }
 `;
+
+const NavLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: ${p => p.theme.maxWidths.default};
+  min-width: 100%;
+  height: 110px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: ${p => p.theme.breakpoints.lg}) {
+    padding-top: 70px;
+    height: calc(100% - 70px);
+    flex-direction: column;
+    justify-content: center;
+    display: ${p => (p.menuIsOpen ? 'flex' : 'none')};
+  }
+`;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//nav hamburger button
 
 const MenuButtonOuter = styled.button`
   position: absolute;
@@ -68,7 +127,7 @@ const MenuButtonOuter = styled.button`
     background-color: ${p => p.theme.colors.white};
     height: 2px;
     width: 28px;
-    transform: ${p => (p.menuIsOpen ? 'translateX(-16px)' : 'none')};
+    transform: ${p => (p.menuIsOpen ? 'translateX(16px)' : 'none')};
     opacity: ${p => (p.menuIsOpen ? 0 : 1)};
     transition: transform 0.2s, opacity 0.2s;
   }
@@ -98,15 +157,18 @@ const MenuButton = ({ ...props }) => (
   </MenuButtonOuter>
 );
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// nav link
+
 const StyledLink = styled.a`
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, ${p => (p.isMatch ? 1 : 0.55)});
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.25px;
   margin: 0 16px;
   text-align: center;
-  s &:hover {
+  &:hover {
     color: rgba(255, 255, 255, 1);
   }
 
@@ -118,31 +180,16 @@ const StyledLink = styled.a`
   transition: 0.2s color;
 `;
 
-const NavLink = ({ href, as, children, ...props }) => (
+const NavLink = ({ path, closeMenu, href, as, children, ...props }) => (
   <Link href={href} as={as} passHref prefetch>
-    <StyledLink {...props}>{children}</StyledLink>
+    <StyledLink isMatch={!!path.match(href)} onClick={closeMenu} {...props}>
+      {children}
+    </StyledLink>
   </Link>
 );
 
-const NavLinkContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  max-width: ${p => p.theme.maxWidths.default};
-  min-width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: ${p => p.theme.breakpoints.lg}) {
-    padding-top: 70px;
-    height: calc(100%-70px);
-    flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
-  }
-`;
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//shopping basket
 
 const StyledShoppingBasket = styled.span`
   color: rgba(255, 255, 255, 0.55);
@@ -167,32 +214,65 @@ const ShoppingBasket = props => (
 );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//nav
 
-const Nav = () => {
-  const [menuIsOpen, setMenu] = useState(true);
-  const openMenu = () => setMenu(true);
-  const closeMenu = () => setMenu(false);
-  const toggleMenu = () => setMenu(!menuIsOpen);
+const Nav = ({ state, dispatch }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const closeMenu = () => dispatch({ type: 'closeMenu' });
+  const toggleMenu = () => dispatch({ type: 'toggleMenu' });
+
+  const onScroll = () => {
+    window.requestAnimationFrame(() => {
+      if (window.scrollY > 500) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [state.navIsLarge]);
+
   return (
-    <StyledNav menuIsOpen={menuIsOpen}>
+    <StyledNav
+      className={state.navIsLarge && !isScrolled ? 'navIsLarge' : 'isFixed'}
+      navIsLarge={state.navIsLarge}
+      menuIsOpen={state.menuIsOpen}
+    >
       <Logo>
         <img src="/static/logo_header.png" alt="logo" />
       </Logo>
-      <NavLinkContainer menuIsOpen={menuIsOpen}>
+      <NavLinkContainer menuIsOpen={state.menuIsOpen}>
         <Flex flexDirection={{ lg: 'row', _: 'column' }} ml="-16px">
-          <NavLink href="/">home</NavLink>
-          <NavLink href="/">history</NavLink>
-          <NavLink href="/">liquor store</NavLink>
-          <NavLink href="/">shop</NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/">
+            home
+          </NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/history">
+            history
+          </NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/liquor-store">
+            liquor store
+          </NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/shop">
+            shop
+          </NavLink>
         </Flex>
 
         <Flex flexDirection={{ lg: 'row', _: 'column' }}>
-          <NavLink href="/">contact</NavLink>
-          <NavLink href="/">login</NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/contact">
+            contact
+          </NavLink>
+          <NavLink path={state.path} closeMenu={closeMenu} href="/login">
+            login
+          </NavLink>
           <ShoppingBasket number="0" />
         </Flex>
       </NavLinkContainer>
-      <MenuButton onClick={toggleMenu} menuIsOpen={menuIsOpen} />
+      <MenuButton onClick={toggleMenu} menuIsOpen={state.menuIsOpen} />
     </StyledNav>
   );
 };
