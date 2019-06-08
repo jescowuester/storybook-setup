@@ -8,7 +8,7 @@ import { Main } from './styles';
 
 const initialState = {
   menuIsOpen: true,
-  isLarge: true,
+  navIsLarge: true,
   path: ''
 };
 
@@ -17,7 +17,13 @@ const reducer = (state, action) => {
     case 'changePath':
       return {
         ...state,
-        isLarge: action.path === '/',
+        navIsLarge: [
+          '/',
+          '/history',
+          '/liquor-store',
+          '/contact',
+          '/login'
+        ].includes(action.path),
         path: action.path
       };
     case 'openMenu':
@@ -46,6 +52,7 @@ const Layout = ({ children, router }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    console.log(router.pathname);
     dispatch({
       type: 'changePath',
       path: router.pathname
@@ -55,10 +62,10 @@ const Layout = ({ children, router }) => {
   return (
     <>
       <Nav state={state} dispatch={dispatch} />
-      <Main isLarge={state.isLarge}>
+      <Main navIsLarge={state.navIsLarge}>
         {children}
 
-        {!state.isLarge && <></>}
+        {!state.navIsLarge && <></>}
       </Main>
     </>
   );

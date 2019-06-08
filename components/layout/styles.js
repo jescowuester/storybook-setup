@@ -5,7 +5,7 @@ const Main = styled.main`
   height: 100%;
   min-height: 100vh;
   @media (max-width: ${p => p.theme.breakpoints.lg}) {
-    padding-top: ${p => (p.isLarge ? 0 : '70px')};
+    padding-top: ${p => (p.navIsLarge ? 0 : '70px')};
   }
 `;
 

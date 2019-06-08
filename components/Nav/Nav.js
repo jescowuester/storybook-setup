@@ -42,13 +42,13 @@ const StyledNav = styled.nav`
     height: ${p => (p.menuIsOpen ? '100vh' : '70px')};
   }
   @media (min-width: ${p => p.theme.breakpoints.lg}) {
-    &.isLarge {
+    &.navIsLarge {
       height: 500px;
       position: absolute;
     }
     &.isFixed {
       animation: ${p =>
-        p.isLarge
+        p.navIsLarge
           ? css`
               ${slideIn} 0.8s cubic-bezier(0.18, 0.66, 0.19, 1)
             `
@@ -233,16 +233,14 @@ const Nav = ({ state, dispatch }) => {
   };
 
   useEffect(() => {
-    if (state.isLarge) {
-      window.addEventListener('scroll', onScroll);
-      return () => window.removeEventListener('scroll', onScroll);
-    }
-  }, [state.isLarge]);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [state.navIsLarge]);
 
   return (
     <StyledNav
-      className={state.isLarge && !isScrolled ? 'isLarge' : 'isFixed'}
-      isLarge={state.isLarge}
+      className={state.navIsLarge && !isScrolled ? 'navIsLarge' : 'isFixed'}
+      navIsLarge={state.navIsLarge}
       menuIsOpen={state.menuIsOpen}
     >
       <Logo>
